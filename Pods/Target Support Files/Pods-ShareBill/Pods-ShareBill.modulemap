@@ -1,0 +1,6 @@
+framework module Pods_ShareBill {
+  umbrella header "Pods-ShareBill-umbrella.h"
+
+  export *
+  module * { export * }
+}

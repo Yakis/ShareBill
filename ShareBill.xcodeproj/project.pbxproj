@@ -7,21 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1551F1C3214FC82800BA5CEF /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551F1C2214FC82800BA5CEF /* AppController.swift */; };
+		1551F1C6214FC86100BA5CEF /* AddBillVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551F1C4214FC86100BA5CEF /* AddBillVC.swift */; };
+		1551F1C7214FC86100BA5CEF /* AddBillVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1551F1C5214FC86100BA5CEF /* AddBillVC.xib */; };
+		1551F1CB214FCCFD00BA5CEF /* AddMateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551F1C9214FCCFD00BA5CEF /* AddMateVC.swift */; };
+		1551F1CC214FCCFD00BA5CEF /* AddMateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1551F1CA214FCCFD00BA5CEF /* AddMateVC.xib */; };
+		1551F1D0214FD15300BA5CEF /* TenantsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551F1CE214FD15300BA5CEF /* TenantsListVC.swift */; };
+		1551F1D1214FD15300BA5CEF /* TenantsListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1551F1CF214FD15300BA5CEF /* TenantsListVC.xib */; };
+		15AE7F94214EC5E500AEDDB1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AE7F93214EC5E500AEDDB1 /* User.swift */; };
+		15AE7F97214EC6CA00AEDDB1 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AE7F96214EC6CA00AEDDB1 /* Bill.swift */; };
+		15AE7F9E214EC9D100AEDDB1 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AE7F9C214EC9D100AEDDB1 /* ScannerViewController.swift */; };
 		15D47D68214EADA30020F074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D47D67214EADA30020F074 /* AppDelegate.swift */; };
 		15D47D6A214EADA30020F074 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D47D69214EADA30020F074 /* ViewController.swift */; };
-		15D47D6D214EADA30020F074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15D47D6B214EADA30020F074 /* Main.storyboard */; };
 		15D47D6F214EADAB0020F074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15D47D6E214EADAB0020F074 /* Assets.xcassets */; };
 		15D47D72214EADAB0020F074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15D47D70214EADAB0020F074 /* LaunchScreen.storyboard */; };
+		90F5E345F16E382CF95798BF /* Pods_ShareBill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCEEEC5742B717EFAEE63BED /* Pods_ShareBill.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1551F1C2214FC82800BA5CEF /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		1551F1C4214FC86100BA5CEF /* AddBillVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillVC.swift; sourceTree = "<group>"; };
+		1551F1C5214FC86100BA5CEF /* AddBillVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddBillVC.xib; sourceTree = "<group>"; };
+		1551F1C9214FCCFD00BA5CEF /* AddMateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMateVC.swift; sourceTree = "<group>"; };
+		1551F1CA214FCCFD00BA5CEF /* AddMateVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddMateVC.xib; sourceTree = "<group>"; };
+		1551F1CE214FD15300BA5CEF /* TenantsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantsListVC.swift; sourceTree = "<group>"; };
+		1551F1CF214FD15300BA5CEF /* TenantsListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TenantsListVC.xib; sourceTree = "<group>"; };
+		15AE7F93214EC5E500AEDDB1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		15AE7F96214EC6CA00AEDDB1 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		15AE7F9C214EC9D100AEDDB1 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		15D47D64214EADA30020F074 /* ShareBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15D47D67214EADA30020F074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15D47D69214EADA30020F074 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		15D47D6C214EADA30020F074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15D47D6E214EADAB0020F074 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15D47D71214EADAB0020F074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15D47D73214EADAB0020F074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DCD631C12C171F39418189E /* Pods-ShareBill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareBill.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareBill/Pods-ShareBill.release.xcconfig"; sourceTree = "<group>"; };
+		B855E0D69F3131F18D5081DD /* Pods-ShareBill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareBill.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareBill/Pods-ShareBill.debug.xcconfig"; sourceTree = "<group>"; };
+		CCEEEC5742B717EFAEE63BED /* Pods_ShareBill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareBill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +51,56 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90F5E345F16E382CF95798BF /* Pods_ShareBill.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1551F1C8214FCCAD00BA5CEF /* AddBillVC */ = {
+			isa = PBXGroup;
+			children = (
+				1551F1C4214FC86100BA5CEF /* AddBillVC.swift */,
+				1551F1C5214FC86100BA5CEF /* AddBillVC.xib */,
+			);
+			path = AddBillVC;
+			sourceTree = "<group>";
+		};
+		1551F1CD214FCD0000BA5CEF /* AddMateVC */ = {
+			isa = PBXGroup;
+			children = (
+				1551F1C9214FCCFD00BA5CEF /* AddMateVC.swift */,
+				1551F1CA214FCCFD00BA5CEF /* AddMateVC.xib */,
+			);
+			path = AddMateVC;
+			sourceTree = "<group>";
+		};
+		1551F1D2214FD15800BA5CEF /* TenantsListVC */ = {
+			isa = PBXGroup;
+			children = (
+				1551F1CE214FD15300BA5CEF /* TenantsListVC.swift */,
+				1551F1CF214FD15300BA5CEF /* TenantsListVC.xib */,
+			);
+			path = TenantsListVC;
+			sourceTree = "<group>";
+		};
+		15AE7F95214EC67900AEDDB1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				15AE7F93214EC5E500AEDDB1 /* User.swift */,
+				15AE7F96214EC6CA00AEDDB1 /* Bill.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		15D47D5B214EADA30020F074 = {
 			isa = PBXGroup;
 			children = (
 				15D47D66214EADA30020F074 /* ShareBill */,
 				15D47D65214EADA30020F074 /* Products */,
+				712AA7C9C1FC686C58F55715 /* Pods */,
+				443B2485EE87595E7AC1068C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +117,34 @@
 			children = (
 				15D47D67214EADA30020F074 /* AppDelegate.swift */,
 				15D47D69214EADA30020F074 /* ViewController.swift */,
-				15D47D6B214EADA30020F074 /* Main.storyboard */,
 				15D47D6E214EADAB0020F074 /* Assets.xcassets */,
 				15D47D70214EADAB0020F074 /* LaunchScreen.storyboard */,
 				15D47D73214EADAB0020F074 /* Info.plist */,
+				15AE7F95214EC67900AEDDB1 /* Models */,
+				15AE7F9C214EC9D100AEDDB1 /* ScannerViewController.swift */,
+				1551F1C2214FC82800BA5CEF /* AppController.swift */,
+				1551F1C8214FCCAD00BA5CEF /* AddBillVC */,
+				1551F1CD214FCD0000BA5CEF /* AddMateVC */,
+				1551F1D2214FD15800BA5CEF /* TenantsListVC */,
 			);
 			path = ShareBill;
+			sourceTree = "<group>";
+		};
+		443B2485EE87595E7AC1068C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCEEEC5742B717EFAEE63BED /* Pods_ShareBill.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		712AA7C9C1FC686C58F55715 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B855E0D69F3131F18D5081DD /* Pods-ShareBill.debug.xcconfig */,
+				4DCD631C12C171F39418189E /* Pods-ShareBill.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,6 +154,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15D47D76214EADAB0020F074 /* Build configuration list for PBXNativeTarget "ShareBill" */;
 			buildPhases = (
+				AE4B60EFAD9B838FEE1ECE14 /* [CP] Check Pods Manifest.lock */,
 				15D47D60214EADA30020F074 /* Sources */,
 				15D47D61214EADA30020F074 /* Frameworks */,
 				15D47D62214EADA30020F074 /* Resources */,
@@ -96,6 +180,7 @@
 				TargetAttributes = {
 					15D47D63214EADA30020F074 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -123,34 +208,56 @@
 			buildActionMask = 2147483647;
 			files = (
 				15D47D72214EADAB0020F074 /* LaunchScreen.storyboard in Resources */,
+				1551F1D1214FD15300BA5CEF /* TenantsListVC.xib in Resources */,
 				15D47D6F214EADAB0020F074 /* Assets.xcassets in Resources */,
-				15D47D6D214EADA30020F074 /* Main.storyboard in Resources */,
+				1551F1C7214FC86100BA5CEF /* AddBillVC.xib in Resources */,
+				1551F1CC214FCCFD00BA5CEF /* AddMateVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AE4B60EFAD9B838FEE1ECE14 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShareBill-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		15D47D60214EADA30020F074 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1551F1D0214FD15300BA5CEF /* TenantsListVC.swift in Sources */,
+				15AE7F97214EC6CA00AEDDB1 /* Bill.swift in Sources */,
 				15D47D6A214EADA30020F074 /* ViewController.swift in Sources */,
 				15D47D68214EADA30020F074 /* AppDelegate.swift in Sources */,
+				1551F1CB214FCCFD00BA5CEF /* AddMateVC.swift in Sources */,
+				15AE7F9E214EC9D100AEDDB1 /* ScannerViewController.swift in Sources */,
+				15AE7F94214EC5E500AEDDB1 /* User.swift in Sources */,
+				1551F1C6214FC86100BA5CEF /* AddBillVC.swift in Sources */,
+				1551F1C3214FC82800BA5CEF /* AppController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		15D47D6B214EADA30020F074 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				15D47D6C214EADA30020F074 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		15D47D70214EADAB0020F074 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -278,6 +385,7 @@
 		};
 		15D47D77214EADAB0020F074 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B855E0D69F3131F18D5081DD /* Pods-ShareBill.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -289,13 +397,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yakis.ShareBill;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		15D47D78214EADAB0020F074 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DCD631C12C171F39418189E /* Pods-ShareBill.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -307,7 +416,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yakis.ShareBill;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
