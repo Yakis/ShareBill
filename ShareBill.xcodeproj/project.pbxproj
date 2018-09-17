@@ -14,6 +14,9 @@
 		1551F1CC214FCCFD00BA5CEF /* AddMateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1551F1CA214FCCFD00BA5CEF /* AddMateVC.xib */; };
 		1551F1D0214FD15300BA5CEF /* TenantsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551F1CE214FD15300BA5CEF /* TenantsListVC.swift */; };
 		1551F1D1214FD15300BA5CEF /* TenantsListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1551F1CF214FD15300BA5CEF /* TenantsListVC.xib */; };
+		1551F1D4214FF64A00BA5CEF /* TenantsListTableViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551F1D3214FF64A00BA5CEF /* TenantsListTableViewExt.swift */; };
+		1551F1D7214FF6EA00BA5CEF /* TenantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551F1D5214FF6EA00BA5CEF /* TenantCell.swift */; };
+		1551F1D8214FF6EA00BA5CEF /* TenantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1551F1D6214FF6EA00BA5CEF /* TenantCell.xib */; };
 		15AE7F94214EC5E500AEDDB1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AE7F93214EC5E500AEDDB1 /* User.swift */; };
 		15AE7F97214EC6CA00AEDDB1 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AE7F96214EC6CA00AEDDB1 /* Bill.swift */; };
 		15AE7F9E214EC9D100AEDDB1 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AE7F9C214EC9D100AEDDB1 /* ScannerViewController.swift */; };
@@ -32,6 +35,9 @@
 		1551F1CA214FCCFD00BA5CEF /* AddMateVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddMateVC.xib; sourceTree = "<group>"; };
 		1551F1CE214FD15300BA5CEF /* TenantsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantsListVC.swift; sourceTree = "<group>"; };
 		1551F1CF214FD15300BA5CEF /* TenantsListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TenantsListVC.xib; sourceTree = "<group>"; };
+		1551F1D3214FF64A00BA5CEF /* TenantsListTableViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantsListTableViewExt.swift; sourceTree = "<group>"; };
+		1551F1D5214FF6EA00BA5CEF /* TenantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantCell.swift; sourceTree = "<group>"; };
+		1551F1D6214FF6EA00BA5CEF /* TenantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TenantCell.xib; sourceTree = "<group>"; };
 		15AE7F93214EC5E500AEDDB1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		15AE7F96214EC6CA00AEDDB1 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		15AE7F9C214EC9D100AEDDB1 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
@@ -81,8 +87,19 @@
 			children = (
 				1551F1CE214FD15300BA5CEF /* TenantsListVC.swift */,
 				1551F1CF214FD15300BA5CEF /* TenantsListVC.xib */,
+				1551F1D3214FF64A00BA5CEF /* TenantsListTableViewExt.swift */,
+				1551F1D9214FF6ED00BA5CEF /* TenantCell */,
 			);
 			path = TenantsListVC;
+			sourceTree = "<group>";
+		};
+		1551F1D9214FF6ED00BA5CEF /* TenantCell */ = {
+			isa = PBXGroup;
+			children = (
+				1551F1D5214FF6EA00BA5CEF /* TenantCell.swift */,
+				1551F1D6214FF6EA00BA5CEF /* TenantCell.xib */,
+			);
+			path = TenantCell;
 			sourceTree = "<group>";
 		};
 		15AE7F95214EC67900AEDDB1 /* Models */ = {
@@ -208,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15D47D72214EADAB0020F074 /* LaunchScreen.storyboard in Resources */,
+				1551F1D8214FF6EA00BA5CEF /* TenantCell.xib in Resources */,
 				1551F1D1214FD15300BA5CEF /* TenantsListVC.xib in Resources */,
 				15D47D6F214EADAB0020F074 /* Assets.xcassets in Resources */,
 				1551F1C7214FC86100BA5CEF /* AddBillVC.xib in Resources */,
@@ -250,6 +268,8 @@
 				1551F1CB214FCCFD00BA5CEF /* AddMateVC.swift in Sources */,
 				15AE7F9E214EC9D100AEDDB1 /* ScannerViewController.swift in Sources */,
 				15AE7F94214EC5E500AEDDB1 /* User.swift in Sources */,
+				1551F1D4214FF64A00BA5CEF /* TenantsListTableViewExt.swift in Sources */,
+				1551F1D7214FF6EA00BA5CEF /* TenantCell.swift in Sources */,
 				1551F1C6214FC86100BA5CEF /* AddBillVC.swift in Sources */,
 				1551F1C3214FC82800BA5CEF /* AppController.swift in Sources */,
 			);

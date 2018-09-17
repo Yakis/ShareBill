@@ -8,6 +8,11 @@
 
 import UIKit
 
+
+protocol AddTenantDelegate: class {
+    func didFinishAddingTenant(tenant: User)
+}
+
 class AddMateVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nameField: UITextField!
@@ -19,7 +24,7 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
     var datePicker: UIDatePicker!
     var textField: UITextField!
     var user: User!
-    
+    weak var delegate: AddTenantDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,7 +103,7 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
         guard let inDate = dateFormatter.date(from: moveInString) else {return}
         guard let outDate = dateFormatter.date(from: moveOutString) else {return}
         self.user = User.init(name: nameString, inDate: inDate, outDate: outDate)
-        print(user)
+        delegate?.didFinishAddingTenant(tenant: user)
         navigationController?.popToRootViewController(animated: true)
     }
     
