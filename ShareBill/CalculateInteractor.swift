@@ -51,6 +51,7 @@ class CalculateInteractor {
     
     
     func getAmount(per tenant: Tenant, for bill: Bill) -> Double {
+        
         return 0
     }
     

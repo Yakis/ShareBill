@@ -58,8 +58,6 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
         let tenants = realm.objects(Tenant.self)
         for newTenant in tenants {
             let tenant = Tenant()
-            print("------------TENANTS LIST------------")
-            print(newTenant.name)
             tenant.name = newTenant.name
             tenant.inDate = newTenant.inDate
             tenant.outDate = newTenant.outDate

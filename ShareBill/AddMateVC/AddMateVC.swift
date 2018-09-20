@@ -109,10 +109,7 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
         
         let realm = try! Realm()
         // You only need to do this once (per thread)
-        print("------------TENANT-------------")
-        print(tenant.name)
-        print(tenant.inDate)
-        print(tenant.outDate)
+    
         // Add to the Realm inside a transaction
         try! realm.write {
             realm.add(tenant)

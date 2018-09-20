@@ -29,7 +29,23 @@ class AddBillVC: UIViewController {
         guard let amount = amount.text?.toDouble() else {return}
         bill = Bill(amount: amount, startDate: inDate.date, endDate: outDate.date)
         let interactor = CalculateInteractor()
-        print(interactor.getCostPerDayPerPerson(for: tenants, for: bill))
+        let amountPerDay = interactor.getCostPerDayPerPerson(for: tenants, for: bill)
+        print("----------------Bill details----------------")
+        print("Total amount: \(bill.amount)")
+        print("Time interval: \(bill.startDate) - \(bill.endDate)")
+        print("Amount per day / person: \(amountPerDay)")
+        print("--------------------------------------------")
+        for tenant in tenants {
+            let days = interactor.getNumberOfDays(per: tenant, for: bill)
+            tenant.days = days
+        let amountPerPerson = Double(tenant.days) * interactor.getCostPerDayPerPerson(for: tenants, for: bill)
+            
+            print("----------------Tenant details----------------")
+            print("Name: \(tenant.name)")
+            print("Move in date: \(tenant.inDate)")
+            print("Move out date: \(tenant.outDate)")
+            print("Amount to pay: \(amountPerPerson)")
+        }
     }
     
 
@@ -45,7 +61,7 @@ class AddBillVC: UIViewController {
             self.tenants.append(tenant)
         }
     }
-    
+
     
     
 }
