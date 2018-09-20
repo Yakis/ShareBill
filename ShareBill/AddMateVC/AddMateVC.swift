@@ -31,6 +31,8 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
         moveInField.delegate = self
         moveOutField.delegate = self
         stillHereSwitch.setOn(false, animated: true)
+        moveInField.tag = 0
+        moveOutField.tag = 1
     }
 
 
@@ -74,6 +76,7 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
     
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("TAG=== \(textField.tag)")
         self.pickUpDate(textField)
     }
     

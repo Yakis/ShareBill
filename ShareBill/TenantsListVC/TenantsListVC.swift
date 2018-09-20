@@ -34,6 +34,12 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
         setupTableView()
+        
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         fetchTenants()
     }
 
@@ -61,6 +67,8 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
             tenant.name = newTenant.name
             tenant.inDate = newTenant.inDate
             tenant.outDate = newTenant.outDate
+            tenant.days = newTenant.days
+            tenant.amount = newTenant.amount
             self.tenants.append(tenant)
         }
     }

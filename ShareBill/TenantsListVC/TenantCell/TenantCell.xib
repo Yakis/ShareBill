@@ -19,8 +19,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="123.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnK-rZ-1mN">
-                        <rect key="frame" x="16" y="11" width="288" height="22"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnK-rZ-1mN">
+                        <rect key="frame" x="16" y="11" width="238" height="22"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -31,8 +31,20 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YK9-4A-ERZ">
-                        <rect key="frame" x="16" y="70" width="288" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Move out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YK9-4A-ERZ">
+                        <rect key="frame" x="16" y="70" width="238" height="21"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dP5-Hh-AFu">
+                        <rect key="frame" x="262" y="11.5" width="44" height="21"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ylc-8i-Qws">
+                        <rect key="frame" x="262" y="70" width="40" height="21"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -40,18 +52,24 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="xJ9-UC-TOS" firstAttribute="top" secondItem="wnK-rZ-1mN" secondAttribute="bottom" constant="8" id="1e8-qW-x8f"/>
+                    <constraint firstAttribute="trailing" secondItem="Ylc-8i-Qws" secondAttribute="trailing" constant="18" id="42E-JM-chN"/>
+                    <constraint firstItem="dP5-Hh-AFu" firstAttribute="leading" secondItem="wnK-rZ-1mN" secondAttribute="trailing" constant="8" id="9UC-yd-cfi"/>
                     <constraint firstItem="wnK-rZ-1mN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="9ui-UJ-6KO"/>
                     <constraint firstItem="YK9-4A-ERZ" firstAttribute="top" secondItem="xJ9-UC-TOS" secondAttribute="bottom" constant="8" id="HAO-Rc-G3o"/>
+                    <constraint firstItem="Ylc-8i-Qws" firstAttribute="centerY" secondItem="YK9-4A-ERZ" secondAttribute="centerY" id="Kte-1S-QsJ"/>
+                    <constraint firstAttribute="trailing" secondItem="dP5-Hh-AFu" secondAttribute="trailing" constant="14" id="PnK-9X-RZO"/>
                     <constraint firstItem="wnK-rZ-1mN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Sns-AY-N7E"/>
                     <constraint firstItem="xJ9-UC-TOS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Yvw-jb-4fd"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="wnK-rZ-1mN" secondAttribute="trailing" id="jl1-Fn-jTK"/>
                     <constraint firstAttribute="trailingMargin" secondItem="xJ9-UC-TOS" secondAttribute="trailing" id="koG-TK-UPp"/>
                     <constraint firstItem="YK9-4A-ERZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="nSA-Gr-VkG"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="YK9-4A-ERZ" secondAttribute="trailing" id="vcb-lv-Aku"/>
+                    <constraint firstItem="dP5-Hh-AFu" firstAttribute="centerY" secondItem="wnK-rZ-1mN" secondAttribute="centerY" id="ugj-ax-BtI"/>
+                    <constraint firstItem="Ylc-8i-Qws" firstAttribute="leading" secondItem="YK9-4A-ERZ" secondAttribute="trailing" constant="8" id="ukC-NE-7Zl"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="amountLabel" destination="dP5-Hh-AFu" id="SlV-Fr-ydo"/>
+                <outlet property="daysLabel" destination="Ylc-8i-Qws" id="XpA-ru-4f2"/>
                 <outlet property="moveInLabel" destination="xJ9-UC-TOS" id="X9c-sj-n0T"/>
                 <outlet property="moveOutLabel" destination="YK9-4A-ERZ" id="ebE-xM-E8b"/>
                 <outlet property="nameLabel" destination="wnK-rZ-1mN" id="K2j-hF-VG7"/>

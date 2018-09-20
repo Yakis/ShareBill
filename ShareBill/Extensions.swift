@@ -27,3 +27,10 @@ extension String {
         return numberFormatter.number(from: self)?.doubleValue
     }
 }
+
+
+extension Double {
+    func roundUp(toNearest: Double) -> Double {
+        return ceil(self / toNearest) * toNearest
+    }
+}

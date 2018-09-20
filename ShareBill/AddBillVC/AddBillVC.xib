@@ -24,22 +24,34 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="RdT-8y-iHa">
-                    <rect key="frame" x="16" y="40" width="343" height="577"/>
+                    <rect key="frame" x="16" y="40" width="343" height="611"/>
                     <subviews>
-                        <datePicker contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="VL2-0H-UOL">
-                            <rect key="frame" x="0.0" y="0.0" width="343" height="218"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill start date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fer-5N-kau">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="20"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <datePicker contentMode="scaleToFill" verticalHuggingPriority="246" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="VL2-0H-UOL">
+                            <rect key="frame" x="0.0" y="41" width="343" height="216"/>
                             <date key="date" timeIntervalSinceReferenceDate="559140302.43156302">
                                 <!--2018-09-20 12:45:02 +0000-->
                             </date>
                         </datePicker>
-                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Svz-vD-0SV">
-                            <rect key="frame" x="0.0" y="239" width="343" height="216"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Bill end date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94L-d4-hhJ">
+                            <rect key="frame" x="0.0" y="278" width="343" height="20"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <datePicker contentMode="scaleToFill" verticalHuggingPriority="248" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Svz-vD-0SV">
+                            <rect key="frame" x="0.0" y="319" width="343" height="170"/>
                             <date key="date" timeIntervalSinceReferenceDate="559140302.43156302">
                                 <!--2018-09-20 12:45:02 +0000-->
                             </date>
                         </datePicker>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nfw-QP-aVM">
-                            <rect key="frame" x="0.0" y="476" width="343" height="40"/>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nfw-QP-aVM">
+                            <rect key="frame" x="0.0" y="510" width="343" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="odK-pV-ioG"/>
                             </constraints>
@@ -48,7 +60,7 @@
                             <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paJ-i6-Mit">
-                            <rect key="frame" x="0.0" y="537" width="343" height="40"/>
+                            <rect key="frame" x="0.0" y="571" width="343" height="40"/>
                             <color key="backgroundColor" red="0.69125844680000004" green="1" blue="0.62481661870000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="boW-6f-40s"/>
@@ -61,10 +73,10 @@
                     </subviews>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RdT-8y-iHa" secondAttribute="trailing" constant="16" id="1nP-sm-eDM"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RdT-8y-iHa" secondAttribute="bottom" constant="50" id="2v5-dt-fA6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RdT-8y-iHa" secondAttribute="bottom" constant="16" id="2v5-dt-fA6"/>
                 <constraint firstItem="RdT-8y-iHa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Web-dd-Ahm"/>
                 <constraint firstItem="RdT-8y-iHa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="sNS-dR-nx4"/>
             </constraints>

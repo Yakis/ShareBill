@@ -14,6 +14,8 @@ class TenantCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var moveInLabel: UILabel!
     @IBOutlet weak var moveOutLabel: UILabel!
+    @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var daysLabel: UILabel!
     
     
     
@@ -33,6 +35,8 @@ class TenantCell: UITableViewCell {
         dateFormatter.timeStyle = .none
         let inDate = dateFormatter.string(from: tenant.inDate)
         let outDate = dateFormatter.string(from: tenant.outDate)
+        self.amountLabel.text = "£\(tenant.amount.roundUp(toNearest: 0.02))"
+        self.daysLabel.text = "Days: \(tenant.days)"
         self.nameLabel.text = tenant.name
         self.moveInLabel.text = "Move in: \(inDate)"
         let today = Date()

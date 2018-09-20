@@ -44,13 +44,15 @@ class AddBillVC: UIViewController {
             let days = interactor.getNumberOfDays(per: tenant, for: bill)
             tenant.days = days
         let amountPerPerson = Double(tenant.days) * interactor.getCostPerDayPerPerson(for: tenants, for: bill)
-            
+            updateTenant(tenant: tenant, amount: amountPerPerson, days: days)
             print("----------------Tenant details----------------")
             print("Name: \(tenant.name)")
             print("Move in date: \(tenant.inDate)")
             print("Move out date: \(tenant.outDate)")
             print("Amount to pay: \(amountPerPerson)")
         }
+         let tenantsListVC = TenantsListVC(nibName: "TenantsListVC", bundle: nil)
+        self.tabBarController?.selectedIndex = 1
     }
     
 
@@ -63,10 +65,25 @@ class AddBillVC: UIViewController {
             tenant.name = newTenant.name
             tenant.inDate = newTenant.inDate
             tenant.outDate = newTenant.outDate
+            tenant.days = newTenant.days
+            tenant.amount = newTenant.amount
             self.tenants.append(tenant)
         }
     }
 
+    
+    func updateTenant(tenant: Tenant, amount: Double, days: Int) {
+        DispatchQueue(label: "background").async {
+            autoreleasepool {
+                let realm = try! Realm()
+                let theTenant = realm.objects(Tenant.self).filter("name == %@", tenant.name).first
+                try! realm.write {
+                    theTenant!.amount = amount
+                    theTenant!.days = days
+                }
+            }
+        }
+    }
     
     
 }
