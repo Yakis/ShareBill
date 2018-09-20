@@ -25,10 +25,10 @@ class TenantCell: UITableViewCell {
     }
 
     
-    func setup(with user: User) {
-        self.nameLabel.text = user.name
-        self.moveInLabel.text = "\(user.inDate)"
-        self.moveOutLabel.text = "\(user.outDate)"
+    func setup(with tenant: Tenant) {
+        self.nameLabel.text = tenant.name
+        self.moveInLabel.text = "\(tenant.inDate)"
+        self.moveOutLabel.text = "\(tenant.outDate)"
     }
     
     

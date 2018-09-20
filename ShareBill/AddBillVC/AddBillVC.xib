@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddBillVC" customModule="ShareBill" customModuleProvider="target">
             <connections>
+                <outlet property="amount" destination="nfw-QP-aVM" id="G0A-mm-SLX"/>
+                <outlet property="inDate" destination="VL2-0H-UOL" id="OM7-gk-Qei"/>
+                <outlet property="outDate" destination="Svz-vD-0SV" id="ZHN-0G-qy9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,7 +22,52 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="RdT-8y-iHa">
+                    <rect key="frame" x="16" y="40" width="343" height="577"/>
+                    <subviews>
+                        <datePicker contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="VL2-0H-UOL">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="218"/>
+                            <date key="date" timeIntervalSinceReferenceDate="559140302.43156302">
+                                <!--2018-09-20 12:45:02 +0000-->
+                            </date>
+                        </datePicker>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Svz-vD-0SV">
+                            <rect key="frame" x="0.0" y="239" width="343" height="216"/>
+                            <date key="date" timeIntervalSinceReferenceDate="559140302.43156302">
+                                <!--2018-09-20 12:45:02 +0000-->
+                            </date>
+                        </datePicker>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nfw-QP-aVM">
+                            <rect key="frame" x="0.0" y="476" width="343" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="odK-pV-ioG"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paJ-i6-Mit">
+                            <rect key="frame" x="0.0" y="537" width="343" height="40"/>
+                            <color key="backgroundColor" red="0.69125844680000004" green="1" blue="0.62481661870000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="boW-6f-40s"/>
+                            </constraints>
+                            <state key="normal" title="Calculate"/>
+                            <connections>
+                                <action selector="calculateButtonAction:" destination="-1" eventType="touchUpInside" id="tWh-yY-wfl"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
             <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RdT-8y-iHa" secondAttribute="trailing" constant="16" id="1nP-sm-eDM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RdT-8y-iHa" secondAttribute="bottom" constant="50" id="2v5-dt-fA6"/>
+                <constraint firstItem="RdT-8y-iHa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Web-dd-Ahm"/>
+                <constraint firstItem="RdT-8y-iHa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="sNS-dR-nx4"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>

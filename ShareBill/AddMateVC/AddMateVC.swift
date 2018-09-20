@@ -7,10 +7,10 @@
 //
 
 import UIKit
-
+import RealmSwift
 
 protocol AddTenantDelegate: class {
-    func didFinishAddingTenant(tenant: User)
+    func didFinishAddingTenant()
 }
 
 class AddMateVC: UIViewController, UITextFieldDelegate {
@@ -23,7 +23,7 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
     
     var datePicker: UIDatePicker!
     var textField: UITextField!
-    var user: User!
+    var tenant: Tenant!
     weak var delegate: AddTenantDelegate?
     
     override func viewDidLoad() {
@@ -81,11 +81,11 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
     @IBAction func stillHereSwitchAction(_ sender: UISwitch) {
         switch sender.isOn {
         case true:
-            let dateFormatter1 = DateFormatter()
-            dateFormatter1.dateStyle = .medium
-            dateFormatter1.timeStyle = .none
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            dateFormatter.timeStyle = .none
             let today = Date.init(timeIntervalSinceNow: 0)
-            moveOutField.text = dateFormatter1.string(from: today)
+            moveOutField.text = dateFormatter.string(from: today)
             moveOutField.isEnabled = false
         default:
             moveOutField.isEnabled = true
@@ -102,8 +102,22 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
         guard let moveOutString = moveOutField.text else {return}
         guard let inDate = dateFormatter.date(from: moveInString) else {return}
         guard let outDate = dateFormatter.date(from: moveOutString) else {return}
-        self.user = User.init(name: nameString, inDate: inDate, outDate: outDate)
-        delegate?.didFinishAddingTenant(tenant: user)
+        self.tenant = Tenant()
+        tenant.name = nameString
+        tenant.inDate = inDate
+        tenant.outDate = outDate
+        
+        let realm = try! Realm()
+        // You only need to do this once (per thread)
+        print("------------TENANT-------------")
+        print(tenant.name)
+        print(tenant.inDate)
+        print(tenant.outDate)
+        // Add to the Realm inside a transaction
+        try! realm.write {
+            realm.add(tenant)
+            delegate?.didFinishAddingTenant()
+        }
         navigationController?.popToRootViewController(animated: true)
     }
     

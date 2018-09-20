@@ -15,14 +15,14 @@ extension TenantsListVC: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.users.count
+        return self.tenants.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "TenantCell", for: indexPath) as? TenantCell {
-            let user = users[indexPath.row]
-            cell.setup(with: user)
+            let tenant = tenants[indexPath.row]
+            cell.setup(with: tenant)
             return cell
         } else {
             return UITableViewCell()

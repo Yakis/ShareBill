@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import RealmSwift
 
 
 
@@ -21,7 +21,7 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
     @IBOutlet weak var tableView: UITableView!
     
     
-    var users = [User]() {
+    var tenants = [Tenant]() {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -34,6 +34,7 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
         setupTableView()
+        fetchTenants()
     }
 
 
@@ -45,8 +46,25 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
     }
     
     
-    func didFinishAddingTenant(tenant: User) {
-        self.users.append(tenant)
+    func didFinishAddingTenant() {
+        fetchTenants()
+        
+    }
+    
+    
+    func fetchTenants() {
+        self.tenants.removeAll()
+        let realm = try! Realm()
+        let tenants = realm.objects(Tenant.self)
+        for newTenant in tenants {
+            let tenant = Tenant()
+            print("------------TENANTS LIST------------")
+            print(newTenant.name)
+            tenant.name = newTenant.name
+            tenant.inDate = newTenant.inDate
+            tenant.outDate = newTenant.outDate
+            self.tenants.append(tenant)
+        }
     }
 
 }

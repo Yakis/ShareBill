@@ -6,4 +6,5 @@ target 'ShareBill' do
   use_frameworks!
 
   # Pods for ShareBill
+  pod 'RealmSwift'
 end
