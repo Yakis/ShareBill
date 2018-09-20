@@ -26,9 +26,22 @@ class TenantCell: UITableViewCell {
 
     
     func setup(with tenant: Tenant) {
+        print(tenant.amount)
+        print(tenant.days)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        let inDate = dateFormatter.string(from: tenant.inDate)
+        let outDate = dateFormatter.string(from: tenant.outDate)
         self.nameLabel.text = tenant.name
-        self.moveInLabel.text = "\(tenant.inDate)"
-        self.moveOutLabel.text = "\(tenant.outDate)"
+        self.moveInLabel.text = "Move in: \(inDate)"
+        let today = Date()
+        if today.interval(ofComponent: .day, fromDate: tenant.outDate) == 1 {
+            self.moveOutLabel.text = "Still living here"
+        } else {
+            self.moveOutLabel.text = "Move out: \(outDate)"
+            
+        }
     }
     
     

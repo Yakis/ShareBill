@@ -21,8 +21,14 @@ class AddBillVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchTenants()
         
+        
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        fetchTenants()
     }
 
     @IBAction func calculateButtonAction(_ sender: Any) {
@@ -34,7 +40,6 @@ class AddBillVC: UIViewController {
         print("Total amount: \(bill.amount)")
         print("Time interval: \(bill.startDate) - \(bill.endDate)")
         print("Amount per day / person: \(amountPerDay)")
-        print("--------------------------------------------")
         for tenant in tenants {
             let days = interactor.getNumberOfDays(per: tenant, for: bill)
             tenant.days = days
