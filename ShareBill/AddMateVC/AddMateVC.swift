@@ -22,9 +22,10 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
     
     
     var datePicker: UIDatePicker!
-    var textField: UITextField!
     var tenant: Tenant!
     weak var delegate: AddTenantDelegate?
+    var currentTag: Int!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +38,7 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
 
 
     func pickUpDate(_ textField : UITextField){
-        self.textField = textField
+        self.currentTag = textField.tag
         // DatePicker
         self.datePicker = UIDatePicker(frame:CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
         self.datePicker.backgroundColor = UIColor.white
@@ -63,20 +64,28 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
     
     
     @objc func doneClick() {
-        let dateFormatter1 = DateFormatter()
-        dateFormatter1.dateStyle = .medium
-        dateFormatter1.timeStyle = .none
-        textField.text = dateFormatter1.string(from: datePicker.date)
-        textField.resignFirstResponder()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        if currentTag == 0 {
+            moveInField.text = dateFormatter.string(from: datePicker.date)
+            moveInField.resignFirstResponder()
+        } else {
+            moveOutField.text = dateFormatter.string(from: datePicker.date)
+            moveOutField.resignFirstResponder()
+        }
     }
     
     @objc func cancelClick() {
-        textField.resignFirstResponder()
+        if currentTag == 0 {
+            moveInField.resignFirstResponder()
+        } else {
+            moveOutField.resignFirstResponder()
+        }
     }
     
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("TAG=== \(textField.tag)")
         self.pickUpDate(textField)
     }
     
@@ -109,11 +118,7 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
         tenant.name = nameString
         tenant.inDate = inDate
         tenant.outDate = outDate
-        
         let realm = try! Realm()
-        // You only need to do this once (per thread)
-    
-        // Add to the Realm inside a transaction
         try! realm.write {
             realm.add(tenant)
             delegate?.didFinishAddingTenant()

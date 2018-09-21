@@ -25,6 +25,10 @@ class AddBillVC: UIViewController {
         
     }
     
+    @IBAction func buttonu(_ sender: Any) {
+        let pickerVC = DatePickerViewController()
+        self.present(pickerVC, animated: true, completion: nil)
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
