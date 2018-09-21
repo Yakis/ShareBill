@@ -28,10 +28,10 @@ class AppController: NSObject {
     class func createAndReturnTabBarController() -> UITabBarController {
         let tabBarController = UITabBarController()
 
-        let addBillVC = AddBillVC(nibName: "AddBillVC", bundle: nil)
+        let addBillVC = BillsVC(nibName: "BillsVC", bundle: nil)
         let navAddBill = UINavigationController(rootViewController: addBillVC)
-        navAddBill.navigationBar.topItem?.title = "Add Bill"
-        addBillVC.tabBarItem = UITabBarItem(title: "Add Bill", image: UIImage(named: "BarcodeBW"), selectedImage: UIImage(named: "BarcodeRed"))
+        navAddBill.navigationBar.topItem?.title = "Your Bills"
+        addBillVC.tabBarItem = UITabBarItem(title: "Your Bills", image: UIImage(named: "BarcodeBW"), selectedImage: UIImage(named: "BarcodeRed"))
 
         let tenantsListVC = TenantsListVC(nibName: "TenantsListVC", bundle: nil)
         let navTenantsList = UINavigationController(rootViewController: tenantsListVC)

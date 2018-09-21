@@ -21,16 +21,12 @@ class CalculateInteractor {
             inDate = tenant.inDate
         case false:
             inDate = bill.startDate
-        default:
-            break
         }
         switch tenant.outDate >= bill.endDate {
         case true:
             outDate = bill.endDate
         case false:
             outDate = tenant.outDate
-        default:
-            break
         }
         return outDate.interval(ofComponent: .day, fromDate: inDate) + 1
     }
