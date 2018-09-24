@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1516A48E21554E5F000E1A59 /* AddBillVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1516A48C21554E5F000E1A59 /* AddBillVC.swift */; };
 		1516A48F21554E5F000E1A59 /* AddBillVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1516A48D21554E5F000E1A59 /* AddBillVC.xib */; };
+		1523F8C821590DB800A6EC74 /* BillsTVExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1523F8C721590DB800A6EC74 /* BillsTVExt.swift */; };
+		1523F8CB21590E3D00A6EC74 /* BillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1523F8C921590E3D00A6EC74 /* BillCell.swift */; };
+		1523F8CC21590E3D00A6EC74 /* BillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1523F8CA21590E3D00A6EC74 /* BillCell.xib */; };
 		1551F1C3214FC82800BA5CEF /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551F1C2214FC82800BA5CEF /* AppController.swift */; };
 		1551F1C6214FC86100BA5CEF /* BillsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551F1C4214FC86100BA5CEF /* BillsVC.swift */; };
 		1551F1C7214FC86100BA5CEF /* BillsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1551F1C5214FC86100BA5CEF /* BillsVC.xib */; };
@@ -34,6 +37,9 @@
 /* Begin PBXFileReference section */
 		1516A48C21554E5F000E1A59 /* AddBillVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillVC.swift; sourceTree = "<group>"; };
 		1516A48D21554E5F000E1A59 /* AddBillVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddBillVC.xib; sourceTree = "<group>"; };
+		1523F8C721590DB800A6EC74 /* BillsTVExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsTVExt.swift; sourceTree = "<group>"; };
+		1523F8C921590E3D00A6EC74 /* BillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillCell.swift; sourceTree = "<group>"; };
+		1523F8CA21590E3D00A6EC74 /* BillCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillCell.xib; sourceTree = "<group>"; };
 		1551F1C2214FC82800BA5CEF /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		1551F1C4214FC86100BA5CEF /* BillsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsVC.swift; sourceTree = "<group>"; };
 		1551F1C5214FC86100BA5CEF /* BillsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillsVC.xib; sourceTree = "<group>"; };
@@ -101,11 +107,22 @@
 			path = AddBillVC;
 			sourceTree = "<group>";
 		};
+		1523F8CD21590E4000A6EC74 /* BillCell */ = {
+			isa = PBXGroup;
+			children = (
+				1523F8C921590E3D00A6EC74 /* BillCell.swift */,
+				1523F8CA21590E3D00A6EC74 /* BillCell.xib */,
+			);
+			path = BillCell;
+			sourceTree = "<group>";
+		};
 		1551F1C8214FCCAD00BA5CEF /* BillsVC */ = {
 			isa = PBXGroup;
 			children = (
 				1551F1C4214FC86100BA5CEF /* BillsVC.swift */,
 				1551F1C5214FC86100BA5CEF /* BillsVC.xib */,
+				1523F8C721590DB800A6EC74 /* BillsTVExt.swift */,
+				1523F8CD21590E4000A6EC74 /* BillCell */,
 			);
 			path = BillsVC;
 			sourceTree = "<group>";
@@ -261,6 +278,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1523F8CC21590E3D00A6EC74 /* BillCell.xib in Resources */,
 				15D47D72214EADAB0020F074 /* LaunchScreen.storyboard in Resources */,
 				1551F1D8214FF6EA00BA5CEF /* TenantCell.xib in Resources */,
 				1516A48F21554E5F000E1A59 /* AddBillVC.xib in Resources */,
@@ -331,8 +349,10 @@
 				158342AB2153C1DE00C95C2D /* Extensions.swift in Sources */,
 				1551F1D4214FF64A00BA5CEF /* TenantsListTableViewExt.swift in Sources */,
 				1551F1D7214FF6EA00BA5CEF /* TenantCell.swift in Sources */,
+				1523F8CB21590E3D00A6EC74 /* BillCell.swift in Sources */,
 				1551F1C6214FC86100BA5CEF /* BillsVC.swift in Sources */,
 				1551F1C3214FC82800BA5CEF /* AppController.swift in Sources */,
+				1523F8C821590DB800A6EC74 /* BillsTVExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

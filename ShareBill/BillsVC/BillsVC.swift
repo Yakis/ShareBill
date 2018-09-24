@@ -14,40 +14,39 @@ class BillsVC: UIViewController {
     @IBOutlet weak var inDate: UIDatePicker!
     @IBOutlet weak var outDate: UIDatePicker!
     @IBOutlet weak var amount: UITextField!
+    @IBOutlet weak var tableView: UITableView!
     
-    var bill: Bill!
+    
     var tenants: [Tenant] = []
+    var bills: [Bill] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
+        setupTableView()
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         fetchTenants()
-        fetchBill()
+        fetchBills()
     }
 
-    @IBAction func calculateButtonAction(_ sender: Any) {
+    func calculate(bill: Bill) {
         let interactor = CalculateInteractor()
-        let amountPerDay = interactor.getCostPerDayPerPerson(for: tenants, for: bill)
-        print("----------------Bill details----------------")
-        print("Total amount: \(bill.amount)")
-        print("Time interval: \(bill.startDate) - \(bill.endDate)")
-        print("Amount per day / person: \(amountPerDay)")
         for tenant in tenants {
             let days = interactor.getNumberOfDays(per: tenant, for: bill)
             tenant.days = days
-        let amountPerPerson = Double(tenant.days) * interactor.getCostPerDayPerPerson(for: tenants, for: bill)
+            let amountPerPerson = Double(tenant.days) * interactor.getCostPerDayPerPerson(for: tenants, for: bill)
             updateTenant(tenant: tenant, amount: amountPerPerson, days: days)
-            print("----------------Tenant details----------------")
-            print("Name: \(tenant.name)")
-            print("Move in date: \(tenant.inDate)")
-            print("Move out date: \(tenant.outDate)")
-            print("Amount to pay: \(amountPerPerson)")
         }
         self.tabBarController?.selectedIndex = 1
     }
@@ -70,25 +69,31 @@ class BillsVC: UIViewController {
 
     
     func updateTenant(tenant: Tenant, amount: Double, days: Int) {
-        DispatchQueue(label: "background").async {
-            autoreleasepool {
+        
                 let realm = try! Realm()
                 let theTenant = realm.objects(Tenant.self).filter("name == %@", tenant.name).first
                 try! realm.write {
                     theTenant!.amount = amount
                     theTenant!.days = days
-                }
-            }
+                
+        
         }
     }
     
     
     
-    func fetchBill() {
+    func fetchBills() {
+        self.bills.removeAll()
         let realm = try! Realm()
-        guard let lastBill = realm.objects(Bill.self).last else {return}
-        self.bill = lastBill
-        print("AMOUNT===", bill.amount)
+        let bills = realm.objects(Bill.self)
+        for newBill in bills {
+            let bill = Bill()
+            bill.amount = newBill.amount
+            bill.startDate = newBill.startDate
+            bill.endDate = newBill.endDate
+            self.bills.append(bill)
+        }
+        
     }
     
     
