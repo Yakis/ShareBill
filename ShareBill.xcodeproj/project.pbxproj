@@ -75,6 +75,7 @@
 		1516A48A21554E3B000E1A59 /* AppMain */ = {
 			isa = PBXGroup;
 			children = (
+				1551F1C2214FC82800BA5CEF /* AppController.swift */,
 				15D47D67214EADA30020F074 /* AppDelegate.swift */,
 				15D47D69214EADA30020F074 /* ViewController.swift */,
 			);
@@ -172,7 +173,6 @@
 				1516A48B21554E44000E1A59 /* SupportingFiles */,
 				15AE7F95214EC67900AEDDB1 /* Models */,
 				15AE7F9C214EC9D100AEDDB1 /* ScannerViewController.swift */,
-				1551F1C2214FC82800BA5CEF /* AppController.swift */,
 				1551F1C8214FCCAD00BA5CEF /* BillsVC */,
 				1551F1CD214FCD0000BA5CEF /* AddMateVC */,
 				1551F1D2214FD15800BA5CEF /* TenantsListVC */,

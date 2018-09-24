@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddBillVC" customModule="ShareBill" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BillsVC" customModule="ShareBill" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,7 +19,26 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zM-Vp-oSh">
+                    <rect key="frame" x="20" y="313.5" width="335" height="40"/>
+                    <color key="backgroundColor" red="0.66190845251857544" green="1" blue="0.77768152956314196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="1K7-8F-oRf"/>
+                    </constraints>
+                    <state key="normal" title="Calculate"/>
+                    <connections>
+                        <action selector="calculateButtonAction:" destination="-1" eventType="touchUpInside" id="nH5-Hc-6py"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="6zM-Vp-oSh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Axs-04-f7S"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6zM-Vp-oSh" secondAttribute="trailing" constant="20" id="L9S-PP-cB3"/>
+                <constraint firstItem="6zM-Vp-oSh" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="do1-Js-K8T"/>
+                <constraint firstItem="6zM-Vp-oSh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="kR7-dB-Phz"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>

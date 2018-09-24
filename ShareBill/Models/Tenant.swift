@@ -16,8 +16,4 @@ class Tenant: Object {
     @objc dynamic var amount: Double = 0.0
     @objc dynamic var days: Int = 0
     
-    
-    
-    
-    
 }

@@ -7,20 +7,12 @@
 //
 
 import Foundation
+import RealmSwift
 
-
-class Bill {
+class Bill: Object {
     
-    var amount: Double
-    var startDate: Date
-    var endDate: Date
-    
-    
-    init(amount: Double, startDate: Date, endDate: Date) {
-        self.amount = amount
-        self.startDate = startDate
-        self.endDate = endDate
-    }
-    
-    
+    @objc dynamic var amount: Double = 0.0
+    @objc dynamic var startDate: Date = Date(timeIntervalSinceNow: 0)
+    @objc dynamic var endDate: Date = Date(timeIntervalSinceNow: 0)
 }
+

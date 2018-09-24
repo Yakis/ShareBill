@@ -28,11 +28,10 @@ class BillsVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         fetchTenants()
+        fetchBill()
     }
 
     @IBAction func calculateButtonAction(_ sender: Any) {
-        guard let amount = amount.text?.toDouble() else {return}
-        bill = Bill(amount: amount, startDate: inDate.date, endDate: outDate.date)
         let interactor = CalculateInteractor()
         let amountPerDay = interactor.getCostPerDayPerPerson(for: tenants, for: bill)
         print("----------------Bill details----------------")
@@ -81,6 +80,15 @@ class BillsVC: UIViewController {
                 }
             }
         }
+    }
+    
+    
+    
+    func fetchBill() {
+        let realm = try! Realm()
+        guard let lastBill = realm.objects(Bill.self).last else {return}
+        self.bill = lastBill
+        print("AMOUNT===", bill.amount)
     }
     
     

@@ -15,7 +15,6 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = UIColor.black
         captureSession = AVCaptureSession()
         
