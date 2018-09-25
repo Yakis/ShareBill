@@ -69,14 +69,11 @@ class BillsVC: UIViewController {
 
     
     func updateTenant(tenant: Tenant, amount: Double, days: Int) {
-        
                 let realm = try! Realm()
                 let theTenant = realm.objects(Tenant.self).filter("name == %@", tenant.name).first
                 try! realm.write {
                     theTenant!.amount = amount
                     theTenant!.days = days
-                
-        
         }
     }
     
