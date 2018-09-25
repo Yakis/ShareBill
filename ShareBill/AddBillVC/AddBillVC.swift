@@ -63,7 +63,6 @@ class AddBillVC: UIViewController, UITextFieldDelegate {
     @objc func doneClick() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
         if currentTag == 0 {
             startDateTextField.text = dateFormatter.string(from: datePicker.date)
             startDateTextField.resignFirstResponder()
@@ -90,7 +89,6 @@ class AddBillVC: UIViewController, UITextFieldDelegate {
     @IBAction func doneButtonAction(_ sender: Any) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
         guard let amount = amountTextField.text?.toDouble() else {return}
         guard let startDateString = startDateTextField.text else {return}
         guard let endDateString = endDateTextField.text else {return}

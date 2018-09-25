@@ -32,13 +32,13 @@ extension BillsVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let bill = bills[indexPath.row]
         let delete = UITableViewRowAction(style: .destructive, title: "Delete") { [weak self] (action, indexPath) in
-            let realm = try! Realm()
-            try! realm.write {
-                realm.delete(realm.objects(Bill.self).filter("amount=%@",bill.amount))
-            
-                //realm.delete(bill.realm)
-                self?.fetchBills()
-            }
+            UserAlert.deleteConfirmation(vc: self!, message: "Are you sure you want to delete this bill?", completion: { [weak self] in
+                let realm = try! Realm()
+                try! realm.write {
+                    realm.delete(realm.objects(Bill.self).filter("amount=%@",bill.amount))
+                    self?.fetchBills()
+                }
+            })
         }
         
         let calculate = UITableViewRowAction(style: .normal, title: "Calculate") { [weak self] (action, indexPath) in

@@ -95,7 +95,6 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
         case true:
             let dateFormatter = DateFormatter()
             dateFormatter.dateStyle = .medium
-            dateFormatter.timeStyle = .none
             let today = Date.init(timeIntervalSinceNow: 0)
             moveOutField.text = dateFormatter.string(from: today)
             moveOutField.isEnabled = false
@@ -108,7 +107,6 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
     @IBAction func finishButtonAction(_ sender: Any) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
         guard let nameString = nameField.text else {return}
         guard let moveInString = moveInField.text else {return}
         guard let moveOutString = moveOutField.text else {return}

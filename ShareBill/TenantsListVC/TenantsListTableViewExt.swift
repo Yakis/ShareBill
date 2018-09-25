@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import RealmSwift
 
 extension TenantsListVC: UITableViewDataSource, UITableViewDelegate {
     
@@ -32,6 +32,19 @@ extension TenantsListVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let tenant = tenants[indexPath.row]
+        let realm = try! Realm()
+        UserAlert.deleteConfirmation(vc: self, message: "Are you sure you want to delete this user?") {
+            try! realm.write {
+                realm.delete(realm.objects(Tenant.self).filter("name=%@",tenant.name))
+                self.fetchTenants()
+            }
+        }
     }
     
     
