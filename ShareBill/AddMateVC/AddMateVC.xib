@@ -25,33 +25,45 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6X8-fK-E0R">
-                    <rect key="frame" x="16" y="70" width="343" height="181"/>
+                    <rect key="frame" x="16" y="70" width="343" height="211"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tenant name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t4j-t7-YuK">
-                            <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
-                            <nil key="textColor"/>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tenant name" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t4j-t7-YuK">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
+                            <color key="backgroundColor" red="0.34509803919999998" green="0.35294117650000001" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="3MC-Ls-51v"/>
+                            </constraints>
+                            <color key="textColor" red="0.94509803920000002" green="0.95294117649999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Move in date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZG5-ND-5Bu">
-                            <rect key="frame" x="0.0" y="50" width="343" height="30"/>
-                            <nil key="textColor"/>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Move in date" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZG5-ND-5Bu">
+                            <rect key="frame" x="0.0" y="60" width="343" height="40"/>
+                            <color key="backgroundColor" red="0.34509803919999998" green="0.35294117650000001" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="CMp-tk-71n"/>
+                            </constraints>
+                            <color key="textColor" red="0.94509803920000002" green="0.95294117649999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Move out date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dTR-yd-pci">
-                            <rect key="frame" x="0.0" y="100" width="343" height="30"/>
-                            <nil key="textColor"/>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Move out date" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dTR-yd-pci">
+                            <rect key="frame" x="0.0" y="120" width="343" height="40"/>
+                            <color key="backgroundColor" red="0.34509803919999998" green="0.35294117650000001" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="mV3-Ya-Q3q"/>
+                            </constraints>
+                            <color key="textColor" red="0.94509803920000002" green="0.95294117649999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="FDI-l8-k0S">
-                            <rect key="frame" x="0.0" y="150" width="343" height="31"/>
+                            <rect key="frame" x="0.0" y="180" width="343" height="31"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Still living here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXz-78-RdE">
                                     <rect key="frame" x="0.0" y="0.0" width="282" height="31"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
-                                    <nil key="textColor"/>
+                                    <color key="textColor" red="0.94509803920000002" green="0.95294117649999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zo3-8q-DVJ">
@@ -65,15 +77,17 @@
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fX5-vS-Qbb">
-                    <rect key="frame" x="160.5" y="271" width="54" height="38"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                    <state key="normal" title="Finish"/>
+                    <rect key="frame" x="160.5" y="301" width="54" height="40"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                    <state key="normal" title="Finish">
+                        <color key="titleColor" red="0.50588235290000005" green="0.63921568630000003" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
                     <connections>
                         <action selector="finishButtonAction:" destination="-1" eventType="touchUpInside" id="27i-Y0-C6w"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.1529411765" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="fX5-vS-Qbb" firstAttribute="top" secondItem="bXz-78-RdE" secondAttribute="bottom" constant="20" id="CgK-aK-y7O"/>
                 <constraint firstItem="fX5-vS-Qbb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Gzj-NV-K3o"/>
