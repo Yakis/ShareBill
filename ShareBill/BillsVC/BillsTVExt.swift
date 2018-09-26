@@ -46,7 +46,7 @@ extension BillsVC: UITableViewDataSource, UITableViewDelegate {
             self?.calculate(bill: bill)
         }
         
-        calculate.backgroundColor = UIColor.green
+        calculate.backgroundColor = Colors.maritimeGreen
         
         return [delete, calculate]
     }

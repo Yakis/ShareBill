@@ -27,7 +27,12 @@ class AppController: NSObject {
     
     class func createAndReturnTabBarController() -> UITabBarController {
         let tabBarController = UITabBarController()
-
+        tabBarController.tabBar.barTintColor = Colors.maritimeGray
+        tabBarController.tabBar.isTranslucent = false
+        tabBarController.tabBar.backgroundColor = Colors.maritimeGray
+        tabBarController.tabBar.tintColor = Colors.maritimeBlue
+        tabBarController.tabBar.unselectedItemTintColor = Colors.maritimeGreen
+        
         let addBillVC = BillsVC(nibName: "BillsVC", bundle: nil)
         let navAddBill = UINavigationController(rootViewController: addBillVC)
         navAddBill.navigationBar.topItem?.title = "Your Bills"
@@ -37,7 +42,13 @@ class AppController: NSObject {
         let navTenantsList = UINavigationController(rootViewController: tenantsListVC)
         navTenantsList.navigationBar.topItem?.title = "Tenants"
         tenantsListVC.tabBarItem = UITabBarItem(title: "Tenants", image: UIImage(named: "TenantsListBW"), selectedImage: UIImage(named: "TenantsListRed"))
-
+        
+        navAddBill.navigationBar.backgroundColor = Colors.maritimeGray
+        navTenantsList.navigationBar.backgroundColor = Colors.maritimeGray
+        navAddBill.navigationBar.barTintColor = Colors.maritimeGray
+        navTenantsList.navigationBar.barTintColor = Colors.maritimeGray
+        navAddBill.navigationBar.tintColor = Colors.maritimeBlue
+        navTenantsList.navigationBar.tintColor = Colors.maritimeBlue
 
         let viewControllers = [navAddBill, navTenantsList]
         tabBarController.viewControllers = viewControllers

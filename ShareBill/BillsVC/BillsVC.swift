@@ -36,6 +36,7 @@ class BillsVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        tableView.tableFooterView = UIView(frame: .zero)
         fetchTenants()
         fetchBills()
     }

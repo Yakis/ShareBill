@@ -12,8 +12,8 @@ class BillCell: UITableViewCell {
 
     
     @IBOutlet weak var amountLabel: UILabel!
-    @IBOutlet weak var startDateLabel: UILabel!
-    @IBOutlet weak var endDateLabel: UILabel!
+    @IBOutlet weak var lenghtLabel: UILabel!
+    
     
     
     
@@ -29,9 +29,8 @@ class BillCell: UITableViewCell {
         dateFormatter.timeStyle = .none
         let startDate = dateFormatter.string(from: bill.startDate)
         let endDate = dateFormatter.string(from: bill.endDate)
-        self.amountLabel.text = "\(bill.amount)"
-        self.startDateLabel.text = startDate
-        self.endDateLabel.text = endDate
+        self.amountLabel.text = "Amount: \(bill.amount)"
+        self.lenghtLabel.text = "\(startDate) - \(endDate)"
         
     }
     
