@@ -30,8 +30,9 @@ extension String {
 
 
 extension Double {
-    func roundUp(toNearest: Double) -> Double {
-        return ceil(self / toNearest) * toNearest
+    func roundToDecimal(_ fractionDigits: Int) -> Double {
+        let multiplier = pow(10, Double(fractionDigits))
+        return Darwin.round(self * multiplier) / multiplier
     }
 }
 

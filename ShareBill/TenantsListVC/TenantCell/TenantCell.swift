@@ -33,7 +33,7 @@ class TenantCell: UITableViewCell {
         dateFormatter.timeStyle = .none
         let inDate = dateFormatter.string(from: tenant.inDate)
         let outDate = dateFormatter.string(from: tenant.outDate)
-        self.amountLabel.text = "£\(tenant.amount.roundUp(toNearest: 0.02))"
+        self.amountLabel.text = "£\(tenant.amount.roundToDecimal(2))"
         self.daysLabel.text = "Days: \(tenant.days)"
         self.nameLabel.text = tenant.name
         self.moveInLabel.text = "Move in: \(inDate)"
