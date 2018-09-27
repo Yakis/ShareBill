@@ -42,13 +42,22 @@ class BillsVC: UIViewController {
     }
 
     func calculate(bill: Bill) {
+        var total = 0.0
         let interactor = CalculateInteractor()
         for tenant in tenants {
-            let days = interactor.getNumberOfDays(per: tenant, for: bill)
-            tenant.days = days
-            let amountPerPerson = Double(tenant.days) * interactor.getCostPerDayPerPerson(for: tenants, for: bill)
-            updateTenant(tenant: tenant, amount: amountPerPerson, days: days)
+             if bill.endDate > tenant.inDate && bill.startDate < tenant.outDate {
+                let days = interactor.getNumberOfDays(per: tenant, for: bill)
+                tenant.days = days
+                let amountPerPerson = Double(tenant.days) * interactor.getCostPerDayPerPerson(for: tenants, for: bill)
+                updateTenant(tenant: tenant, amount: amountPerPerson, days: days)
+                total += amountPerPerson
+                print("Cost per day: \(interactor.getCostPerDayPerPerson(for: tenants, for: bill))")
+                print("Name: \(tenant.name), days: \(tenant.days) amount: \(amountPerPerson)")
+            } else {
+                updateTenant(tenant: tenant, amount: 0.0, days: 0)
+            }
         }
+        print("Total: \(total)")
         self.tabBarController?.selectedIndex = 1
     }
     

@@ -28,14 +28,16 @@ class CalculateInteractor {
         case false:
             outDate = tenant.outDate
         }
-        return outDate.interval(ofComponent: .day, fromDate: inDate) + 1
+        return outDate.interval(ofComponent: .day, fromDate: inDate)
     }
     
     
     func getTotalNumberOfDays(for tenants: [Tenant], for bill: Bill) -> Double {
         var totalDays = 0
         for tenant in tenants {
+            if bill.endDate > tenant.inDate && bill.startDate < tenant.outDate {
             totalDays += getNumberOfDays(per: tenant, for: bill)
+            }
         }
         return Double(totalDays)
     }

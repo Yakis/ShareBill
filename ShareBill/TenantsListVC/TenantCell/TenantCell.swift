@@ -28,8 +28,6 @@ class TenantCell: UITableViewCell {
 
     
     func setup(with tenant: Tenant) {
-        print(tenant.amount)
-        print(tenant.days)
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
