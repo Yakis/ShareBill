@@ -38,7 +38,8 @@ class AddBillVC: UIViewController, UITextFieldDelegate {
         self.currentTag = textField.tag
         // DatePicker
         self.datePicker = UIDatePicker(frame:CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
-        self.datePicker.backgroundColor = Colors.maritimeGray
+        self.datePicker.backgroundColor = Colors.maritimeDark
+        datePicker.setValue(UIColor.white, forKeyPath: "textColor")
         self.datePicker.datePickerMode = UIDatePicker.Mode.date
         textField.inputView = self.datePicker
         
@@ -51,13 +52,13 @@ class AddBillVC: UIViewController, UITextFieldDelegate {
         
         // Adding Button ToolBar
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddMateVC.doneClick))
-        doneButton.tintColor = Colors.maritimeGreen
+        doneButton.tintColor = Colors.maritimeOrange
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(AddMateVC.cancelClick))
-        cancelButton.tintColor = Colors.maritimeGreen
+        cancelButton.tintColor = Colors.maritimeOrange
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.isUserInteractionEnabled = true
-        toolBar.barTintColor = Colors.maritimeGray
+        toolBar.barTintColor = Colors.maritimeDark
         textField.inputAccessoryView = toolBar
         
     }

@@ -304,7 +304,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ShareBill/Pods-ShareBill-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ShareBill/Pods-ShareBill-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
@@ -315,7 +315,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShareBill/Pods-ShareBill-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShareBill/Pods-ShareBill-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AE4B60EFAD9B838FEE1ECE14 /* [CP] Check Pods Manifest.lock */ = {

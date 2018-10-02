@@ -33,6 +33,9 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
+        navigationItem.rightBarButtonItem?.tintColor = Colors.maritimeOrange
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Reset", style: .plain, target: self, action: #selector(resetTapped))
+        navigationItem.leftBarButtonItem?.tintColor = Colors.maritimeOrange
         setupTableView()
         
     }
@@ -49,6 +52,21 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
         let addMateVC = AddMateVC(nibName: "AddMateVC", bundle: nil)
         addMateVC.delegate = self
         self.navigationController?.pushViewController(addMateVC, animated: true)
+    }
+    
+    
+    @objc func resetTapped() {
+        let realm = try! Realm()
+        let tenants = realm.objects(Tenant.self)
+        try! realm.write {
+            for tenant in tenants {
+            tenant.setValue(0.0, forKeyPath: "amount")
+                tenant.setValue(0, forKeyPath: "days")
+            }
+            DispatchQueue.main.async { [weak self] in
+                self?.fetchTenants()
+            }
+        }
     }
     
     

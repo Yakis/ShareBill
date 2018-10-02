@@ -27,11 +27,11 @@ class AppController: NSObject {
     
     class func createAndReturnTabBarController() -> UITabBarController {
         let tabBarController = UITabBarController()
-        tabBarController.tabBar.barTintColor = Colors.maritimeGray
+        tabBarController.tabBar.barTintColor = Colors.maritimeDark
         tabBarController.tabBar.isTranslucent = false
-        tabBarController.tabBar.backgroundColor = Colors.maritimeGray
-        tabBarController.tabBar.tintColor = Colors.maritimeBlue
-        tabBarController.tabBar.unselectedItemTintColor = Colors.maritimeGreen
+        tabBarController.tabBar.backgroundColor = Colors.maritimeDark
+        tabBarController.tabBar.tintColor = Colors.maritimeOrange
+        tabBarController.tabBar.unselectedItemTintColor = Colors.inactiveOrange
         
         let addBillVC = BillsVC(nibName: "BillsVC", bundle: nil)
         let navAddBill = UINavigationController(rootViewController: addBillVC)
@@ -43,12 +43,12 @@ class AppController: NSObject {
         navTenantsList.navigationBar.topItem?.title = "Tenants"
         tenantsListVC.tabBarItem = UITabBarItem(title: "Tenants", image: UIImage(named: "TenantsListBW"), selectedImage: UIImage(named: "TenantsListRed"))
         
-        navAddBill.navigationBar.backgroundColor = Colors.maritimeGray
-        navTenantsList.navigationBar.backgroundColor = Colors.maritimeGray
-        navAddBill.navigationBar.barTintColor = Colors.maritimeGray
-        navTenantsList.navigationBar.barTintColor = Colors.maritimeGray
-        navAddBill.navigationBar.tintColor = Colors.maritimeBlue
-        navTenantsList.navigationBar.tintColor = Colors.maritimeBlue
+        navAddBill.navigationBar.backgroundColor = Colors.maritimeDark
+        navTenantsList.navigationBar.backgroundColor = Colors.maritimeDark
+        navAddBill.navigationBar.barTintColor = Colors.maritimeDark
+        navTenantsList.navigationBar.barTintColor = Colors.maritimeDark
+        navAddBill.navigationBar.tintColor = Colors.maritimeOrange
+        navTenantsList.navigationBar.tintColor = Colors.maritimeOrange
 
         let viewControllers = [navAddBill, navTenantsList]
         tabBarController.viewControllers = viewControllers

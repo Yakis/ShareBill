@@ -10,9 +10,10 @@ import UIKit
 
 
 struct Colors {
-    static let maritimeBlue = UIColor(displayP3Red: 194/255, green: 211/255, blue: 218/255, alpha: 1.0)
-    static let maritimeGreen = UIColor(displayP3Red: 129/255, green: 163/255, blue: 167/255, alpha: 1.0)
-    static let maritimeGray = UIColor(displayP3Red: 88/255, green: 90/255, blue: 86/255, alpha: 1.0)
-    static let maritimeWhite = UIColor(displayP3Red: 241/255, green: 243/255, blue: 242/255, alpha: 1.0)
-    static let maritimeDark = UIColor(displayP3Red: 39/255, green: 36/255, blue: 36/255, alpha: 1.0)
+    static let maritimeBlue = UIColor(displayP3Red: 0/255, green: 157/255, blue: 220/255, alpha: 1.0)
+    static let maritimeGreen = UIColor(displayP3Red: 0/255, green: 155/255, blue: 114/255, alpha: 1.0)
+    static let maritimePurple = UIColor(displayP3Red: 103/255, green: 97/255, blue: 168/255, alpha: 1.0)
+    static let maritimeOrange = UIColor(displayP3Red: 242/255, green: 100/255, blue: 48/255, alpha: 1.0)
+    static let inactiveOrange = UIColor(displayP3Red: 110/255, green: 46/255, blue: 22/255, alpha: 1.0)
+    static let maritimeDark = UIColor(displayP3Red: 42/255, green: 45/255, blue: 52/255, alpha: 1.0)
 }
