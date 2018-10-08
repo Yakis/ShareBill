@@ -11,6 +11,9 @@ import UIKit
 
 class CalculateInteractor {
     
+    var tenants: [Tenant] = []
+    var dataInteractor = DataInteractor()
+    
     
     
     func getNumberOfDays(per tenant: Tenant, for bill: Bill) -> Int {
@@ -48,9 +51,20 @@ class CalculateInteractor {
     }
     
     
-    func getAmount(per tenant: Tenant, for bill: Bill) -> Double {
-        
-        return 0
+    func calculate(bill: Bill, completion: (Tenant, Double, Int) -> ()) {
+        self.tenants = dataInteractor.fetchTenants()
+        var total = 0.0
+        for tenant in tenants {
+            if bill.endDate > tenant.inDate && bill.startDate < tenant.outDate {
+                let days = getNumberOfDays(per: tenant, for: bill)
+                tenant.days = days
+                let amountPerPerson = Double(tenant.days) * getCostPerDayPerPerson(for: tenants, for: bill)
+                completion(tenant, amountPerPerson, days)
+                total += amountPerPerson
+            } else {
+                completion(tenant, 0.0, 0)
+            }
+        }
     }
     
     

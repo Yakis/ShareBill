@@ -157,6 +157,7 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
             theTenant!.inDate = inDate
             theTenant?.outDate = outDate
             theTenant?.stillLivingHere = stillHereSwitch.isOn
+            delegate?.didFinishAddingTenant()
         }
     }
     

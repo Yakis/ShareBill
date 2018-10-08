@@ -19,6 +19,8 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
     
     
     @IBOutlet weak var tableView: UITableView!
+    let dataInteractor = DataInteractor()
+    let calculateInteractor = CalculateInteractor()
     
     
     var tenants = [Tenant]() {
@@ -43,7 +45,7 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        fetchTenants()
+        self.tenants = dataInteractor.fetchTenants()
     }
 
 
@@ -64,31 +66,24 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
                 tenant.setValue(0, forKeyPath: "days")
             }
             DispatchQueue.main.async { [weak self] in
-                self?.fetchTenants()
+                self?.tenants = self?.dataInteractor.fetchTenants() ?? []
             }
         }
     }
     
     
     func didFinishAddingTenant() {
-        fetchTenants()
-        
-    }
-    
-    
-    func fetchTenants() {
-        self.tenants.removeAll()
         let realm = try! Realm()
-        let tenants = realm.objects(Tenant.self)
-        for newTenant in tenants {
-            let tenant = Tenant()
-            tenant.name = newTenant.name
-            tenant.inDate = newTenant.inDate
-            tenant.outDate = newTenant.outDate
-            tenant.days = newTenant.days
-            tenant.amount = newTenant.amount
-            self.tenants.append(tenant)
+        guard let bill = realm.objects(Bill.self).first else {return}
+        print(bill.amount)
+        self.calculateInteractor.calculate(bill: bill) { [weak self] (tenant, amount, days) in
+            self?.dataInteractor.updateAmountAndDays(tenant: tenant, amount: amount, days: days)
         }
+        //self?.tenants = dataInteractor.fetchTenants()
+
     }
+    
+    
+    
 
 }

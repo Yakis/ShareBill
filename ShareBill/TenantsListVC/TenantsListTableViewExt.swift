@@ -42,7 +42,7 @@ extension TenantsListVC: UITableViewDataSource, UITableViewDelegate {
         UserAlert.deleteConfirmation(vc: self, message: "Are you sure you want to delete this user?") {
             try! realm.write {
                 realm.delete(realm.objects(Tenant.self).filter("name=%@",tenant.name))
-                self.fetchTenants()
+                self.tenants = self.dataInteractor.fetchTenants()
             }
         }
     }
@@ -53,6 +53,7 @@ extension TenantsListVC: UITableViewDataSource, UITableViewDelegate {
         let tenant = tenants[indexPath.row]
         addMateVC.isEditingMode = true
         addMateVC.tenant = tenant
+        addMateVC.delegate = self
         self.navigationController?.pushViewController(addMateVC, animated: true)
     }
     

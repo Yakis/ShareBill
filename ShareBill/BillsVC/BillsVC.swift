@@ -16,7 +16,8 @@ class BillsVC: UIViewController {
     @IBOutlet weak var amount: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
-    
+    var calculateInteractor = CalculateInteractor()
+    var dataInteractor = DataInteractor()
     var tenants: [Tenant] = []
     var bills: [Bill] = [] {
         didSet {
@@ -37,55 +38,23 @@ class BillsVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         tableView.tableFooterView = UIView(frame: .zero)
-        fetchTenants()
+        let dataInteractor = DataInteractor()
+        self.tenants = dataInteractor.fetchTenants()
         fetchBills()
     }
 
+    
     func calculate(bill: Bill) {
-        var total = 0.0
-        let interactor = CalculateInteractor()
-        for tenant in tenants {
-             if bill.endDate > tenant.inDate && bill.startDate < tenant.outDate {
-                let days = interactor.getNumberOfDays(per: tenant, for: bill)
-                tenant.days = days
-                let amountPerPerson = Double(tenant.days) * interactor.getCostPerDayPerPerson(for: tenants, for: bill)
-                updateAmountAndDays(tenant: tenant, amount: amountPerPerson, days: days)
-                total += amountPerPerson
-                print("Cost per day: \(interactor.getCostPerDayPerPerson(for: tenants, for: bill))")
-                print("Name: \(tenant.name), days: \(tenant.days) amount: \(amountPerPerson)")
-            } else {
-                updateAmountAndDays(tenant: tenant, amount: 0.0, days: 0)
-            }
+        calculateInteractor.calculate(bill: bill) { [weak self] (tenant, amount, days) in
+            self?.dataInteractor.updateAmountAndDays(tenant: tenant, amount: amount, days: days)
         }
-        print("Total: \(total)")
         self.tabBarController?.selectedIndex = 1
     }
     
 
-    func fetchTenants() {
-        self.tenants.removeAll()
-        let realm = try! Realm()
-        let tenants = realm.objects(Tenant.self)
-        for newTenant in tenants {
-            let tenant = Tenant()
-            tenant.name = newTenant.name
-            tenant.inDate = newTenant.inDate
-            tenant.outDate = newTenant.outDate
-            tenant.days = newTenant.days
-            tenant.amount = newTenant.amount
-            self.tenants.append(tenant)
-        }
-    }
 
     
-    func updateAmountAndDays(tenant: Tenant, amount: Double, days: Int) {
-                let realm = try! Realm()
-                let theTenant = realm.objects(Tenant.self).filter("name == %@", tenant.name).first
-                try! realm.write {
-                    theTenant!.amount = amount
-                    theTenant!.days = days
-        }
-    }
+    
     
     
     
