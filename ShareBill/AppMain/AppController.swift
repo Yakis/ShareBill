@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AppController: NSObject {
     
@@ -55,6 +56,22 @@ class AppController: NSObject {
         return tabBarController
     }
 
+    
+    
+    
+    
+    class func setStillLivingHereDate() {
+        let realm = try! Realm()
+        let tenants = realm.objects(Tenant.self)
+        try! realm.write {
+            for tenant in tenants {
+                if tenant.stillLivingHere {
+                    let currentDate = Date(timeIntervalSinceNow: 0)
+                tenant.setValue(currentDate, forKeyPath: "outDate")
+                }
+            }
+            }
+    }
     
     
 }

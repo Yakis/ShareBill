@@ -121,6 +121,7 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
         tenant.name = nameString
         tenant.inDate = inDate
         tenant.outDate = outDate
+        tenant.stillLivingHere = stillHereSwitch.isOn
         let realm = try! Realm()
         try! realm.write {
             realm.add(tenant)

@@ -14,6 +14,7 @@ class Tenant: Object {
     @objc dynamic var inDate: Date = Date(timeIntervalSinceNow: 0)
     @objc dynamic var outDate: Date = Date(timeIntervalSinceNow: 0)
     @objc dynamic var amount: Double = 0.0
+    @objc dynamic var stillLivingHere = false
     @objc dynamic var days: Int = 0
     
 }
