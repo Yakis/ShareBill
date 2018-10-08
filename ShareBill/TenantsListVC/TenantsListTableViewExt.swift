@@ -48,6 +48,15 @@ extension TenantsListVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let addMateVC = AddMateVC(nibName: "AddMateVC", bundle: nil)
+        let tenant = tenants[indexPath.row]
+        addMateVC.isEditingMode = true
+        addMateVC.tenant = tenant
+        self.navigationController?.pushViewController(addMateVC, animated: true)
+    }
+    
+    
     func setupTableView() {
         let nib = UINib(nibName: "TenantCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "TenantCell")

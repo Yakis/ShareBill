@@ -25,6 +25,7 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
     var tenant: Tenant!
     weak var delegate: AddTenantDelegate?
     var currentTag: Int!
+    var isEditingMode = false
     
     
     override func viewDidLoad() {
@@ -35,6 +36,7 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
         moveInField.tag = 0
         moveOutField.tag = 1
         stillHereSwitch.onTintColor = Colors.maritimeBlue
+        fillTheFieldsInEditingMode()
     }
 
 
@@ -110,6 +112,17 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func finishButtonAction(_ sender: Any) {
+        switch isEditingMode {
+        case true:
+            updateTentant()
+        default:
+            saveNewTenant()
+        }
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    
+    func saveNewTenant() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         guard let nameString = nameField.text else {return}
@@ -127,7 +140,35 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
             realm.add(tenant)
             delegate?.didFinishAddingTenant()
         }
-        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    func updateTentant() {
+        let realm = try! Realm()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        let theTenant = realm.objects(Tenant.self).filter("name == %@", tenant.name).first
+        guard let nameString = nameField.text else {return}
+        guard let moveInString = moveInField.text else {return}
+        guard let moveOutString = moveOutField.text else {return}
+        guard let inDate = dateFormatter.date(from: moveInString) else {return}
+        guard let outDate = dateFormatter.date(from: moveOutString) else {return}
+        try! realm.write {
+            theTenant!.name = nameString
+            theTenant!.inDate = inDate
+            theTenant?.outDate = outDate
+            theTenant?.stillLivingHere = stillHereSwitch.isOn
+        }
+    }
+    
+    func fillTheFieldsInEditingMode() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        if isEditingMode {
+            self.nameField.text = tenant.name
+            moveInField.text = dateFormatter.string(from: tenant.inDate)
+            moveOutField.text = dateFormatter.string(from: tenant.outDate)
+        }
     }
     
 }

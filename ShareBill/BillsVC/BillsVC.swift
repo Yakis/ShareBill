@@ -49,12 +49,12 @@ class BillsVC: UIViewController {
                 let days = interactor.getNumberOfDays(per: tenant, for: bill)
                 tenant.days = days
                 let amountPerPerson = Double(tenant.days) * interactor.getCostPerDayPerPerson(for: tenants, for: bill)
-                updateTenant(tenant: tenant, amount: amountPerPerson, days: days)
+                updateAmountAndDays(tenant: tenant, amount: amountPerPerson, days: days)
                 total += amountPerPerson
                 print("Cost per day: \(interactor.getCostPerDayPerPerson(for: tenants, for: bill))")
                 print("Name: \(tenant.name), days: \(tenant.days) amount: \(amountPerPerson)")
             } else {
-                updateTenant(tenant: tenant, amount: 0.0, days: 0)
+                updateAmountAndDays(tenant: tenant, amount: 0.0, days: 0)
             }
         }
         print("Total: \(total)")
@@ -78,7 +78,7 @@ class BillsVC: UIViewController {
     }
 
     
-    func updateTenant(tenant: Tenant, amount: Double, days: Int) {
+    func updateAmountAndDays(tenant: Tenant, amount: Double, days: Int) {
                 let realm = try! Realm()
                 let theTenant = realm.objects(Tenant.self).filter("name == %@", tenant.name).first
                 try! realm.write {
