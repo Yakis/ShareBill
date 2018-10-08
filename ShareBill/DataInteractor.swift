@@ -37,10 +37,10 @@ class DataInteractor {
             autoreleasepool {
         let realm = try! Realm()
         let theTenant = realm.objects(Tenant.self).filter("name == %@", tenant.name).first
-        try! realm.write {
+        realm.beginWrite()
             theTenant!.amount = amount
             theTenant?.days = days
-                }
+                try! realm.commitWrite()
             }
         }
     }
