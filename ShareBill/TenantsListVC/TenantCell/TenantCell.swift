@@ -37,8 +37,7 @@ class TenantCell: UITableViewCell {
         self.daysLabel.text = "Days: \(tenant.days)"
         self.nameLabel.text = tenant.name
         self.moveInLabel.text = "Move in: \(inDate)"
-        let today = Date()
-        if today.interval(ofComponent: .day, fromDate: tenant.outDate) == 1 {
+        if tenant.stillLivingHere == true {
             self.moveOutLabel.text = "Still living here"
         } else {
             self.moveOutLabel.text = "Move out: \(outDate)"

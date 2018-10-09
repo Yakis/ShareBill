@@ -18,13 +18,13 @@ class DataInteractor {
         let realm = try! Realm()
         let fetchedTenants = realm.objects(Tenant.self)
         for newTenant in fetchedTenants {
-            print(newTenant.days)
             let tenant = Tenant()
             tenant.name = newTenant.name
             tenant.inDate = newTenant.inDate
             tenant.outDate = newTenant.outDate
             tenant.days = newTenant.days
             tenant.amount = newTenant.amount
+            tenant.stillLivingHere = newTenant.stillLivingHere
             tenants.append(tenant)
         }
         completion(tenants)

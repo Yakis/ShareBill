@@ -47,6 +47,9 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         dataInteractor.fetchTenants { (tenants) in
+            for tenant in tenants {
+                print("Tenant \(tenant.name) is still living here = \(tenant.stillLivingHere)")
+            }
           self.tenants = tenants
         }
     }
@@ -84,9 +87,6 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
         let realm = try! Realm()
         guard let bill = realm.objects(Bill.self).first else {return}
         self.calculateInteractor.calculate(bill: bill) { (tenants) in
-            for tenant in tenants {
-                print("\(tenant.name) \(tenant.amount)")
-            }
                 self.tenants = tenants
         }
     }
