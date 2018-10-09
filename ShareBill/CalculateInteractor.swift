@@ -59,14 +59,10 @@ class CalculateInteractor {
                 //tenant.days = days
                 let amountPerPerson = Double(days) * getCostPerDayPerPerson(for: tenants, for: bill)
                 self.dataInteractor.updateAmountAndDays(tenant: tenant, amount: amountPerPerson, days: days, completion: { tenants in
-                    for tenant in tenants {
-                        print("Tenant: \(tenant.name), amount: \(tenant.amount)")
-                    }
                     completion(tenants)
                 })
             } else {
                 self.dataInteractor.updateAmountAndDays(tenant: tenant, amount: 0.0, days: 0, completion: { tenants in
-                    print("Tenant: \(tenant.name), amount: \(tenant.amount)")
                     completion(tenants)
                 })
             }

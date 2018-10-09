@@ -25,8 +25,10 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
     
     var tenants = [Tenant]() {
         didSet {
+            for tenant in tenants {
+                print("\(tenant.name), amount: \(tenant.amount)")
+            }
             DispatchQueue.main.async {
-                print("Refresh=== \(self.tenants.last?.name) \(self.tenants.last?.amount)")
                 self.tableView.reloadData()
             }
         }
@@ -40,17 +42,13 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Reset", style: .plain, target: self, action: #selector(resetTapped))
         navigationItem.leftBarButtonItem?.tintColor = Colors.maritimeOrange
         setupTableView()
-        
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         dataInteractor.fetchTenants { (tenants) in
-            for tenant in tenants {
-                print("Tenant \(tenant.name) is still living here = \(tenant.stillLivingHere)")
-            }
-          self.tenants = tenants
+                self.tenants = tenants
         }
     }
 
@@ -64,12 +62,16 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
     
     
     @objc func resetTapped() {
+        DispatchQueue(label: "userInitiated").async {
+            autoreleasepool {
         let realm = try! Realm()
         let tenants = realm.objects(Tenant.self)
-        try! realm.write {
+                realm.beginWrite()
             for tenant in tenants {
             tenant.setValue(0.0, forKeyPath: "amount")
                 tenant.setValue(0, forKeyPath: "days")
+            }
+              try! realm.commitWrite()
             }
             self.dataInteractor.fetchTenants(completion: { (tenants) in
                 self.tenants = tenants

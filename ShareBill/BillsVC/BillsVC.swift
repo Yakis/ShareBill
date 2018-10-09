@@ -32,6 +32,7 @@ class BillsVC: UIViewController {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
         setupTableView()
+        
     }
     
     
@@ -48,7 +49,7 @@ class BillsVC: UIViewController {
     func calculate(bill: Bill) {
         self.calculateInteractor.calculate(bill: bill) { (tenants) in
             DispatchQueue.main.async {
-                self.tabBarController?.selectedIndex = 1                
+                self.tabBarController?.selectedIndex = 1
             }
         }
     }

@@ -33,7 +33,7 @@ class DataInteractor {
     
     
     func updateAmountAndDays(tenant: Tenant, amount: Double, days: Int, completion: @escaping (([Tenant]) -> ())) {
-        DispatchQueue(label: "background").async {
+        DispatchQueue.main.async {
             autoreleasepool {
                 let realm = try! Realm()
                 let theTenant = realm.objects(Tenant.self).filter("name == %@", tenant.name).first
@@ -41,11 +41,9 @@ class DataInteractor {
                 theTenant?.amount = amount
                 theTenant?.days = days
                 try! realm.commitWrite()
-                    self.fetchTenants (completion: { (tenants) in
-                        completion(tenants)
-                    })
-                
-                
+                self.fetchTenants (completion: { (tenants) in
+                    completion(tenants)
+                })
             }
         }
     }
