@@ -38,17 +38,19 @@ class BillsVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         tableView.tableFooterView = UIView(frame: .zero)
-        let dataInteractor = DataInteractor()
-        self.tenants = dataInteractor.fetchTenants()
+        self.dataInteractor.fetchTenants (completion: { (tenants) in
+            self.tenants = tenants
+        })
         fetchBills()
     }
 
     
     func calculate(bill: Bill) {
-        calculateInteractor.calculate(bill: bill) { [weak self] (tenant, amount, days) in
-            self?.dataInteractor.updateAmountAndDays(tenant: tenant, amount: amount, days: days)
+        self.calculateInteractor.calculate(bill: bill) { (tenants) in
+            DispatchQueue.main.async {
+                self.tabBarController?.selectedIndex = 1                
+            }
         }
-        self.tabBarController?.selectedIndex = 1
     }
     
 

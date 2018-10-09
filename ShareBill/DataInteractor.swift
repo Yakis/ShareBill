@@ -13,7 +13,7 @@ import RealmSwift
 class DataInteractor {
     
     
-    func fetchTenants() -> [Tenant] {
+    func fetchTenants(completion: ([Tenant]) -> ()) {
         var tenants = [Tenant]()
         let realm = try! Realm()
         let fetchedTenants = realm.objects(Tenant.self)
@@ -27,22 +27,30 @@ class DataInteractor {
             tenant.amount = newTenant.amount
             tenants.append(tenant)
         }
-        return tenants
+        completion(tenants)
     }
     
     
     
-    func updateAmountAndDays(tenant: Tenant, amount: Double, days: Int) {
+    func updateAmountAndDays(tenant: Tenant, amount: Double, days: Int, completion: @escaping (([Tenant]) -> ())) {
         DispatchQueue(label: "background").async {
             autoreleasepool {
-        let realm = try! Realm()
-        let theTenant = realm.objects(Tenant.self).filter("name == %@", tenant.name).first
-        realm.beginWrite()
-            theTenant!.amount = amount
-            theTenant?.days = days
+                let realm = try! Realm()
+                let theTenant = realm.objects(Tenant.self).filter("name == %@", tenant.name).first
+                realm.beginWrite()
+                theTenant?.amount = amount
+                theTenant?.days = days
                 try! realm.commitWrite()
+                    self.fetchTenants (completion: { (tenants) in
+                        completion(tenants)
+                    })
+                
+                
             }
         }
     }
+    
+    
+    
     
 }

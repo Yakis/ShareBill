@@ -38,11 +38,21 @@ extension TenantsListVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         let tenant = tenants[indexPath.row]
-        let realm = try! Realm()
         UserAlert.deleteConfirmation(vc: self, message: "Are you sure you want to delete this user?") {
-            try! realm.write {
-                realm.delete(realm.objects(Tenant.self).filter("name=%@",tenant.name))
-                self.tenants = self.dataInteractor.fetchTenants()
+           self.delete(tenant: tenant)
+        }
+    }
+    
+    
+    func delete(tenant: Tenant) {
+        DispatchQueue(label: "background").async {
+            autoreleasepool {
+                let realm = try! Realm()
+                let tenantToDelete = realm.objects(Tenant.self).filter("name=%@",tenant.name)
+                realm.beginWrite()
+                realm.delete(tenantToDelete)
+                try! realm.commitWrite()
+                self.calculate()
             }
         }
     }

@@ -138,8 +138,8 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
         let realm = try! Realm()
         try! realm.write {
             realm.add(tenant)
-            delegate?.didFinishAddingTenant()
         }
+        delegate?.didFinishAddingTenant()
     }
     
     func updateTentant() {
@@ -157,8 +157,8 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
             theTenant!.inDate = inDate
             theTenant?.outDate = outDate
             theTenant?.stillLivingHere = stillHereSwitch.isOn
-            delegate?.didFinishAddingTenant()
         }
+        delegate?.didFinishAddingTenant()
     }
     
     func fillTheFieldsInEditingMode() {
