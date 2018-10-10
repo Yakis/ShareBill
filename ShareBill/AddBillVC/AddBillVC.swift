@@ -17,10 +17,11 @@ class AddBillVC: UIViewController, UITextFieldDelegate {
     var datePicker: UIDatePicker!
     var currentTag: Int!
     var bill: Bill!
-    
+    var isEditingMode = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fillTheFieldsInEditingMode()
         startDateTextField.delegate = self
         endDateTextField.delegate = self
         startDateTextField.tag = 0
@@ -29,7 +30,7 @@ class AddBillVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
+        
     }
     
     
@@ -91,6 +92,15 @@ class AddBillVC: UIViewController, UITextFieldDelegate {
 
 
     @IBAction func doneButtonAction(_ sender: Any) {
+        switch isEditingMode {
+        case true:
+            updateBill()
+        default:
+            saveBill()
+        }
+    }
+    
+    func saveBill() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         guard let amount = amountTextField.text?.toDouble() else {return}
@@ -109,6 +119,33 @@ class AddBillVC: UIViewController, UITextFieldDelegate {
         navigationController?.popToRootViewController(animated: true)
     }
     
+    func updateBill() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        let realm = try! Realm()
+        let theBill = realm.objects(Bill.self).filter("amount == %@", bill.amount).first
+        guard let amount = amountTextField.text?.toDouble() else {return}
+        guard let startDateString = startDateTextField.text else {return}
+        guard let endDateString = endDateTextField.text else {return}
+        guard let startDate = dateFormatter.date(from: startDateString) else {return}
+        guard let endDate = dateFormatter.date(from: endDateString) else {return}
+        try! realm.write {
+            theBill?.amount = amount
+            theBill?.startDate = startDate
+            theBill?.endDate = endDate
+        }
+        navigationController?.popToRootViewController(animated: true)
+    }
     
+    
+    func fillTheFieldsInEditingMode() {
+        if isEditingMode {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .medium
+            self.amountTextField.text = String(bill.amount)
+            self.startDateTextField.text = dateFormatter.string(from: bill.startDate)
+            self.endDateTextField.text = dateFormatter.string(from: bill.endDate)
+        }
+    }
 
 }

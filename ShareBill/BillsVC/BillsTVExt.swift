@@ -58,6 +58,14 @@ extension BillsVC: UITableViewDataSource, UITableViewDelegate {
     
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let bill = bills[indexPath.row]
+        let addBillVC = AddBillVC(nibName: "AddBillVC", bundle: nil)
+        addBillVC.bill = bill
+        addBillVC.isEditingMode = true
+        self.navigationController?.pushViewController(addBillVC, animated: true)
+    }
+    
     
     
     func setupTableView() {

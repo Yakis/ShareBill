@@ -166,8 +166,8 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
         guard let inDate = dateFormatter.date(from: moveInString) else {return}
         guard let outDate = dateFormatter.date(from: moveOutString) else {return}
         try! realm.write {
-            theTenant!.name = nameString
-            theTenant!.inDate = inDate
+            theTenant?.name = nameString
+            theTenant?.inDate = inDate
             theTenant?.outDate = outDate
             theTenant?.stillLivingHere = stillHereSwitch.isOn
         }
