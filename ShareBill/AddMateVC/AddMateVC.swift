@@ -47,6 +47,7 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
         self.datePicker.backgroundColor = Colors.maritimeDark
         datePicker.setValue(UIColor.white, forKeyPath: "textColor")
         self.datePicker.datePickerMode = UIDatePicker.Mode.date
+        setDatePickerToTenantDate(picker: self.datePicker)
         textField.inputView = self.datePicker
         
         // ToolBar
@@ -122,6 +123,18 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
     }
     
     
+    func setDatePickerToTenantDate(picker: UIDatePicker) {
+        if isEditingMode {
+        switch currentTag {
+        case 0:
+            picker.date = tenant.inDate
+        default:
+            picker.date = tenant.outDate
+        }
+        }
+    }
+    
+    
     func saveNewTenant() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
@@ -161,6 +174,13 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
         delegate?.didFinishAddingTenant()
     }
     
+    
+    func setTheSwitchToTenantStatus() {
+        if tenant.stillLivingHere {
+            stillHereSwitch.setOn(true, animated: true)
+        }
+    }
+    
     func fillTheFieldsInEditingMode() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
@@ -169,6 +189,7 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
             self.nameField.text = tenant.name
             moveInField.text = dateFormatter.string(from: tenant.inDate)
             moveOutField.text = dateFormatter.string(from: tenant.outDate)
+            setTheSwitchToTenantStatus()
         }
     }
     
