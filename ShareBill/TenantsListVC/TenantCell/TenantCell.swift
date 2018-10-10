@@ -36,11 +36,11 @@ class TenantCell: UITableViewCell {
         self.amountLabel.text = "£\(tenant.amount.roundToDecimal(2))"
         self.daysLabel.text = "Days: \(tenant.days)"
         self.nameLabel.text = tenant.name
-        self.moveInLabel.text = "Move in: \(inDate)"
+        self.moveInLabel.text = "Moved in: \(inDate)"
         if tenant.stillLivingHere == true {
             self.moveOutLabel.text = "Still living here"
         } else {
-            self.moveOutLabel.text = "Move out: \(outDate)"
+            self.moveOutLabel.text = "Moved out: \(outDate)"
             
         }
     }
