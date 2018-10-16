@@ -25,9 +25,6 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
     
     var tenants = [Tenant]() {
         didSet {
-            for tenant in tenants {
-                print("\(tenant.name), amount: \(tenant.amount)")
-            }
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -92,6 +89,7 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
                 self.tenants = tenants
         }
     }
+    
     
 
 }

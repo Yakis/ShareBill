@@ -31,6 +31,7 @@ class BillsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(saveTapped))
         setupTableView()
         
     }
@@ -80,6 +81,12 @@ class BillsVC: UIViewController {
   @objc func addTapped() {
     let addBillVC = AddBillVC(nibName: "AddBillVC", bundle: nil)
     self.navigationController?.pushViewController(addBillVC, animated: true)
+    }
+    
+    
+    @objc func saveTapped() {
+        let mathInfoVC = MathInfoVC(nibName: "MathInfoVC", bundle: nil)
+        self.navigationController?.pushViewController(mathInfoVC, animated: true)
     }
     
 }

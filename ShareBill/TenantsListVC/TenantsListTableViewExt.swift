@@ -68,6 +68,9 @@ extension TenantsListVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     
+    
+    
+    
     func setupTableView() {
         let nib = UINib(nibName: "TenantCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "TenantCell")
