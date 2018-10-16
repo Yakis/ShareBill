@@ -39,8 +39,18 @@ class ReportVC: UIViewController {
             stringReport.append("\n\(tenant.name) - days: \(tenant.days), amount: \(tenant.amount.roundToDecimal(2))\n----------------------------------------")
         }
         detailedReportTextView.text = stringReport
+        shareImage()
     }
 
     
+    
+    
+    func shareImage() {
+        let image = self.view.asImage()
+            let vc = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+            vc.popoverPresentationController?.sourceView = self.view
+            self.present(vc, animated: true)
+        
+    }
 
 }
