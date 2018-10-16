@@ -14,6 +14,8 @@
 		1523F8CC21590E3D00A6EC74 /* BillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1523F8CA21590E3D00A6EC74 /* BillCell.xib */; };
 		15255F322175DE3500E78425 /* MathInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15255F302175DE3500E78425 /* MathInfoVC.swift */; };
 		15255F332175DE3500E78425 /* MathInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15255F312175DE3500E78425 /* MathInfoVC.xib */; };
+		15255F382175EE3400E78425 /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15255F362175EE3400E78425 /* ReportVC.swift */; };
+		15255F392175EE3400E78425 /* ReportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15255F372175EE3400E78425 /* ReportVC.xib */; };
 		153537FD216B7D8D00152503 /* DataInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153537FC216B7D8D00152503 /* DataInteractor.swift */; };
 		1551F1C3214FC82800BA5CEF /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551F1C2214FC82800BA5CEF /* AppController.swift */; };
 		1551F1C6214FC86100BA5CEF /* BillsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551F1C4214FC86100BA5CEF /* BillsVC.swift */; };
@@ -47,6 +49,8 @@
 		1523F8CA21590E3D00A6EC74 /* BillCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillCell.xib; sourceTree = "<group>"; };
 		15255F302175DE3500E78425 /* MathInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathInfoVC.swift; sourceTree = "<group>"; };
 		15255F312175DE3500E78425 /* MathInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MathInfoVC.xib; sourceTree = "<group>"; };
+		15255F362175EE3400E78425 /* ReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
+		15255F372175EE3400E78425 /* ReportVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportVC.xib; sourceTree = "<group>"; };
 		153537FC216B7D8D00152503 /* DataInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInteractor.swift; sourceTree = "<group>"; };
 		1551F1C2214FC82800BA5CEF /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		1551F1C4214FC86100BA5CEF /* BillsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsVC.swift; sourceTree = "<group>"; };
@@ -126,11 +130,20 @@
 			path = BillCell;
 			sourceTree = "<group>";
 		};
-		15255F342175DE3D00E78425 /* ReportVC */ = {
+		15255F342175DE3D00E78425 /* MathInfoVC */ = {
 			isa = PBXGroup;
 			children = (
 				15255F312175DE3500E78425 /* MathInfoVC.xib */,
 				15255F302175DE3500E78425 /* MathInfoVC.swift */,
+			);
+			path = MathInfoVC;
+			sourceTree = "<group>";
+		};
+		15255F352175EE2400E78425 /* ReportVC */ = {
+			isa = PBXGroup;
+			children = (
+				15255F362175EE3400E78425 /* ReportVC.swift */,
+				15255F372175EE3400E78425 /* ReportVC.xib */,
 			);
 			path = ReportVC;
 			sourceTree = "<group>";
@@ -187,7 +200,6 @@
 		15D47D5B214EADA30020F074 = {
 			isa = PBXGroup;
 			children = (
-				15255F342175DE3D00E78425 /* ReportVC */,
 				15D47D66214EADA30020F074 /* ShareBill */,
 				15D47D65214EADA30020F074 /* Products */,
 				712AA7C9C1FC686C58F55715 /* Pods */,
@@ -206,6 +218,7 @@
 		15D47D66214EADA30020F074 /* ShareBill */ = {
 			isa = PBXGroup;
 			children = (
+				15255F352175EE2400E78425 /* ReportVC */,
 				1516A48A21554E3B000E1A59 /* AppMain */,
 				1516A48B21554E44000E1A59 /* SupportingFiles */,
 				15AE7F95214EC67900AEDDB1 /* Models */,
@@ -214,6 +227,7 @@
 				1516A49021555548000E1A59 /* AddBillVC */,
 				1551F1CD214FCD0000BA5CEF /* AddMateVC */,
 				1551F1D2214FD15800BA5CEF /* TenantsListVC */,
+				15255F342175DE3D00E78425 /* MathInfoVC */,
 				15FDD2E1216E719700AE7D90 /* Interactors */,
 				158342AA2153C1DE00C95C2D /* Extensions.swift */,
 				156628D6215AA45300A04BD0 /* Alerts.swift */,
@@ -313,6 +327,7 @@
 				15D47D72214EADAB0020F074 /* LaunchScreen.storyboard in Resources */,
 				1551F1D8214FF6EA00BA5CEF /* TenantCell.xib in Resources */,
 				1516A48F21554E5F000E1A59 /* AddBillVC.xib in Resources */,
+				15255F392175EE3400E78425 /* ReportVC.xib in Resources */,
 				15255F332175DE3500E78425 /* MathInfoVC.xib in Resources */,
 				1551F1D1214FD15300BA5CEF /* TenantsListVC.xib in Resources */,
 				15D47D6F214EADAB0020F074 /* Assets.xcassets in Resources */,
@@ -376,6 +391,7 @@
 				15D47D68214EADA30020F074 /* AppDelegate.swift in Sources */,
 				1516A48E21554E5F000E1A59 /* AddBillVC.swift in Sources */,
 				15255F322175DE3500E78425 /* MathInfoVC.swift in Sources */,
+				15255F382175EE3400E78425 /* ReportVC.swift in Sources */,
 				1551F1CB214FCCFD00BA5CEF /* AddMateVC.swift in Sources */,
 				15AE7F9E214EC9D100AEDDB1 /* ScannerViewController.swift in Sources */,
 				15AE7F94214EC5E500AEDDB1 /* Tenant.swift in Sources */,
