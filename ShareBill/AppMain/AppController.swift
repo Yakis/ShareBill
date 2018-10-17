@@ -44,14 +44,24 @@ class AppController: NSObject {
         navTenantsList.navigationBar.topItem?.title = "Tenants"
         tenantsListVC.tabBarItem = UITabBarItem(title: "Tenants", image: UIImage(named: "TenantsListBW"), selectedImage: UIImage(named: "TenantsListRed"))
         
+        let faqVC = FaqVC(nibName: "FaqVC", bundle: nil)
+        let navFaq =  UINavigationController(rootViewController: faqVC)
+        navFaq.navigationBar.topItem?.title = "FAQ"
+        faqVC.tabBarItem = UITabBarItem(title: "FAQ", image: UIImage(named: "FaqBW"), selectedImage: UIImage(named: "FaqRed"))
+        
         navAddBill.navigationBar.backgroundColor = Colors.maritimeDark
-        navTenantsList.navigationBar.backgroundColor = Colors.maritimeDark
         navAddBill.navigationBar.barTintColor = Colors.maritimeDark
-        navTenantsList.navigationBar.barTintColor = Colors.maritimeDark
         navAddBill.navigationBar.tintColor = Colors.maritimeOrange
+        
+        navTenantsList.navigationBar.backgroundColor = Colors.maritimeDark
+        navTenantsList.navigationBar.barTintColor = Colors.maritimeDark
         navTenantsList.navigationBar.tintColor = Colors.maritimeOrange
+        
+        navFaq.navigationBar.backgroundColor = Colors.maritimeDark
+        navFaq.navigationBar.barTintColor = Colors.maritimeDark
+        navFaq.navigationBar.tintColor = Colors.maritimeOrange
 
-        let viewControllers = [navAddBill, navTenantsList]
+        let viewControllers = [navAddBill, navTenantsList, navFaq]
         tabBarController.viewControllers = viewControllers
         return tabBarController
     }

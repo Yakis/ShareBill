@@ -47,16 +47,26 @@
                         <constraint firstItem="ir2-bv-xGt" firstAttribute="top" secondItem="6wT-7F-mVn" secondAttribute="top" id="wIk-2n-poh"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0IQ-fB-2Kb">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="12"/>
+                    <color key="backgroundColor" red="0.1647058824" green="0.1764705882" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="djx-qe-bqm"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tk8-ex-iGZ" secondAttribute="trailing" constant="20" id="9Yv-Bc-BgB"/>
                 <constraint firstItem="6wT-7F-mVn" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="A7Z-hH-UEo"/>
                 <constraint firstItem="6wT-7F-mVn" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Aws-fB-4d9"/>
+                <constraint firstAttribute="trailing" secondItem="0IQ-fB-2Kb" secondAttribute="trailing" id="J4i-I0-Tin"/>
                 <constraint firstItem="6wT-7F-mVn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="MsG-GQ-HWQ"/>
+                <constraint firstItem="0IQ-fB-2Kb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="O2m-Ay-l7P"/>
                 <constraint firstItem="tk8-ex-iGZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="dmn-Re-Ju3"/>
                 <constraint firstItem="tk8-ex-iGZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="p1q-ue-dq8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tk8-ex-iGZ" secondAttribute="bottom" constant="50" id="pXP-eS-s2O"/>
+                <constraint firstItem="0IQ-fB-2Kb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yTs-Fu-tvJ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="39.200000000000003" y="46.326836581709152"/>

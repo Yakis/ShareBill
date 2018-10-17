@@ -50,7 +50,6 @@ class ReportVC: UIViewController {
             let vc = UIActivityViewController(activityItems: [image], applicationActivities: nil)
             vc.popoverPresentationController?.sourceView = self.view
             self.present(vc, animated: true)
-        
     }
 
 }
