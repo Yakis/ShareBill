@@ -60,12 +60,6 @@ class BillsVC: UIViewController {
         }
     }
     
-
-
-    
-    
-    
-    
     
     func fetchBills() {
         self.bills.removeAll()
