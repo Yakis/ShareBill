@@ -39,6 +39,7 @@
 		15D47D6F214EADAB0020F074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15D47D6E214EADAB0020F074 /* Assets.xcassets */; };
 		15D47D72214EADAB0020F074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15D47D70214EADAB0020F074 /* LaunchScreen.storyboard */; };
 		15D557132178FD8E000750D7 /* BillsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D557122178FD8E000750D7 /* BillsVM.swift */; };
+		15EADB7621871F9000DBCB06 /* TenantsListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EADB7521871F9000DBCB06 /* TenantsListVM.swift */; };
 		90F5E345F16E382CF95798BF /* Pods_ShareBill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCEEEC5742B717EFAEE63BED /* Pods_ShareBill.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		15D47D71214EADAB0020F074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15D47D73214EADAB0020F074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15D557122178FD8E000750D7 /* BillsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsVM.swift; sourceTree = "<group>"; };
+		15EADB7521871F9000DBCB06 /* TenantsListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantsListVM.swift; sourceTree = "<group>"; };
 		4DCD631C12C171F39418189E /* Pods-ShareBill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareBill.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareBill/Pods-ShareBill.release.xcconfig"; sourceTree = "<group>"; };
 		B855E0D69F3131F18D5081DD /* Pods-ShareBill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareBill.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareBill/Pods-ShareBill.debug.xcconfig"; sourceTree = "<group>"; };
 		CCEEEC5742B717EFAEE63BED /* Pods_ShareBill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareBill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,8 +166,8 @@
 				1551F1C4214FC86100BA5CEF /* BillsVC.swift */,
 				1551F1C5214FC86100BA5CEF /* BillsVC.xib */,
 				1523F8C721590DB800A6EC74 /* BillsTVExt.swift */,
-				1523F8CD21590E4000A6EC74 /* BillCell */,
 				15D557122178FD8E000750D7 /* BillsVM.swift */,
+				1523F8CD21590E4000A6EC74 /* BillCell */,
 			);
 			path = BillsVC;
 			sourceTree = "<group>";
@@ -185,6 +187,7 @@
 				1551F1CE214FD15300BA5CEF /* TenantsListVC.swift */,
 				1551F1CF214FD15300BA5CEF /* TenantsListVC.xib */,
 				1551F1D3214FF64A00BA5CEF /* TenantsListTableViewExt.swift */,
+				15EADB7521871F9000DBCB06 /* TenantsListVM.swift */,
 				1551F1D9214FF6ED00BA5CEF /* TenantCell */,
 			);
 			path = TenantsListVC;
@@ -418,6 +421,7 @@
 				1523F8CB21590E3D00A6EC74 /* BillCell.swift in Sources */,
 				15371DA821773F8F00E52F32 /* FaqVC.swift in Sources */,
 				1551F1C6214FC86100BA5CEF /* BillsVC.swift in Sources */,
+				15EADB7621871F9000DBCB06 /* TenantsListVM.swift in Sources */,
 				1551F1C3214FC82800BA5CEF /* AppController.swift in Sources */,
 				1523F8C821590DB800A6EC74 /* BillsTVExt.swift in Sources */,
 				1598E907215BECC900F175C1 /* Constants.swift in Sources */,

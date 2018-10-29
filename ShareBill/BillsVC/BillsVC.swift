@@ -51,11 +51,12 @@ class BillsVC: UIViewController {
 
     
     func calculate(bill: Bill) {
-        self.calculateInteractor.calculate(bill: bill) { (tenants) in
+        self.calculateInteractor.calculate(bill: bill) {
             DispatchQueue.main.async {
                 self.tabBarController?.selectedIndex = 1
             }
         }
+        
     }
     
     

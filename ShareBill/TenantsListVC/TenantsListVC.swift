@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import RealmSwift
-
+import RxSwift
+import RxCocoa
 
 
 
@@ -19,34 +19,21 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
     
     
     @IBOutlet weak var tableView: UITableView!
-    let dataInteractor = DataInteractor()
     let calculateInteractor = CalculateInteractor()
-    
-    
-    var tenants = [Tenant]() {
-        didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
-    }
-    
+    var tenantsListVM = TenantsListVM()
+    var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
-        navigationItem.rightBarButtonItem?.tintColor = Colors.maritimeOrange
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Reset", style: .plain, target: self, action: #selector(resetTapped))
-        navigationItem.leftBarButtonItem?.tintColor = Colors.maritimeOrange
+        setupBarButtons()
         setupTableView()
+        reloadTableViewOnChanges()
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        dataInteractor.fetchTenants { (tenants) in
-                self.tenants = tenants
-        }
+        tenantsListVM.fetchTenants()
     }
 
 
@@ -59,37 +46,30 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
     
     
     @objc func resetTapped() {
-        DispatchQueue(label: "userInitiated").async {
-            autoreleasepool {
-        let realm = try! Realm()
-        let tenants = realm.objects(Tenant.self)
-                realm.beginWrite()
-            for tenant in tenants {
-            tenant.setValue(0.0, forKeyPath: "amount")
-                tenant.setValue(0, forKeyPath: "days")
-            }
-              try! realm.commitWrite()
-            }
-            self.dataInteractor.fetchTenants(completion: { (tenants) in
-                self.tenants = tenants
-            })
-        }
+        tenantsListVM.resetAmounts()
     }
     
     
     func didFinishAddingTenant() {
-        calculate()
+        tenantsListVM.calculate()
     }
     
     
-    func calculate() {
-        let realm = try! Realm()
-        guard let bill = realm.objects(Bill.self).first else {return}
-        self.calculateInteractor.calculate(bill: bill) { (tenants) in
-                self.tenants = tenants
-        }
+    
+    func reloadTableViewOnChanges() {
+        tenantsListVM.tenants.asObservable().subscribe(onNext: { [weak self] _ in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }).disposed(by: disposeBag)
     }
     
     
+    func setupBarButtons() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
+        navigationItem.rightBarButtonItem?.tintColor = Colors.maritimeOrange
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Reset", style: .plain, target: self, action: #selector(resetTapped))
+        navigationItem.leftBarButtonItem?.tintColor = Colors.maritimeOrange
+    }
 
 }

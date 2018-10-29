@@ -51,19 +51,19 @@ class CalculateInteractor {
     }
     
     
-    func calculate(bill: Bill, completion: @escaping (([Tenant]) -> ())) {
+    func calculate(bill: Bill, completion: @escaping () -> ()) {
         dataInteractor.fetchTenants (completion: { (tenants) in
             for tenant in tenants {
                 if bill.endDate > tenant.inDate && bill.startDate < tenant.outDate {
                     let days = getNumberOfDays(per: tenant, for: bill)
                     let amountPerPerson = Double(days) * getCostPerDayPerPerson(for: tenants, for: bill)
-                    self.dataInteractor.updateAmountAndDays(tenant: tenant, amount: amountPerPerson, days: days, completion: { tenants in
-                        completion(tenants)
-                    })
+                    self.dataInteractor.updateAmountAndDays(tenant: tenant, amount: amountPerPerson, days: days) {
+                        completion()
+                    }
                 } else {
-                    self.dataInteractor.updateAmountAndDays(tenant: tenant, amount: 0.0, days: 0, completion: { tenants in
-                        completion(tenants)
-                    })
+                    self.dataInteractor.updateAmountAndDays(tenant: tenant, amount: 0.0, days: 0) {
+                        completion()
+                    }
                 }
             }
         })

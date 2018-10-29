@@ -47,7 +47,7 @@ class DataInteractor {
     }
     
     
-    func updateAmountAndDays(tenant: Tenant, amount: Double, days: Int, completion: @escaping (([Tenant]) -> ())) {
+    func updateAmountAndDays(tenant: Tenant, amount: Double, days: Int, completion: @escaping () -> ()) {
         DispatchQueue.main.async {
             autoreleasepool {
                 let realm = try! Realm()
@@ -56,14 +56,42 @@ class DataInteractor {
                 theTenant?.amount = amount
                 theTenant?.days = days
                 try! realm.commitWrite()
-                self.fetchTenants (completion: { (tenants) in
-                    completion(tenants)
-                })
+                completion()
+//                self.fetchTenants (completion: { (tenants) in
+//                   // completion(tenants)
+//                })
             }
         }
     }
     
+    func resetAmounts(completion: @escaping () -> ()) {
+        DispatchQueue(label: "userInitiated").async {
+            autoreleasepool {
+                let realm = try! Realm()
+                let fetchedTenants = realm.objects(Tenant.self)
+                realm.beginWrite()
+                for tenant in fetchedTenants {
+                    tenant.setValue(0.0, forKeyPath: "amount")
+                    tenant.setValue(0, forKeyPath: "days")
+                }
+                try! realm.commitWrite()
+            }
+            completion()
+        }
+    }
     
     
+    func delete(tenant: Tenant, completion: () -> ()) {
+        let realm = try! Realm()
+        let tenantToDelete = realm.objects(Tenant.self).filter("name=%@",tenant.name)
+        realm.beginWrite()
+        realm.delete(tenantToDelete)
+        do {
+        try! realm.commitWrite()
+            completion()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
     
 }
