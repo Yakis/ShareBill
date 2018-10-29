@@ -15,9 +15,6 @@ import RxCocoa
 class TenantsListVC: UIViewController, AddTenantDelegate {
     
     
-
-    
-    
     @IBOutlet weak var tableView: UITableView!
     let calculateInteractor = CalculateInteractor()
     var tenantsListVM = TenantsListVM()
@@ -35,7 +32,6 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
         super.viewDidAppear(animated)
         tenantsListVM.fetchTenants()
     }
-
 
     
     @objc func addTapped() {
@@ -55,7 +51,6 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
     }
     
     
-    
     func reloadTableViewOnChanges() {
         tenantsListVM.tenants.asObservable().subscribe(onNext: { [weak self] _ in
             DispatchQueue.main.async {
@@ -71,5 +66,7 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Reset", style: .plain, target: self, action: #selector(resetTapped))
         navigationItem.leftBarButtonItem?.tintColor = Colors.maritimeOrange
     }
+
+
 
 }

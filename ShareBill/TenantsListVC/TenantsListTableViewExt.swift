@@ -20,7 +20,7 @@ extension TenantsListVC: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "TenantCell", for: indexPath) as? TenantCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: TenantCell.nibName, for: indexPath) as? TenantCell {
             let tenant = tenantsListVM.tenants.value[indexPath.row]
             cell.setup(with: tenant)
             return cell
@@ -38,14 +38,14 @@ extension TenantsListVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         let tenant = tenantsListVM.tenants.value[indexPath.row]
-        UserAlert.deleteConfirmation(vc: self, message: "Are you sure you want to delete this user?") { [weak self] in
+        UserAlert.deleteConfirmation(vc: self, message: Messages.userDeleteConfirmation) { [weak self] in
            self?.tenantsListVM.delete(tenant: tenant)
         }
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let addMateVC = AddMateVC(nibName: "AddMateVC", bundle: nil)
+        let addMateVC = AddMateVC(nibName: AddMateVC.nibName, bundle: nil)
         let tenant = tenantsListVM.tenants.value[indexPath.row]
         addMateVC.isEditingMode = true
         addMateVC.tenant = tenant

@@ -17,3 +17,8 @@ struct Colors {
     static let inactiveOrange = UIColor(displayP3Red: 110/255, green: 46/255, blue: 22/255, alpha: 1.0)
     static let maritimeDark = UIColor(displayP3Red: 42/255, green: 45/255, blue: 52/255, alpha: 1.0)
 }
+
+struct Messages {
+    static let userDeleteConfirmation = "Are you sure you want to delete this user?"
+    static let billDeleteConfirmation = "Are you sure you want to delete this bill?"
+}

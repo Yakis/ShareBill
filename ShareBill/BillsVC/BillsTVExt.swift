@@ -32,7 +32,7 @@ extension BillsVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let bill = billsVM.bills.value[indexPath.row]
         let delete = UITableViewRowAction(style: .destructive, title: "Delete") { [weak self] (action, indexPath) in
-            UserAlert.deleteConfirmation(vc: self!, message: "Are you sure you want to delete this bill?", completion: { [weak self] in
+            UserAlert.deleteConfirmation(vc: self!, message: Messages.billDeleteConfirmation, completion: { [weak self] in
                 let realm = try! Realm()
                 try! realm.write {
                     realm.delete(realm.objects(Bill.self).filter("amount=%@",bill.amount))
@@ -42,7 +42,6 @@ extension BillsVC: UITableViewDataSource, UITableViewDelegate {
         }
         
         let calculate = UITableViewRowAction(style: .normal, title: "Calculate") { [weak self] (action, indexPath) in
-            // calculate item at indexPath
             self?.calculate(bill: bill)
         }
         
