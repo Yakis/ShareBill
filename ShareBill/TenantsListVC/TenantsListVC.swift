@@ -39,7 +39,7 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
 
     
     @objc func addTapped() {
-        let addMateVC = AddMateVC(nibName: "AddMateVC", bundle: nil)
+        let addMateVC = AddMateVC(nibName: AddMateVC.nibName, bundle: nil)
         addMateVC.delegate = self
         self.navigationController?.pushViewController(addMateVC, animated: true)
     }

@@ -19,7 +19,7 @@ extension BillsVC: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let billCell = tableView.dequeueReusableCell(withIdentifier: "BillCell", for: indexPath) as? BillCell {
+        if let billCell = tableView.dequeueReusableCell(withIdentifier: BillCell.nibName, for: indexPath) as? BillCell {
             let bill = billsVM.bills.value[indexPath.row]
             billCell.setup(with: bill)
             return billCell
@@ -60,7 +60,7 @@ extension BillsVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let bill = billsVM.bills.value[indexPath.row]
-        let addBillVC = AddBillVC(nibName: "AddBillVC", bundle: nil)
+        let addBillVC = AddBillVC(nibName: AddBillVC.nibName, bundle: nil)
         addBillVC.bill = bill
         addBillVC.isEditingMode = true
         self.navigationController?.pushViewController(addBillVC, animated: true)
@@ -70,8 +70,8 @@ extension BillsVC: UITableViewDataSource, UITableViewDelegate {
     
     func setupTableView() {
         tableView.tableFooterView = UIView(frame: .zero)
-        let nib = UINib(nibName: "BillCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "BillCell")
+        let nib = UINib(nibName: BillCell.nibName, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: BillCell.nibName)
         tableView.delegate = self
         tableView.dataSource = self
     }

@@ -61,13 +61,13 @@ class BillsVC: UIViewController {
     
     
   @objc func addTapped() {
-    let addBillVC = AddBillVC(nibName: "AddBillVC", bundle: nil)
+    let addBillVC = AddBillVC(nibName: AddBillVC.nibName, bundle: nil)
     self.navigationController?.pushViewController(addBillVC, animated: true)
     }
     
     
     @objc func saveTapped() {
-        let mathInfoVC = MathInfoVC(nibName: "MathInfoVC", bundle: nil)
+        let mathInfoVC = MathInfoVC(nibName: MathInfoVC.nibName, bundle: nil)
         self.navigationController?.pushViewController(mathInfoVC, animated: true)
     }
     
