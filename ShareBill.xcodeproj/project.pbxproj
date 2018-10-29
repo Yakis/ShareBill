@@ -36,7 +36,6 @@
 		15AE7F94214EC5E500AEDDB1 /* Tenant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AE7F93214EC5E500AEDDB1 /* Tenant.swift */; };
 		15AE7F97214EC6CA00AEDDB1 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AE7F96214EC6CA00AEDDB1 /* Bill.swift */; };
 		15D47D68214EADA30020F074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D47D67214EADA30020F074 /* AppDelegate.swift */; };
-		15D47D6A214EADA30020F074 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D47D69214EADA30020F074 /* ViewController.swift */; };
 		15D47D6F214EADAB0020F074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15D47D6E214EADAB0020F074 /* Assets.xcassets */; };
 		15D47D72214EADAB0020F074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15D47D70214EADAB0020F074 /* LaunchScreen.storyboard */; };
 		15D557132178FD8E000750D7 /* BillsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D557122178FD8E000750D7 /* BillsVM.swift */; };
@@ -74,7 +73,6 @@
 		15AE7F96214EC6CA00AEDDB1 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		15D47D64214EADA30020F074 /* ShareBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15D47D67214EADA30020F074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		15D47D69214EADA30020F074 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		15D47D6E214EADAB0020F074 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15D47D71214EADAB0020F074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15D47D73214EADAB0020F074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 			children = (
 				1551F1C2214FC82800BA5CEF /* AppController.swift */,
 				15D47D67214EADA30020F074 /* AppDelegate.swift */,
-				15D47D69214EADA30020F074 /* ViewController.swift */,
 			);
 			path = AppMain;
 			sourceTree = "<group>";
@@ -363,11 +360,15 @@
 				"${PODS_ROOT}/Target Support Files/Pods-ShareBill/Pods-ShareBill-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -402,7 +403,6 @@
 				1551F1D0214FD15300BA5CEF /* TenantsListVC.swift in Sources */,
 				158342A92153C10000C95C2D /* CalculateInteractor.swift in Sources */,
 				15AE7F97214EC6CA00AEDDB1 /* Bill.swift in Sources */,
-				15D47D6A214EADA30020F074 /* ViewController.swift in Sources */,
 				15D47D68214EADA30020F074 /* AppDelegate.swift in Sources */,
 				15D557132178FD8E000750D7 /* BillsVM.swift in Sources */,
 				1516A48E21554E5F000E1A59 /* AddBillVC.swift in Sources */,

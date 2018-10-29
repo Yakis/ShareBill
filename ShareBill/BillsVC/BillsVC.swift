@@ -8,6 +8,9 @@
 
 import UIKit
 import RealmSwift
+import RxCocoa
+import RxSwift
+
 
 class BillsVC: UIViewController {
 
@@ -19,18 +22,10 @@ class BillsVC: UIViewController {
     var calculateInteractor = CalculateInteractor()
     var dataInteractor = DataInteractor()
     var tenants: [Tenant] = []
-    var bills: [Bill] = [] {
-        didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
-    }
+    var disposeBag = DisposeBag()
+    var billsVM = BillsVM()
     
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
     
     
     override func viewDidLoad() {
@@ -38,17 +33,20 @@ class BillsVC: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addTapped))
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(saveTapped))
         setupTableView()
-        
+        reloadTableViewOnChanges()
     }
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        tableView.tableFooterView = UIView(frame: .zero)
         self.dataInteractor.fetchTenants (completion: { (tenants) in
             self.tenants = tenants
         })
-        fetchBills()
+        self.billsVM.fetchBills()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 
     
@@ -61,22 +59,6 @@ class BillsVC: UIViewController {
     }
     
     
-    func fetchBills() {
-        self.bills.removeAll()
-        let realm = try! Realm()
-        let bills = realm.objects(Bill.self)
-        for newBill in bills {
-            let bill = Bill()
-            bill.amount = newBill.amount
-            bill.startDate = newBill.startDate
-            bill.endDate = newBill.endDate
-            self.bills.append(bill)
-        }
-        
-    }
-    
-    
-    
   @objc func addTapped() {
     let addBillVC = AddBillVC(nibName: "AddBillVC", bundle: nil)
     self.navigationController?.pushViewController(addBillVC, animated: true)
@@ -86,6 +68,15 @@ class BillsVC: UIViewController {
     @objc func saveTapped() {
         let mathInfoVC = MathInfoVC(nibName: "MathInfoVC", bundle: nil)
         self.navigationController?.pushViewController(mathInfoVC, animated: true)
+    }
+    
+    
+    func reloadTableViewOnChanges() {
+        billsVM.bills.asObservable().subscribe(onNext: { [weak self] posts in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }).disposed(by: disposeBag)
     }
     
 }

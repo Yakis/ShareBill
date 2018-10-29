@@ -7,4 +7,6 @@ target 'ShareBill' do
 
   # Pods for ShareBill
   pod 'RealmSwift'
+pod 'RxSwift'
+pod 'RxCocoa'
 end

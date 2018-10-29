@@ -32,6 +32,21 @@ class DataInteractor {
     
     
     
+    func fetchBills(completion: ([Bill]) -> ()) {
+        var bills = [Bill]()
+        let realm = try! Realm()
+        let fetchedBills = realm.objects(Bill.self)
+        for newBill in fetchedBills {
+            let bill = Bill()
+            bill.amount = newBill.amount
+            bill.startDate = newBill.startDate
+            bill.endDate = newBill.endDate
+            bills.append(bill)
+        }
+       completion(bills)
+    }
+    
+    
     func updateAmountAndDays(tenant: Tenant, amount: Double, days: Int, completion: @escaping (([Tenant]) -> ())) {
         DispatchQueue.main.async {
             autoreleasepool {
