@@ -62,12 +62,7 @@ class AddBillVC: UIViewController {
     
 
     @IBAction func doneButtonAction(_ sender: Any) {
-        switch isEditingMode {
-        case true:
-            updateBill()
-        default:
-            saveBill()
-        }
+        saveBill()
     }
     
     
@@ -87,12 +82,13 @@ class AddBillVC: UIViewController {
         addBillVM.amount = amount
         addBillVM.startDate = startDateString
         addBillVM.endDate = endDateString
-        addBillVM.saveBill()
-        
-    }
-    
-    
-    func updateBill() {
+        addBillVM.bill = bill
+        switch isEditingMode {
+        case true:
+            addBillVM.updateBill()
+        default:
+            addBillVM.saveBill()
+        }
         
     }
     

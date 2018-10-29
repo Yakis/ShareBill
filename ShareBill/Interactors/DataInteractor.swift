@@ -41,6 +41,7 @@ class DataInteractor {
             bill.amount = newBill.amount
             bill.startDate = newBill.startDate
             bill.endDate = newBill.endDate
+            bill.id = newBill.id
             bills.append(bill)
         }
        completion(bills)
@@ -55,6 +56,13 @@ class DataInteractor {
         completion()
     }
     
+    func update(with newBill: Bill, completion: () -> ()) {
+        let realm = try! Realm()
+        try! realm.write {
+        realm.add(newBill, update: true)
+            completion()
+        }
+    }
     
     func updateAmountAndDays(tenant: Tenant, amount: Double, days: Int, completion: @escaping () -> ()) {
         DispatchQueue.main.async {
@@ -66,9 +74,6 @@ class DataInteractor {
                 theTenant?.days = days
                 try! realm.commitWrite()
                 completion()
-//                self.fetchTenants (completion: { (tenants) in
-//                   // completion(tenants)
-//                })
             }
         }
     }
@@ -95,12 +100,9 @@ class DataInteractor {
         let tenantToDelete = realm.objects(Tenant.self).filter("name=%@",tenant.name)
         realm.beginWrite()
         realm.delete(tenantToDelete)
-        do {
         try! realm.commitWrite()
             completion()
-        } catch let error {
-            print(error.localizedDescription)
         }
-    }
+    
     
 }
