@@ -47,6 +47,15 @@ class DataInteractor {
     }
     
     
+    func save(bill: Bill, completion: () -> ()) {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(bill)
+        }
+        completion()
+    }
+    
+    
     func updateAmountAndDays(tenant: Tenant, amount: Double, days: Int, completion: @escaping () -> ()) {
         DispatchQueue.main.async {
             autoreleasepool {

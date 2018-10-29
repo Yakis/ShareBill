@@ -26,4 +26,17 @@ class UserAlert {
         alertController.addAction(delete)
         vc.present(alertController, animated: true, completion: nil)
     }
+    
+    
+    static func showInfo(vc: UIViewController, message: String) {
+        let alertController = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "Ok", style: .default) { (action:UIAlertAction) in
+            alertController.dismiss(animated: true, completion: nil)
+        }
+        alertController.addAction(ok)
+        vc.present(alertController, animated: true, completion: nil)
+    }
+    
+    
 }

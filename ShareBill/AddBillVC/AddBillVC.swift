@@ -8,12 +8,17 @@
 
 import UIKit
 import RealmSwift
+import RxSwift
+import RxCocoa
 
-class AddBillVC: UIViewController, UITextFieldDelegate {
+class AddBillVC: UIViewController {
 
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var startDateTextField: UITextField!
     @IBOutlet weak var endDateTextField: UITextField!
+    
+    var addBillVM = AddBillVM()
+    var disposeBag = DisposeBag()
     var datePicker: UIDatePicker!
     var currentTag: Int!
     var bill: Bill!
@@ -22,6 +27,7 @@ class AddBillVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         fillTheFieldsInEditingMode()
+        dismissTheViewAfterSave()
         startDateTextField.delegate = self
         endDateTextField.delegate = self
         startDateTextField.tag = 0
@@ -30,37 +36,6 @@ class AddBillVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-    }
-    
-    
-    
-    func pickUpDate(_ textField : UITextField){
-        self.currentTag = textField.tag
-        // DatePicker
-        self.datePicker = UIDatePicker(frame:CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
-        self.datePicker.backgroundColor = Colors.maritimeDark
-        datePicker.setValue(UIColor.white, forKeyPath: "textColor")
-        self.datePicker.datePickerMode = UIDatePicker.Mode.date
-        textField.inputView = self.datePicker
-        
-        // ToolBar
-        let toolBar = UIToolbar()
-        toolBar.barStyle = .default
-        toolBar.isTranslucent = true
-        toolBar.tintColor = UIColor(red: 92/255, green: 216/255, blue: 255/255, alpha: 1)
-        toolBar.sizeToFit()
-        
-        // Adding Button ToolBar
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddMateVC.doneClick))
-        doneButton.tintColor = Colors.maritimeOrange
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(AddMateVC.cancelClick))
-        cancelButton.tintColor = Colors.maritimeOrange
-        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
-        toolBar.isUserInteractionEnabled = true
-        toolBar.barTintColor = Colors.maritimeDark
-        textField.inputAccessoryView = toolBar
         
     }
     
@@ -85,11 +60,6 @@ class AddBillVC: UIViewController, UITextFieldDelegate {
         }
     }
     
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        self.pickUpDate(textField)
-    }
-
 
     @IBAction func doneButtonAction(_ sender: Any) {
         switch isEditingMode {
@@ -100,41 +70,42 @@ class AddBillVC: UIViewController, UITextFieldDelegate {
         }
     }
     
+    
     func saveBill() {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        guard let amount = amountTextField.text?.toDouble() else {return}
-        guard let startDateString = startDateTextField.text else {return}
-        guard let endDateString = endDateTextField.text else {return}
-        guard let startDate = dateFormatter.date(from: startDateString) else {return}
-        guard let endDate = dateFormatter.date(from: endDateString) else {return}
-        self.bill = Bill()
-        bill.amount = amount
-        bill.startDate = startDate
-        bill.endDate = endDate
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(bill)
+        guard let amount = amountTextField.text, !amount.isEmpty else {
+            UserAlert.showInfo(vc: self, message: "Please enter the amount")
+            return
         }
-        navigationController?.popToRootViewController(animated: true)
+        guard let startDateString = startDateTextField.text, !startDateString.isEmpty else {
+             UserAlert.showInfo(vc: self, message: "Please select the start date")
+            return
+        }
+        guard let endDateString = endDateTextField.text, !endDateString.isEmpty else {
+            UserAlert.showInfo(vc: self, message: "Please select the end date")
+            return
+        }
+        addBillVM.amount = amount
+        addBillVM.startDate = startDateString
+        addBillVM.endDate = endDateString
+        addBillVM.saveBill()
+        
     }
     
+    
     func updateBill() {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        let realm = try! Realm()
-        let theBill = realm.objects(Bill.self).filter("amount == %@", bill.amount).first
-        guard let amount = amountTextField.text?.toDouble() else {return}
-        guard let startDateString = startDateTextField.text else {return}
-        guard let endDateString = endDateTextField.text else {return}
-        guard let startDate = dateFormatter.date(from: startDateString) else {return}
-        guard let endDate = dateFormatter.date(from: endDateString) else {return}
-        try! realm.write {
-            theBill?.amount = amount
-            theBill?.startDate = startDate
-            theBill?.endDate = endDate
-        }
-        navigationController?.popToRootViewController(animated: true)
+        
+    }
+    
+    
+    func dismissTheViewAfterSave() {
+        addBillVM.saveDone.asObservable().subscribe(onNext: { [weak self] saveDone in
+            print(saveDone)
+            if saveDone {
+            DispatchQueue.main.async {
+                self?.navigationController?.popToRootViewController(animated: true)
+            }
+            }
+        }).disposed(by: disposeBag)
     }
     
     
