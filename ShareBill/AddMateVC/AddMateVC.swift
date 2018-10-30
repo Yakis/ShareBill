@@ -13,7 +13,7 @@ protocol AddTenantDelegate: class {
     func didFinishAddingTenant()
 }
 
-class AddMateVC: UIViewController, UITextFieldDelegate {
+class AddMateVC: UIViewController {
 
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var moveInField: UITextField!
@@ -37,64 +37,6 @@ class AddMateVC: UIViewController, UITextFieldDelegate {
         moveOutField.tag = 1
         stillHereSwitch.onTintColor = Colors.maritimeBlue
         fillTheFieldsInEditingMode()
-    }
-
-
-    func pickUpDate(_ textField : UITextField){
-        self.currentTag = textField.tag
-        // DatePicker
-        self.datePicker = UIDatePicker(frame:CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
-        self.datePicker.backgroundColor = Colors.maritimeDark
-        datePicker.setValue(UIColor.white, forKeyPath: "textColor")
-        self.datePicker.datePickerMode = UIDatePicker.Mode.date
-        setDatePickerToTenantDate(picker: self.datePicker)
-        textField.inputView = self.datePicker
-        
-        // ToolBar
-        let toolBar = UIToolbar()
-        toolBar.barStyle = .default
-        toolBar.isTranslucent = true
-        toolBar.tintColor = UIColor(red: 92/255, green: 216/255, blue: 255/255, alpha: 1)
-        toolBar.sizeToFit()
-        
-        // Adding Button ToolBar
-        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(AddMateVC.doneClick))
-        doneButton.tintColor = Colors.maritimeOrange
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(AddMateVC.cancelClick))
-        cancelButton.tintColor = Colors.maritimeOrange
-        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
-        toolBar.isUserInteractionEnabled = true
-        toolBar.barTintColor = Colors.maritimeDark
-        textField.inputAccessoryView = toolBar
-        
-    }
-    
-    
-    @objc func doneClick() {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
-        if currentTag == 0 {
-            moveInField.text = dateFormatter.string(from: datePicker.date)
-            moveInField.resignFirstResponder()
-        } else {
-            moveOutField.text = dateFormatter.string(from: datePicker.date)
-            moveOutField.resignFirstResponder()
-        }
-    }
-    
-    @objc func cancelClick() {
-        if currentTag == 0 {
-            moveInField.resignFirstResponder()
-        } else {
-            moveOutField.resignFirstResponder()
-        }
-    }
-    
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        self.pickUpDate(textField)
     }
     
     

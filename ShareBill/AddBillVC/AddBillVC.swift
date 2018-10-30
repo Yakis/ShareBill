@@ -40,26 +40,6 @@ class AddBillVC: UIViewController {
     }
     
     
-    @objc func doneClick() {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        if currentTag == 0 {
-            startDateTextField.text = dateFormatter.string(from: datePicker.date)
-            startDateTextField.resignFirstResponder()
-        } else {
-            endDateTextField.text = dateFormatter.string(from: datePicker.date)
-            endDateTextField.resignFirstResponder()
-        }
-    }
-    
-    @objc func cancelClick() {
-        if currentTag == 0 {
-            startDateTextField.resignFirstResponder()
-        } else {
-            endDateTextField.resignFirstResponder()
-        }
-    }
-    
 
     @IBAction func doneButtonAction(_ sender: Any) {
         saveBill()
