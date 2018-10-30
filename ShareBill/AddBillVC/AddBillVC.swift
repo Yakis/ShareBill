@@ -95,11 +95,10 @@ class AddBillVC: UIViewController {
     
     func dismissTheViewAfterSave() {
         addBillVM.saveDone.asObservable().subscribe(onNext: { [weak self] saveDone in
-            print(saveDone)
             if saveDone {
-            DispatchQueue.main.async {
-                self?.navigationController?.popToRootViewController(animated: true)
-            }
+                DispatchQueue.main.async {
+                    self?.navigationController?.popToRootViewController(animated: true)
+                }
             }
         }).disposed(by: disposeBag)
     }
