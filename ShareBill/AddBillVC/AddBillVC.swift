@@ -19,7 +19,6 @@ class AddBillVC: UIViewController {
     
     var addBillVM = AddBillVM()
     var disposeBag = DisposeBag()
-    var datePicker: UIDatePicker!
     var currentTag: Int!
     var bill: Bill!
     var isEditingMode = false
@@ -93,5 +92,17 @@ class AddBillVC: UIViewController {
             self.endDateTextField.text = dateFormatter.string(from: bill.endDate)
         }
     }
+    
+    
+    func setDatePickerToBillDateInEditingMode(datePicker: UIDatePicker, textField: UITextField) {
+        if isEditingMode {
+            switch textField.tag {
+            case 0: datePicker.date = bill.startDate
+            default: datePicker.date = bill.endDate
+            }
+        }
+    }
+    
+    
 
 }

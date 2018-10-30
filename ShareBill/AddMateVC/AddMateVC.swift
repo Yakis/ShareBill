@@ -135,4 +135,17 @@ class AddMateVC: UIViewController {
         }
     }
     
+    
+    func setDatePickerToTenantDateInEditingMode(datePicker: UIDatePicker, textField: UITextField) {
+        if isEditingMode {
+            switch textField.tag {
+            case 0: datePicker.date = tenant.inDate
+            default: datePicker.date = tenant.outDate
+            }
+        }
+    }
+    
+    
+    
+    
 }

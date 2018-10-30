@@ -15,8 +15,9 @@ extension AddMateVC: UITextFieldDelegate {
         let datePicker = DatePicker.shared
         datePicker.frame = self.view.frame
         datePicker.pickUpDate(textField)
+        setDatePickerToTenantDateInEditingMode(datePicker: datePicker.datePicker, textField: textField)
         guard let observer = datePicker.observer else {return}
-        observer.takeLast(1).bind { (textField) in
+        let _ = observer.takeLast(1).bind { (textField) in
             switch textField.tag {
             case 0: self.moveInField = textField
             default: self.moveOutField = textField
