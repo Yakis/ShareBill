@@ -38,9 +38,9 @@ extension AnswerVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return UITableView.automaticDimension
+//    }
     
     
     
@@ -53,6 +53,8 @@ extension AnswerVC: UITableViewDelegate, UITableViewDataSource {
         tableView.register(contentNib, forCellReuseIdentifier: AnswerContentCell.nibName)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 200
     }
     
     
