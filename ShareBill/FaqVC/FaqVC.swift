@@ -10,9 +10,23 @@ import UIKit
 
 class FaqVC: UIViewController {
 
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    let questions = [
+                    "How do I read the meter?",
+                    "Where is the meter located?",
+                    "It will snow tommorow?",
+                    "Dummy anwers...?"
+    ]
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupTableView()
     }
 
 
