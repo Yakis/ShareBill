@@ -21,4 +21,6 @@ struct Colors {
 struct Messages {
     static let userDeleteConfirmation = "Are you sure you want to delete this user?"
     static let billDeleteConfirmation = "Are you sure you want to delete this bill?"
+    static let noBillsPlaceholder = "There's no bills yet, \nplease add yours from the top right button"
+    static let noTenantsPlaceholder = "There's no tenants yet, \nplease add them from the top right button"
 }

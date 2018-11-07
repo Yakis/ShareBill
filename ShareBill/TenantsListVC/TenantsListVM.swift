@@ -39,10 +39,12 @@ struct TenantsListVM {
     
     func calculate() {
         let realm = try! Realm()
-        guard let bill = realm.objects(Bill.self).last else {return}
-        self.calculateInteractor.calculate(bill: bill) {
-            self.fetchTenants()
+        if let bill = realm.objects(Bill.self).last {
+            self.calculateInteractor.calculate(bill: bill) {
+                self.fetchTenants()
+            }
         }
+            self.fetchTenants()
     }
     
     

@@ -16,6 +16,7 @@
 		15255F332175DE3500E78425 /* MathInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15255F312175DE3500E78425 /* MathInfoVC.xib */; };
 		15255F382175EE3400E78425 /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15255F362175EE3400E78425 /* ReportVC.swift */; };
 		15255F392175EE3400E78425 /* ReportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15255F372175EE3400E78425 /* ReportVC.xib */; };
+		152C24D12193570500E4E837 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C24D02193570500E4E837 /* Placeholder.swift */; };
 		153537FD216B7D8D00152503 /* DataInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153537FC216B7D8D00152503 /* DataInteractor.swift */; };
 		15371DA821773F8F00E52F32 /* FaqVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15371DA621773F8F00E52F32 /* FaqVC.swift */; };
 		15371DA921773F8F00E52F32 /* FaqVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15371DA721773F8F00E52F32 /* FaqVC.xib */; };
@@ -70,6 +71,7 @@
 		15255F312175DE3500E78425 /* MathInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MathInfoVC.xib; sourceTree = "<group>"; };
 		15255F362175EE3400E78425 /* ReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
 		15255F372175EE3400E78425 /* ReportVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportVC.xib; sourceTree = "<group>"; };
+		152C24D02193570500E4E837 /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
 		153537FC216B7D8D00152503 /* DataInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInteractor.swift; sourceTree = "<group>"; };
 		15371DA621773F8F00E52F32 /* FaqVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqVC.swift; sourceTree = "<group>"; };
 		15371DA721773F8F00E52F32 /* FaqVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaqVC.xib; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 				1598E906215BECC900F175C1 /* Constants.swift */,
 				15371DAA21773F9800E52F32 /* FaqVC */,
 				15C761AE218896EA008DF6B5 /* DatePicker.swift */,
+				152C24D02193570500E4E837 /* Placeholder.swift */,
 			);
 			path = ShareBill;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				1551F1C3214FC82800BA5CEF /* AppController.swift in Sources */,
 				15840C562193019D00586D75 /* AnswerContentCell.swift in Sources */,
 				1523F8C821590DB800A6EC74 /* BillsTVExt.swift in Sources */,
+				152C24D12193570500E4E837 /* Placeholder.swift in Sources */,
 				1598E907215BECC900F175C1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

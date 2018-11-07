@@ -54,6 +54,7 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
     func reloadTableViewOnChanges() {
         tenantsListVM.tenants.asObservable().subscribe(onNext: { [weak self] _ in
             DispatchQueue.main.async {
+                self?.showOrHidePlaceholder()
                 self?.tableView.reloadData()
             }
         }).disposed(by: disposeBag)
@@ -67,6 +68,15 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
         navigationItem.leftBarButtonItem?.tintColor = Colors.maritimeOrange
     }
 
+    
+    func showOrHidePlaceholder () {
+        if tenantsListVM.tenants.value.isEmpty {
+            Placeholder.share.show(placeholderView: self.tableView, text: Messages.noTenantsPlaceholder)
+        } else {
+            Placeholder.share.hide()
+            tableView.backgroundView = nil
+        }
+    }
 
 
 }

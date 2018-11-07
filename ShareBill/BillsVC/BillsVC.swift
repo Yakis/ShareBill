@@ -74,9 +74,21 @@ class BillsVC: UIViewController {
     func reloadTableViewOnChanges() {
         billsVM.bills.asObservable().subscribe(onNext: { [weak self] posts in
             DispatchQueue.main.async {
+                self?.showOrHidePlaceholder()
                 self?.tableView.reloadData()
             }
         }).disposed(by: disposeBag)
+    }
+    
+    
+    
+    func showOrHidePlaceholder () {
+        if billsVM.bills.value.isEmpty {
+            Placeholder.share.show(placeholderView: self.tableView, text: Messages.noBillsPlaceholder)
+        } else {
+            Placeholder.share.hide()
+            tableView.backgroundView = nil
+        }
     }
     
 }
