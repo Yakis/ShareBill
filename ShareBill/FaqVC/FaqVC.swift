@@ -18,7 +18,8 @@ class FaqVC: UIViewController {
                     "How do I read the meter?",
                     "Where is the meter located?",
                     "It will snow tommorow?",
-                    "Dummy anwers...?"
+                    "Dummy anwers...?",
+                    "Do they have something in their heads or it's empty as usual?"
     ]
     
     

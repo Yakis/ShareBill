@@ -36,7 +36,10 @@ extension FaqVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Need implementation to display detailed info for selected question
         let question = questions[indexPath.row]
-        print(question)
+        let answerVC = AnswerVC(nibName: AnswerVC.nibName, bundle: nil)
+        self.navigationController?.pushViewController(answerVC, animated: true)
+        answerVC.answer = Answer(title: question, image: "meter", content: "For a single rate meter simply write down the five numbers as you read them from left to right, including any zeros at the start. Here, this one says: 21138.")
+        
     }
     
     
