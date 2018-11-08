@@ -47,15 +47,15 @@ class AddBillVC: UIViewController {
     
     func saveBill() {
         guard let amount = amountTextField.text, !amount.isEmpty else {
-            UserAlert.showInfo(vc: self, message: "Please enter the amount")
+            UserAlert.showInfo(vc: self, message: Messages.enterAmount)
             return
         }
         guard let startDateString = startDateTextField.text, !startDateString.isEmpty else {
-             UserAlert.showInfo(vc: self, message: "Please select the start date")
+             UserAlert.showInfo(vc: self, message: Messages.selectStartingDate)
             return
         }
         guard let endDateString = endDateTextField.text, !endDateString.isEmpty else {
-            UserAlert.showInfo(vc: self, message: "Please select the end date")
+            UserAlert.showInfo(vc: self, message: Messages.selectEndDate)
             return
         }
         addBillVM.amount = amount
