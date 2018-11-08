@@ -31,6 +31,9 @@
 		1551F1D7214FF6EA00BA5CEF /* TenantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551F1D5214FF6EA00BA5CEF /* TenantCell.swift */; };
 		1551F1D8214FF6EA00BA5CEF /* TenantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1551F1D6214FF6EA00BA5CEF /* TenantCell.xib */; };
 		156628D7215AA45300A04BD0 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156628D6215AA45300A04BD0 /* Alerts.swift */; };
+		1566EC6B2194708000E00DE4 /* AddBillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1566EC692194708000E00DE4 /* AddBillCell.swift */; };
+		1566EC6C2194708000E00DE4 /* AddBillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1566EC6A2194708000E00DE4 /* AddBillCell.xib */; };
+		1566EC6F2194724B00E00DE4 /* AddBillTvExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1566EC6E2194724B00E00DE4 /* AddBillTvExt.swift */; };
 		158342A92153C10000C95C2D /* CalculateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158342A82153C10000C95C2D /* CalculateInteractor.swift */; };
 		158342AB2153C1DE00C95C2D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158342AA2153C1DE00C95C2D /* Extensions.swift */; };
 		15840C402192D61F00586D75 /* FaqCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15840C3E2192D61F00586D75 /* FaqCell.swift */; };
@@ -86,6 +89,9 @@
 		1551F1D5214FF6EA00BA5CEF /* TenantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantCell.swift; sourceTree = "<group>"; };
 		1551F1D6214FF6EA00BA5CEF /* TenantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TenantCell.xib; sourceTree = "<group>"; };
 		156628D6215AA45300A04BD0 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		1566EC692194708000E00DE4 /* AddBillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillCell.swift; sourceTree = "<group>"; };
+		1566EC6A2194708000E00DE4 /* AddBillCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddBillCell.xib; sourceTree = "<group>"; };
+		1566EC6E2194724B00E00DE4 /* AddBillTvExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillTvExt.swift; sourceTree = "<group>"; };
 		158342A82153C10000C95C2D /* CalculateInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateInteractor.swift; sourceTree = "<group>"; };
 		158342AA2153C1DE00C95C2D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		15840C3E2192D61F00586D75 /* FaqCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqCell.swift; sourceTree = "<group>"; };
@@ -158,6 +164,8 @@
 				1516A48D21554E5F000E1A59 /* AddBillVC.xib */,
 				15EADB772187330000DBCB06 /* AddBillVM.swift */,
 				15EADB792187332A00DBCB06 /* AddBillTextFieldExt.swift */,
+				1566EC6D2194708300E00DE4 /* AddBillCell */,
+				1566EC6E2194724B00E00DE4 /* AddBillTvExt.swift */,
 			);
 			path = AddBillVC;
 			sourceTree = "<group>";
@@ -242,6 +250,15 @@
 				1551F1D6214FF6EA00BA5CEF /* TenantCell.xib */,
 			);
 			path = TenantCell;
+			sourceTree = "<group>";
+		};
+		1566EC6D2194708300E00DE4 /* AddBillCell */ = {
+			isa = PBXGroup;
+			children = (
+				1566EC692194708000E00DE4 /* AddBillCell.swift */,
+				1566EC6A2194708000E00DE4 /* AddBillCell.xib */,
+			);
+			path = AddBillCell;
 			sourceTree = "<group>";
 		};
 		15840C422192D62600586D75 /* FaqCell */ = {
@@ -433,6 +450,7 @@
 			files = (
 				15840C4D2193014A00586D75 /* AnswerTitleCell.xib in Resources */,
 				15840C572193019D00586D75 /* AnswerContentCell.xib in Resources */,
+				1566EC6C2194708000E00DE4 /* AddBillCell.xib in Resources */,
 				1523F8CC21590E3D00A6EC74 /* BillCell.xib in Resources */,
 				15371DA921773F8F00E52F32 /* FaqVC.xib in Resources */,
 				15840C522193017000586D75 /* AnswerImageCell.xib in Resources */,
@@ -534,8 +552,10 @@
 				1551F1C6214FC86100BA5CEF /* BillsVC.swift in Sources */,
 				15840C512193017000586D75 /* AnswerImageCell.swift in Sources */,
 				15EADB7621871F9000DBCB06 /* TenantsListVM.swift in Sources */,
+				1566EC6F2194724B00E00DE4 /* AddBillTvExt.swift in Sources */,
 				1551F1C3214FC82800BA5CEF /* AppController.swift in Sources */,
 				15840C562193019D00586D75 /* AnswerContentCell.swift in Sources */,
+				1566EC6B2194708000E00DE4 /* AddBillCell.swift in Sources */,
 				1523F8C821590DB800A6EC74 /* BillsTVExt.swift in Sources */,
 				152C24D12193570500E4E837 /* Placeholder.swift in Sources */,
 				1598E907215BECC900F175C1 /* Constants.swift in Sources */,

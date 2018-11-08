@@ -9,12 +9,12 @@
 import UIKit
 
 
-extension AddBillVC: UITextFieldDelegate {
+extension AddBillCell: UITextFieldDelegate {
     
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         let datePicker = DatePicker.shared
-        datePicker.frame = self.view.frame
+        datePicker.frame = self.frame
         datePicker.pickUpDate(textField)
         setDatePickerToBillDateInEditingMode(datePicker: datePicker.datePicker, textField: textField)
         guard let observer = datePicker.observer else {return}
@@ -27,7 +27,12 @@ extension AddBillVC: UITextFieldDelegate {
     }
     
     
-    
+    func setupTextField() {
+        startDateTextField.delegate = self
+        endDateTextField.delegate = self
+        startDateTextField.tag = 0
+        endDateTextField.tag = 1
+    }
     
     
 }

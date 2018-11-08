@@ -13,24 +13,17 @@ import RxCocoa
 
 class AddBillVC: UIViewController {
 
-    @IBOutlet weak var amountTextField: UITextField!
-    @IBOutlet weak var startDateTextField: UITextField!
-    @IBOutlet weak var endDateTextField: UITextField!
+    @IBOutlet weak var tableView: UITableView!
     
-    var addBillVM = AddBillVM()
-    var disposeBag = DisposeBag()
-    var currentTag: Int!
     var bill: Bill!
     var isEditingMode = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fillTheFieldsInEditingMode()
-        dismissTheViewAfterSave()
-        startDateTextField.delegate = self
-        endDateTextField.delegate = self
-        startDateTextField.tag = 0
-        endDateTextField.tag = 1
+        setupTableView()
+        NotificationCenter.default.addObserver(self, selector: #selector(alert(notification:)), name: .alert, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(popToRootVC(notification:)), name: .popToRootVC, object: nil)
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -38,71 +31,22 @@ class AddBillVC: UIViewController {
         
     }
     
-    
-
-    @IBAction func doneButtonAction(_ sender: Any) {
-        saveBill()
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
     }
     
     
-    func saveBill() {
-        guard let amount = amountTextField.text, !amount.isEmpty else {
-            UserAlert.showInfo(vc: self, message: Messages.enterAmount)
-            return
-        }
-        guard let startDateString = startDateTextField.text, !startDateString.isEmpty else {
-             UserAlert.showInfo(vc: self, message: Messages.selectStartingDate)
-            return
-        }
-        guard let endDateString = endDateTextField.text, !endDateString.isEmpty else {
-            UserAlert.showInfo(vc: self, message: Messages.selectEndDate)
-            return
-        }
-        addBillVM.amount = amount
-        addBillVM.startDate = startDateString
-        addBillVM.endDate = endDateString
-        addBillVM.bill = bill
-        switch isEditingMode {
-        case true:
-            addBillVM.updateBill()
-        default:
-            addBillVM.saveBill()
-        }
-        
+    @objc func alert(notification: NSNotification) {
+        guard let message = notification.userInfo?["message"] as? String else {return}
+        UserAlert.showInfo(vc: self, message: message)
     }
     
     
-    func dismissTheViewAfterSave() {
-        addBillVM.saveDone.asObservable().subscribe(onNext: { [weak self] saveDone in
-            if saveDone {
-                DispatchQueue.main.async {
-                    self?.navigationController?.popToRootViewController(animated: true)
-                }
-            }
-        }).disposed(by: disposeBag)
+    
+    @objc func popToRootVC(notification: Notification) {
+        self.navigationController?.popToRootViewController(animated: true)
     }
-    
-    
-    func fillTheFieldsInEditingMode() {
-        if isEditingMode {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = .medium
-            self.amountTextField.text = String(bill.amount)
-            self.startDateTextField.text = dateFormatter.string(from: bill.startDate)
-            self.endDateTextField.text = dateFormatter.string(from: bill.endDate)
-        }
-    }
-    
-    
-    func setDatePickerToBillDateInEditingMode(datePicker: UIDatePicker, textField: UITextField) {
-        if isEditingMode {
-            switch textField.tag {
-            case 0: datePicker.date = bill.startDate
-            default: datePicker.date = bill.endDate
-            }
-        }
-    }
-    
     
 
 }

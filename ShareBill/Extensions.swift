@@ -53,3 +53,10 @@ extension NSObject {
     }
 
 }
+
+
+extension Notification.Name {
+    static let alert = Notification.Name("alert")
+    static let popToRootVC = Notification.Name("popToRootVC")
+    static let keyboardActive = Notification.Name("keyboardActive")
+}
