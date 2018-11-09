@@ -33,9 +33,11 @@ class AddBillCell: UITableViewCell {
     }
     
     
-    func setupWith(bill: Bill, isEditingMode: Bool) {
+    func setupWith(bill: Bill?, isEditingMode: Bool) {
         self.isEditingMode = isEditingMode
+        if isEditingMode {
         self.bill = bill
+        }
         fillTheFieldsInEditingMode()
         dismissTheViewAfterSave()
         setupTextField()
