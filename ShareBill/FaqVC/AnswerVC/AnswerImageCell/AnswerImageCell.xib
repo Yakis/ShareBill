@@ -26,7 +26,7 @@
                                 <rect key="frame" x="8" y="8" width="304" height="183.5"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.1647058824" green="0.1764705882" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.16470588235294117" green="0.1764705882352941" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ybo-Gy-gZ7" secondAttribute="bottom" constant="8" id="Zep-6t-49G"/>
                             <constraint firstAttribute="trailing" secondItem="ybo-Gy-gZ7" secondAttribute="trailing" constant="8" id="fre-ke-Fag"/>

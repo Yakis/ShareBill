@@ -50,6 +50,8 @@
 		15840C5A219302AA00586D75 /* AnswerTVExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15840C59219302AA00586D75 /* AnswerTVExt.swift */; };
 		15840C5C2193047200586D75 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15840C5B2193047200586D75 /* Answer.swift */; };
 		1598E907215BECC900F175C1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1598E906215BECC900F175C1 /* Constants.swift */; };
+		15A15D092195AA98005FD85D /* AddMateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A15D072195AA98005FD85D /* AddMateCell.swift */; };
+		15A15D0A2195AA98005FD85D /* AddMateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A15D082195AA98005FD85D /* AddMateCell.xib */; };
 		15AE7F94214EC5E500AEDDB1 /* Tenant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AE7F93214EC5E500AEDDB1 /* Tenant.swift */; };
 		15AE7F97214EC6CA00AEDDB1 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AE7F96214EC6CA00AEDDB1 /* Bill.swift */; };
 		15C761AF218896EA008DF6B5 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C761AE218896EA008DF6B5 /* DatePicker.swift */; };
@@ -108,6 +110,8 @@
 		15840C59219302AA00586D75 /* AnswerTVExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTVExt.swift; sourceTree = "<group>"; };
 		15840C5B2193047200586D75 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		1598E906215BECC900F175C1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		15A15D072195AA98005FD85D /* AddMateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMateCell.swift; sourceTree = "<group>"; };
+		15A15D082195AA98005FD85D /* AddMateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddMateCell.xib; sourceTree = "<group>"; };
 		15AE7F93214EC5E500AEDDB1 /* Tenant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tenant.swift; sourceTree = "<group>"; };
 		15AE7F96214EC6CA00AEDDB1 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		15C761AE218896EA008DF6B5 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
@@ -227,6 +231,7 @@
 				1551F1C9214FCCFD00BA5CEF /* AddMateVC.swift */,
 				1551F1CA214FCCFD00BA5CEF /* AddMateVC.xib */,
 				15C761B02188B839008DF6B5 /* AddMateTextFieldExt.swift */,
+				15A15D0B2195AA9B005FD85D /* AddMateCell */,
 			);
 			path = AddMateVC;
 			sourceTree = "<group>";
@@ -308,6 +313,15 @@
 				15840C552193019D00586D75 /* AnswerContentCell.xib */,
 			);
 			path = AnswerContentCell;
+			sourceTree = "<group>";
+		};
+		15A15D0B2195AA9B005FD85D /* AddMateCell */ = {
+			isa = PBXGroup;
+			children = (
+				15A15D072195AA98005FD85D /* AddMateCell.swift */,
+				15A15D082195AA98005FD85D /* AddMateCell.xib */,
+			);
+			path = AddMateCell;
 			sourceTree = "<group>";
 		};
 		15AE7F95214EC67900AEDDB1 /* Models */ = {
@@ -464,6 +478,7 @@
 				15840C412192D61F00586D75 /* FaqCell.xib in Resources */,
 				15D47D6F214EADAB0020F074 /* Assets.xcassets in Resources */,
 				1551F1C7214FC86100BA5CEF /* BillsVC.xib in Resources */,
+				15A15D0A2195AA98005FD85D /* AddMateCell.xib in Resources */,
 				1551F1CC214FCCFD00BA5CEF /* AddMateVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -554,6 +569,7 @@
 				15EADB7621871F9000DBCB06 /* TenantsListVM.swift in Sources */,
 				1566EC6F2194724B00E00DE4 /* AddBillTvExt.swift in Sources */,
 				1551F1C3214FC82800BA5CEF /* AppController.swift in Sources */,
+				15A15D092195AA98005FD85D /* AddMateCell.swift in Sources */,
 				15840C562193019D00586D75 /* AnswerContentCell.swift in Sources */,
 				1566EC6B2194708000E00DE4 /* AddBillCell.swift in Sources */,
 				1523F8C821590DB800A6EC74 /* BillsTVExt.swift in Sources */,

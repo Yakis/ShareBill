@@ -30,7 +30,7 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yjq-tj-HgX">
                                 <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
-                                <color key="backgroundColor" red="0.1647058824" green="0.1764705882" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.16470588235294117" green="0.1764705882352941" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="7j0-Go-tQW"/>
                                 </constraints>
@@ -45,7 +45,7 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill start date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oEz-mZ-6oj">
                                 <rect key="frame" x="0.0" y="60" width="288" height="40"/>
-                                <color key="backgroundColor" red="0.1647058824" green="0.1764705882" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.16470588235294117" green="0.1764705882352941" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="rzJ-Lg-6bF"/>
                                 </constraints>
@@ -60,7 +60,7 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill end date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uSJ-jk-DLT">
                                 <rect key="frame" x="0.0" y="120" width="288" height="40"/>
-                                <color key="backgroundColor" red="0.1647058824" green="0.1764705882" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.16470588235294117" green="0.1764705882352941" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="8rr-XW-i47"/>
                                 </constraints>
@@ -86,7 +86,7 @@
                         </connections>
                     </button>
                 </subviews>
-                <color key="backgroundColor" red="0.16470588235294117" green="0.1764705882352941" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <color key="backgroundColor" red="0.16470588235294117" green="0.1764705882352941" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="9Ee-Z9-baX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="0kZ-Vw-IIp"/>
                     <constraint firstItem="DML-uu-NNG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="1fu-YG-cE0"/>

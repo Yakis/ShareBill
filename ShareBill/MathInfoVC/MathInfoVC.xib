@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,7 +29,7 @@
                             <color key="textColor" red="0.0" green="0.61568627450000002" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wn-Rv-9lH">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wn-Rv-9lH">
                             <rect key="frame" x="8" y="35.5" width="327" height="191.5"/>
                             <string key="text">(Bill amount / total number of days lived in by all tenants within the bill interval) x each tenant days lived in within the bill interval.
 
@@ -55,7 +55,7 @@ Example:
                     </subviews>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" red="0.1647058824" green="0.1764705882" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.16470588235294117" green="0.1764705882352941" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="UmA-4C-UPi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Bbt-ep-ypS"/>
                 <constraint firstItem="UmA-4C-UPi" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="MKl-ax-Sda"/>

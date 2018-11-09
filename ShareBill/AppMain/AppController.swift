@@ -52,14 +52,17 @@ class AppController: NSObject {
         navAddBill.navigationBar.backgroundColor = Colors.maritimeDark
         navAddBill.navigationBar.barTintColor = Colors.maritimeDark
         navAddBill.navigationBar.tintColor = Colors.maritimeOrange
+        navAddBill.navigationBar.isTranslucent = false
         
         navTenantsList.navigationBar.backgroundColor = Colors.maritimeDark
         navTenantsList.navigationBar.barTintColor = Colors.maritimeDark
         navTenantsList.navigationBar.tintColor = Colors.maritimeOrange
+        navTenantsList.navigationBar.isTranslucent = false
         
         navFaq.navigationBar.backgroundColor = Colors.maritimeDark
         navFaq.navigationBar.barTintColor = Colors.maritimeDark
         navFaq.navigationBar.tintColor = Colors.maritimeOrange
+        navFaq.navigationBar.isTranslucent = false
 
         let viewControllers = [navAddBill, navTenantsList, navFaq]
         tabBarController.viewControllers = viewControllers
