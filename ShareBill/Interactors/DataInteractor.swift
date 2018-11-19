@@ -25,6 +25,7 @@ class DataInteractor {
             tenant.days = newTenant.days
             tenant.amount = newTenant.amount
             tenant.stillLivingHere = newTenant.stillLivingHere
+            tenant.id = newTenant.id
             tenants.append(tenant)
         }
         completion(tenants)
@@ -63,6 +64,24 @@ class DataInteractor {
             completion()
         }
     }
+    
+    
+    func save(tenant: Tenant, completion: () -> ()) {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(tenant)
+        }
+        completion()
+    }
+    
+    func update(with newTenant: Tenant, completion: () -> ()) {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(newTenant, update: true)
+            completion()
+        }
+    }
+    
     
     func updateAmountAndDays(tenant: Tenant, amount: Double, days: Int, completion: @escaping () -> ()) {
         DispatchQueue.main.async {

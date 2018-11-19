@@ -18,9 +18,102 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="476.5"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yRU-OC-t69">
+                        <rect key="frame" x="16" y="50" width="288" height="211"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tenant name" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SNr-4B-oQa">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
+                                <color key="backgroundColor" red="0.1647058824" green="0.1764705882" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="GhY-A7-Bok"/>
+                                </constraints>
+                                <color key="textColor" red="0.94509803920000002" green="0.95294117649999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="0.94509803920000002" green="0.95294117649999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Move in date" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fo8-w9-bxS">
+                                <rect key="frame" x="0.0" y="60" width="288" height="40"/>
+                                <color key="backgroundColor" red="0.1647058824" green="0.1764705882" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="XWR-kM-EFB"/>
+                                </constraints>
+                                <color key="textColor" red="0.94509803920000002" green="0.95294117649999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="0.94509803920000002" green="0.95294117649999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Move out date" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mV0-4T-LsB">
+                                <rect key="frame" x="0.0" y="120" width="288" height="40"/>
+                                <color key="backgroundColor" red="0.1647058824" green="0.1764705882" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2Of-mi-f9E"/>
+                                </constraints>
+                                <color key="textColor" red="0.94509803920000002" green="0.95294117649999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" red="0.94509803920000002" green="0.95294117649999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="QEH-jy-Jze">
+                                <rect key="frame" x="0.0" y="180" width="288" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Still living here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kX6-oI-dL1">
+                                        <rect key="frame" x="0.0" y="0.0" width="227" height="31"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" red="0.0" green="0.61568627450000002" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWk-qE-UBI">
+                                        <rect key="frame" x="239" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="stillLivingHereAction:" destination="KGk-i7-Jjw" eventType="valueChanged" id="fXz-NI-deT"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5UC-FI-bZI">
+                        <rect key="frame" x="133" y="281" width="54" height="175.5"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                        <state key="normal" title="Finish">
+                            <color key="titleColor" red="0.94901960780000005" green="0.3921568627" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="finishButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="txL-T9-a5s"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yRU-OC-t69" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="5PM-Ae-GAx"/>
+                    <constraint firstAttribute="trailing" secondItem="yRU-OC-t69" secondAttribute="trailing" constant="16" id="NRH-wc-kmF"/>
+                    <constraint firstItem="5UC-FI-bZI" firstAttribute="top" secondItem="yRU-OC-t69" secondAttribute="bottom" constant="20" id="b75-Jm-0jr"/>
+                    <constraint firstItem="yRU-OC-t69" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="50" id="exb-HV-QVm"/>
+                    <constraint firstAttribute="bottom" secondItem="5UC-FI-bZI" secondAttribute="bottom" constant="20" id="uMI-F2-Qks"/>
+                    <constraint firstItem="5UC-FI-bZI" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="vXA-bD-nt4"/>
+                </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.1647058824" green="0.1764705882" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="moveInField" destination="Fo8-w9-bxS" id="AGi-lc-Rfe"/>
+                <outlet property="moveOutField" destination="mV0-4T-LsB" id="xkC-WP-cXz"/>
+                <outlet property="nameField" destination="SNr-4B-oQa" id="TcG-fN-QgO"/>
+                <outlet property="stillLivingHereSwitch" destination="bWk-qE-UBI" id="hje-8Q-mWi"/>
+            </connections>
             <point key="canvasLocation" x="129.59999999999999" y="348.57571214392806"/>
         </tableViewCell>
     </objects>

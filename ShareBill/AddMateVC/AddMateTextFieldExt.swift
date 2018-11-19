@@ -8,12 +8,12 @@
 
 import UIKit
 
-extension AddMateVC: UITextFieldDelegate {
+extension AddMateCell: UITextFieldDelegate {
     
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         let datePicker = DatePicker.shared
-        datePicker.frame = self.view.frame
+        datePicker.frame = self.frame
         datePicker.pickUpDate(textField)
         setDatePickerToTenantDateInEditingMode(datePicker: datePicker.datePicker, textField: textField)
         guard let observer = datePicker.observer else {return}
@@ -25,5 +25,15 @@ extension AddMateVC: UITextFieldDelegate {
         }
     }
     
+    
+    func setupTextField() {
+        moveInField.delegate = self
+        moveOutField.delegate = self
+        stillLivingHereSwitch.setOn(false, animated: true)
+        moveInField.tag = 0
+        moveOutField.tag = 1
+        stillLivingHereSwitch.onTintColor = Colors.maritimeBlue
+        fillTheFieldsInEditingMode()
+    }
     
 }

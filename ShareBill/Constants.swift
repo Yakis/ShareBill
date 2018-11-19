@@ -28,4 +28,8 @@ struct Messages {
     static let enterAmount = "Please enter the amount"
     static let selectStartingDate = "Please select the start date"
     static let selectEndDate = "Please select the end date"
+    
+    static let enterName = "Please enter the tenant name"
+    static let selectMovingInDate = "Please select the moving in date"
+    static let selectMovingOutDate = "Please select the moving out date or switch to 'Still living here'"
 }

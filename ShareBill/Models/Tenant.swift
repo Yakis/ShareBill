@@ -10,6 +10,8 @@ import Foundation
 import RealmSwift
 
 class Tenant: Object {
+    
+    @objc dynamic var id = ""
     @objc dynamic var name = ""
     @objc dynamic var inDate: Date = Date(timeIntervalSinceNow: 0)
     @objc dynamic var outDate: Date = Date(timeIntervalSinceNow: 0)
@@ -17,4 +19,10 @@ class Tenant: Object {
     @objc dynamic var stillLivingHere = false
     @objc dynamic var days: Int = 0
     
+
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+    
+
 }

@@ -49,7 +49,8 @@ extension TenantsListVC: UITableViewDataSource, UITableViewDelegate {
         let tenant = tenantsListVM.tenants.value[indexPath.row]
         addMateVC.isEditingMode = true
         addMateVC.tenant = tenant
-        addMateVC.delegate = self
+        print(tenant.name)
+        print(tenant.id)
         self.navigationController?.pushViewController(addMateVC, animated: true)
     }
     

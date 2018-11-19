@@ -12,7 +12,7 @@ import RxCocoa
 
 
 
-class TenantsListVC: UIViewController, AddTenantDelegate {
+class TenantsListVC: UIViewController {
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -31,23 +31,18 @@ class TenantsListVC: UIViewController, AddTenantDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         tenantsListVM.fetchTenants()
+        tenantsListVM.calculate()
     }
 
     
     @objc func addTapped() {
         let addMateVC = AddMateVC(nibName: AddMateVC.nibName, bundle: nil)
-        addMateVC.delegate = self
         self.navigationController?.pushViewController(addMateVC, animated: true)
     }
     
     
     @objc func resetTapped() {
         tenantsListVM.resetAmounts()
-    }
-    
-    
-    func didFinishAddingTenant() {
-        tenantsListVM.calculate()
     }
     
     
