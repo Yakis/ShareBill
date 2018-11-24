@@ -90,11 +90,9 @@ class AddBillCell: UITableViewCell {
     
     func fillTheFieldsInEditingMode() {
         if isEditingMode {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = .medium
             self.amountTextField.text = String(bill.amount)
-            self.startDateTextField.text = dateFormatter.string(from: bill.startDate)
-            self.endDateTextField.text = dateFormatter.string(from: bill.endDate)
+            self.startDateTextField.text = bill.startDate.shortDateString()
+            self.endDateTextField.text = bill.endDate.shortDateString()
         }
     }
     

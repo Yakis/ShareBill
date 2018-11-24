@@ -13,7 +13,6 @@ import RxSwift
 struct AddBillVM {
     
     let dataInteractor = DataInteractor()
-    let dateFormatter = DateFormatter()
     
     var amount: String?
     var startDate: String?
@@ -28,14 +27,12 @@ struct AddBillVM {
     }
     
     private var _startDate: Date {
-        dateFormatter.dateStyle = .medium
-        guard let startDate = dateFormatter.date(from: startDate!) else {return Date()}
+        guard let startDate = startDate?.toDate() else {return Date()}
         return startDate
     }
     
     private var _endDate: Date {
-        dateFormatter.dateStyle = .medium
-        guard let endDate = dateFormatter.date(from: endDate!) else {return Date()}
+        guard let endDate = endDate?.toDate() else {return Date()}
         return endDate
     }
     

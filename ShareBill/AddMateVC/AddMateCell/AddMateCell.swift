@@ -45,10 +45,8 @@ class AddMateCell: UITableViewCell {
     @IBAction func stillLivingHereAction(_ sender: UISwitch) {
         switch sender.isOn {
         case true:
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = .medium
-            let today = Date.init(timeIntervalSinceNow: 0)
-            moveOutField.text = dateFormatter.string(from: today)
+            let today = Date()
+            moveOutField.text = today.shortDateString()
             moveOutField.isEnabled = false
         default:
             moveOutField.isEnabled = true
@@ -111,13 +109,10 @@ class AddMateCell: UITableViewCell {
     }
     
     func fillTheFieldsInEditingMode() {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
         if isEditingMode {
             self.nameField.text = tenant.name
-            moveInField.text = dateFormatter.string(from: tenant.inDate)
-            moveOutField.text = dateFormatter.string(from: tenant.outDate)
+            moveInField.text = tenant.inDate.shortDateString()
+            moveOutField.text = tenant.outDate.shortDateString()
             setTheSwitchToTenantStatus()
         }
     }

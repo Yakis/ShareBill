@@ -13,7 +13,6 @@ import RxSwift
 struct AddMateVM {
     
     let dataInteractor = DataInteractor()
-    let dateFormatter = DateFormatter()
     
     var name: String?
     var moveInDate: String?
@@ -29,14 +28,12 @@ struct AddMateVM {
     }
     
     private var _moveInDate: Date {
-        dateFormatter.dateStyle = .medium
-        guard let moveInDate = dateFormatter.date(from: moveInDate!) else {return Date()}
+        guard let moveInDate = moveInDate?.toDate() else {return Date()}
         return moveInDate
     }
     
     private var _moveOutDate: Date {
-        dateFormatter.dateStyle = .medium
-        guard let moveOutDate = dateFormatter.date(from: moveOutDate!) else {return Date()}
+        guard let moveOutDate = moveOutDate?.toDate() else {return Date()}
         return moveOutDate
     }
     

@@ -28,11 +28,8 @@ class TenantCell: UITableViewCell {
 
     
     func setup(with tenant: Tenant) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
-        let inDate = dateFormatter.string(from: tenant.inDate)
-        let outDate = dateFormatter.string(from: tenant.outDate)
+        let inDate = tenant.inDate.shortDateString()
+        let outDate = tenant.outDate.shortDateString()
         self.amountLabel.text = "£\(tenant.amount.roundToDecimal(2))"
         self.daysLabel.text = "Days: \(tenant.days)"
         self.nameLabel.text = tenant.name

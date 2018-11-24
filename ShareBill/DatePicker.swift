@@ -55,10 +55,7 @@ class DatePicker: NSObject {
     
     
      @objc func doneClick() {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-            currentTextField.text = dateFormatter.string(from: datePicker.date)
-        
+            currentTextField.text = datePicker.date.shortDateString()
         setObserver()
             currentTextField.resignFirstResponder()
     }

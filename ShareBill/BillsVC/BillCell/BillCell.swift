@@ -24,11 +24,9 @@ class BillCell: UITableViewCell {
     }
 
     func setup(with bill: Bill) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
-        let startDate = dateFormatter.string(from: bill.startDate)
-        let endDate = dateFormatter.string(from: bill.endDate)
+        
+        let startDate = bill.startDate.shortDateString()
+        let endDate = bill.endDate.shortDateString()
         self.amountLabel.text = "Amount: \(bill.amount)"
         self.lenghtLabel.text = "\(startDate) - \(endDate)"
         

@@ -26,6 +26,7 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
+    
 }
 
 
@@ -35,6 +36,14 @@ extension String {
         numberFormatter.locale = Locale(identifier: "en_US_POSIX") as Locale
         return numberFormatter.number(from: self)?.doubleValue
     }
+    
+    func toDate() -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        return dateFormatter.date(from: self) ?? Date()
+    }
+    
 }
 
 
@@ -43,6 +52,7 @@ extension Double {
         let multiplier = pow(10, Double(fractionDigits))
         return Darwin.round(self * multiplier) / multiplier
     }
+    
 }
 
 
