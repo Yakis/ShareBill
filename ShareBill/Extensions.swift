@@ -17,6 +17,15 @@ extension Date {
         guard let end = currentCalendar.ordinality(of: comp, in: .era, for: self) else { return 0 }
         return end - start
     }
+    
+    
+    func shortDateString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        return dateFormatter.string(from: self)
+    }
+    
 }
 
 
@@ -36,15 +45,6 @@ extension Double {
     }
 }
 
-extension UIView {
-    
-    func asImage() -> UIImage {
-        let renderer = UIGraphicsImageRenderer(bounds: bounds)
-        return renderer.image { rendererContext in
-            layer.render(in: rendererContext.cgContext)
-        }
-    }
-}
 
 extension NSObject {
     

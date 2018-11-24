@@ -28,26 +28,28 @@ class ReportVC: UIViewController {
         let realm = try! Realm()
         guard let bill = realm.objects(Bill.self).last else {return}
         let tenants = realm.objects(Tenant.self)
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
-        let startDate = dateFormatter.string(from: bill.startDate)
-        let endDate = dateFormatter.string(from: bill.endDate)
+        let startDate = bill.startDate.shortDateString()
+        let endDate = bill.endDate.shortDateString()
         let billDetails = "Bill amount: £\(bill.amount)\nBill interval: \(startDate) - \(endDate)\n----------------------------------------"
         stringReport = billDetails
         for tenant in tenants {
-            stringReport.append("\n\(tenant.name) - days: \(tenant.days), amount: \(tenant.amount.roundToDecimal(2))\n----------------------------------------")
+            var outDate = ""
+            if tenant.stillLivingHere {
+                outDate = "<Still living here>"
+            } else {
+                outDate = "\(tenant.outDate.shortDateString())"
+            }
+            stringReport.append("\n\(tenant.name) \nAmount: \(tenant.amount.roundToDecimal(2)) \nMoved in: \(tenant.inDate.shortDateString()) \nMoved out: \(outDate) \nDays: \(tenant.days)\n----------------------------------------")
         }
         detailedReportTextView.text = stringReport
-        shareImage()
+        shareText(text: stringReport)
     }
 
     
     
     
-    func shareImage() {
-        let image = self.view.asImage()
-            let vc = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+    func shareText(text: String) {
+            let vc = UIActivityViewController(activityItems: [text], applicationActivities: nil)
             vc.popoverPresentationController?.sourceView = self.view
             self.present(vc, animated: true)
     }
