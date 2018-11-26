@@ -38,7 +38,7 @@ extension FaqVC: UITableViewDataSource, UITableViewDelegate {
         let question = questions[indexPath.row]
         let answerVC = AnswerVC(nibName: AnswerVC.nibName, bundle: nil)
         self.navigationController?.pushViewController(answerVC, animated: true)
-        answerVC.answer = Answer(title: question, image: "meter", content: "For a single rate meter simply write down the five numbers as you read them from left to right, including any zeros at the start. Here, this one says: 21138.")
+        answerVC.answer = Answer(title: question, image: "meter", content: "Energy meters are different, but the reading principle is quite the same: read the numbers from left to right, and when something is displayed differently, you stop. No matter if we are talking about a number written with red color, a dot or another dial type (for analogue meters), you just read the first set of numbers until one of the elements changes. See the examples below:")
         
     }
     

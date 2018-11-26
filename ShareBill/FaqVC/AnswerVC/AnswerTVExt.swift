@@ -27,20 +27,20 @@ extension AnswerVC: UITableViewDelegate, UITableViewDataSource {
             answerTitleCell.setupWith(title: answer!.title)
             return answerTitleCell
         case 1:
-            answerImageCell.setupWith(image: answer!.image)
-            return answerImageCell
-        case 2:
             answerContentCell.setupWith(content: answer!.content)
             return answerContentCell
+        case 2:
+            answerImageCell.setupWith(image: answer!.image)
+            return answerImageCell
         default:
             return UITableViewCell()
         }
     }
     
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableView.automaticDimension
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
     
     
     
