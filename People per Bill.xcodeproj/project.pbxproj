@@ -1,0 +1,819 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1516A48E21554E5F000E1A59 /* AddBillVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1516A48C21554E5F000E1A59 /* AddBillVC.swift */; };
+		1516A48F21554E5F000E1A59 /* AddBillVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1516A48D21554E5F000E1A59 /* AddBillVC.xib */; };
+		1523F8C821590DB800A6EC74 /* BillsTVExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1523F8C721590DB800A6EC74 /* BillsTVExt.swift */; };
+		1523F8CB21590E3D00A6EC74 /* BillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1523F8C921590E3D00A6EC74 /* BillCell.swift */; };
+		1523F8CC21590E3D00A6EC74 /* BillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1523F8CA21590E3D00A6EC74 /* BillCell.xib */; };
+		15255F322175DE3500E78425 /* MathInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15255F302175DE3500E78425 /* MathInfoVC.swift */; };
+		15255F332175DE3500E78425 /* MathInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15255F312175DE3500E78425 /* MathInfoVC.xib */; };
+		15255F382175EE3400E78425 /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15255F362175EE3400E78425 /* ReportVC.swift */; };
+		15255F392175EE3400E78425 /* ReportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15255F372175EE3400E78425 /* ReportVC.xib */; };
+		152C24D12193570500E4E837 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C24D02193570500E4E837 /* Placeholder.swift */; };
+		152DBAFB21AD6ACE00DE2DD9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 152DBAFA21AD6ACE00DE2DD9 /* GoogleService-Info.plist */; };
+		152DBAFD21AD6EA600DE2DD9 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152DBAFC21AD6EA600DE2DD9 /* FirebaseHelper.swift */; };
+		153537FD216B7D8D00152503 /* DataInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153537FC216B7D8D00152503 /* DataInteractor.swift */; };
+		15371DA821773F8F00E52F32 /* FaqVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15371DA621773F8F00E52F32 /* FaqVC.swift */; };
+		15371DA921773F8F00E52F32 /* FaqVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15371DA721773F8F00E52F32 /* FaqVC.xib */; };
+		1551F1C3214FC82800BA5CEF /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551F1C2214FC82800BA5CEF /* AppController.swift */; };
+		1551F1C6214FC86100BA5CEF /* BillsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551F1C4214FC86100BA5CEF /* BillsVC.swift */; };
+		1551F1C7214FC86100BA5CEF /* BillsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1551F1C5214FC86100BA5CEF /* BillsVC.xib */; };
+		1551F1CB214FCCFD00BA5CEF /* AddMateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551F1C9214FCCFD00BA5CEF /* AddMateVC.swift */; };
+		1551F1CC214FCCFD00BA5CEF /* AddMateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1551F1CA214FCCFD00BA5CEF /* AddMateVC.xib */; };
+		1551F1D0214FD15300BA5CEF /* TenantsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551F1CE214FD15300BA5CEF /* TenantsListVC.swift */; };
+		1551F1D1214FD15300BA5CEF /* TenantsListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1551F1CF214FD15300BA5CEF /* TenantsListVC.xib */; };
+		1551F1D4214FF64A00BA5CEF /* TenantsListTableViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551F1D3214FF64A00BA5CEF /* TenantsListTableViewExt.swift */; };
+		1551F1D7214FF6EA00BA5CEF /* TenantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551F1D5214FF6EA00BA5CEF /* TenantCell.swift */; };
+		1551F1D8214FF6EA00BA5CEF /* TenantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1551F1D6214FF6EA00BA5CEF /* TenantCell.xib */; };
+		156628D7215AA45300A04BD0 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156628D6215AA45300A04BD0 /* Alerts.swift */; };
+		1566EC6B2194708000E00DE4 /* AddBillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1566EC692194708000E00DE4 /* AddBillCell.swift */; };
+		1566EC6C2194708000E00DE4 /* AddBillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1566EC6A2194708000E00DE4 /* AddBillCell.xib */; };
+		1566EC6F2194724B00E00DE4 /* AddBillTvExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1566EC6E2194724B00E00DE4 /* AddBillTvExt.swift */; };
+		158342A92153C10000C95C2D /* CalculateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158342A82153C10000C95C2D /* CalculateInteractor.swift */; };
+		158342AB2153C1DE00C95C2D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158342AA2153C1DE00C95C2D /* Extensions.swift */; };
+		15840C402192D61F00586D75 /* FaqCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15840C3E2192D61F00586D75 /* FaqCell.swift */; };
+		15840C412192D61F00586D75 /* FaqCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15840C3F2192D61F00586D75 /* FaqCell.xib */; };
+		15840C442192DB1B00586D75 /* FaqTVExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15840C432192DB1B00586D75 /* FaqTVExt.swift */; };
+		15840C47219300B500586D75 /* AnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15840C45219300B500586D75 /* AnswerVC.swift */; };
+		15840C48219300B500586D75 /* AnswerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15840C46219300B500586D75 /* AnswerVC.xib */; };
+		15840C4C2193014A00586D75 /* AnswerTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15840C4A2193014A00586D75 /* AnswerTitleCell.swift */; };
+		15840C4D2193014A00586D75 /* AnswerTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15840C4B2193014A00586D75 /* AnswerTitleCell.xib */; };
+		15840C512193017000586D75 /* AnswerImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15840C4F2193017000586D75 /* AnswerImageCell.swift */; };
+		15840C522193017000586D75 /* AnswerImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15840C502193017000586D75 /* AnswerImageCell.xib */; };
+		15840C562193019D00586D75 /* AnswerContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15840C542193019D00586D75 /* AnswerContentCell.swift */; };
+		15840C572193019D00586D75 /* AnswerContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15840C552193019D00586D75 /* AnswerContentCell.xib */; };
+		15840C5A219302AA00586D75 /* AnswerTVExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15840C59219302AA00586D75 /* AnswerTVExt.swift */; };
+		15840C5C2193047200586D75 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15840C5B2193047200586D75 /* Answer.swift */; };
+		1592946D21AD677D00E61069 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1592946C21AD677D00E61069 /* Default-568h@2x.png */; };
+		1598E907215BECC900F175C1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1598E906215BECC900F175C1 /* Constants.swift */; };
+		159C25D021A297B20036DEDB /* AddMateVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159C25CF21A297B20036DEDB /* AddMateVM.swift */; };
+		159C25D221A2A44F0036DEDB /* AddMateTVExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159C25D121A2A44F0036DEDB /* AddMateTVExt.swift */; };
+		15A15D092195AA98005FD85D /* AddMateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A15D072195AA98005FD85D /* AddMateCell.swift */; };
+		15A15D0A2195AA98005FD85D /* AddMateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A15D082195AA98005FD85D /* AddMateCell.xib */; };
+		15AE7F94214EC5E500AEDDB1 /* Tenant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AE7F93214EC5E500AEDDB1 /* Tenant.swift */; };
+		15AE7F97214EC6CA00AEDDB1 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AE7F96214EC6CA00AEDDB1 /* Bill.swift */; };
+		15C761AF218896EA008DF6B5 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C761AE218896EA008DF6B5 /* DatePicker.swift */; };
+		15C761B12188B839008DF6B5 /* AddMateTextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C761B02188B839008DF6B5 /* AddMateTextFieldExt.swift */; };
+		15D47D68214EADA30020F074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D47D67214EADA30020F074 /* AppDelegate.swift */; };
+		15D47D6F214EADAB0020F074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15D47D6E214EADAB0020F074 /* Assets.xcassets */; };
+		15D47D72214EADAB0020F074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15D47D70214EADAB0020F074 /* LaunchScreen.storyboard */; };
+		15D557132178FD8E000750D7 /* BillsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D557122178FD8E000750D7 /* BillsVM.swift */; };
+		15EADB7621871F9000DBCB06 /* TenantsListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EADB7521871F9000DBCB06 /* TenantsListVM.swift */; };
+		15EADB782187330000DBCB06 /* AddBillVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EADB772187330000DBCB06 /* AddBillVM.swift */; };
+		15EADB7A2187332A00DBCB06 /* AddBillTextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EADB792187332A00DBCB06 /* AddBillTextFieldExt.swift */; };
+		E68CAED9DFCD873818861D03 /* Pods_PeopleperBill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A37019F28329997647A28BA4 /* Pods_PeopleperBill.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1516A48C21554E5F000E1A59 /* AddBillVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillVC.swift; sourceTree = "<group>"; };
+		1516A48D21554E5F000E1A59 /* AddBillVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddBillVC.xib; sourceTree = "<group>"; };
+		1523F8C721590DB800A6EC74 /* BillsTVExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsTVExt.swift; sourceTree = "<group>"; };
+		1523F8C921590E3D00A6EC74 /* BillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillCell.swift; sourceTree = "<group>"; };
+		1523F8CA21590E3D00A6EC74 /* BillCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillCell.xib; sourceTree = "<group>"; };
+		15255F302175DE3500E78425 /* MathInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathInfoVC.swift; sourceTree = "<group>"; };
+		15255F312175DE3500E78425 /* MathInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MathInfoVC.xib; sourceTree = "<group>"; };
+		15255F362175EE3400E78425 /* ReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
+		15255F372175EE3400E78425 /* ReportVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportVC.xib; sourceTree = "<group>"; };
+		152C24D02193570500E4E837 /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
+		152DBAFA21AD6ACE00DE2DD9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		152DBAFC21AD6EA600DE2DD9 /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		153537FC216B7D8D00152503 /* DataInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInteractor.swift; sourceTree = "<group>"; };
+		15371DA621773F8F00E52F32 /* FaqVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqVC.swift; sourceTree = "<group>"; };
+		15371DA721773F8F00E52F32 /* FaqVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaqVC.xib; sourceTree = "<group>"; };
+		1551F1C2214FC82800BA5CEF /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		1551F1C4214FC86100BA5CEF /* BillsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsVC.swift; sourceTree = "<group>"; };
+		1551F1C5214FC86100BA5CEF /* BillsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillsVC.xib; sourceTree = "<group>"; };
+		1551F1C9214FCCFD00BA5CEF /* AddMateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMateVC.swift; sourceTree = "<group>"; };
+		1551F1CA214FCCFD00BA5CEF /* AddMateVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddMateVC.xib; sourceTree = "<group>"; };
+		1551F1CE214FD15300BA5CEF /* TenantsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantsListVC.swift; sourceTree = "<group>"; };
+		1551F1CF214FD15300BA5CEF /* TenantsListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TenantsListVC.xib; sourceTree = "<group>"; };
+		1551F1D3214FF64A00BA5CEF /* TenantsListTableViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantsListTableViewExt.swift; sourceTree = "<group>"; };
+		1551F1D5214FF6EA00BA5CEF /* TenantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantCell.swift; sourceTree = "<group>"; };
+		1551F1D6214FF6EA00BA5CEF /* TenantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TenantCell.xib; sourceTree = "<group>"; };
+		156628D6215AA45300A04BD0 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		1566EC692194708000E00DE4 /* AddBillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillCell.swift; sourceTree = "<group>"; };
+		1566EC6A2194708000E00DE4 /* AddBillCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddBillCell.xib; sourceTree = "<group>"; };
+		1566EC6E2194724B00E00DE4 /* AddBillTvExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillTvExt.swift; sourceTree = "<group>"; };
+		158342A82153C10000C95C2D /* CalculateInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateInteractor.swift; sourceTree = "<group>"; };
+		158342AA2153C1DE00C95C2D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		15840C3E2192D61F00586D75 /* FaqCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqCell.swift; sourceTree = "<group>"; };
+		15840C3F2192D61F00586D75 /* FaqCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FaqCell.xib; sourceTree = "<group>"; };
+		15840C432192DB1B00586D75 /* FaqTVExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqTVExt.swift; sourceTree = "<group>"; };
+		15840C45219300B500586D75 /* AnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerVC.swift; sourceTree = "<group>"; };
+		15840C46219300B500586D75 /* AnswerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerVC.xib; sourceTree = "<group>"; };
+		15840C4A2193014A00586D75 /* AnswerTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTitleCell.swift; sourceTree = "<group>"; };
+		15840C4B2193014A00586D75 /* AnswerTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerTitleCell.xib; sourceTree = "<group>"; };
+		15840C4F2193017000586D75 /* AnswerImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerImageCell.swift; sourceTree = "<group>"; };
+		15840C502193017000586D75 /* AnswerImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerImageCell.xib; sourceTree = "<group>"; };
+		15840C542193019D00586D75 /* AnswerContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerContentCell.swift; sourceTree = "<group>"; };
+		15840C552193019D00586D75 /* AnswerContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerContentCell.xib; sourceTree = "<group>"; };
+		15840C59219302AA00586D75 /* AnswerTVExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTVExt.swift; sourceTree = "<group>"; };
+		15840C5B2193047200586D75 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		1592946C21AD677D00E61069 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1598E906215BECC900F175C1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		159C25CF21A297B20036DEDB /* AddMateVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMateVM.swift; sourceTree = "<group>"; };
+		159C25D121A2A44F0036DEDB /* AddMateTVExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMateTVExt.swift; sourceTree = "<group>"; };
+		15A15D072195AA98005FD85D /* AddMateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMateCell.swift; sourceTree = "<group>"; };
+		15A15D082195AA98005FD85D /* AddMateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddMateCell.xib; sourceTree = "<group>"; };
+		15AE7F93214EC5E500AEDDB1 /* Tenant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tenant.swift; sourceTree = "<group>"; };
+		15AE7F96214EC6CA00AEDDB1 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		15C761AE218896EA008DF6B5 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
+		15C761B02188B839008DF6B5 /* AddMateTextFieldExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMateTextFieldExt.swift; sourceTree = "<group>"; };
+		15D47D64214EADA30020F074 /* People per Bill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "People per Bill.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15D47D67214EADA30020F074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		15D47D6E214EADAB0020F074 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15D47D71214EADAB0020F074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		15D47D73214EADAB0020F074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15D557122178FD8E000750D7 /* BillsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsVM.swift; sourceTree = "<group>"; };
+		15EADB7521871F9000DBCB06 /* TenantsListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantsListVM.swift; sourceTree = "<group>"; };
+		15EADB772187330000DBCB06 /* AddBillVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillVM.swift; sourceTree = "<group>"; };
+		15EADB792187332A00DBCB06 /* AddBillTextFieldExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillTextFieldExt.swift; sourceTree = "<group>"; };
+		4DCD631C12C171F39418189E /* Pods-ShareBill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareBill.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareBill/Pods-ShareBill.release.xcconfig"; sourceTree = "<group>"; };
+		9E55DABFAE0491D9F443C44D /* Pods-PeopleperBill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleperBill.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleperBill/Pods-PeopleperBill.debug.xcconfig"; sourceTree = "<group>"; };
+		A37019F28329997647A28BA4 /* Pods_PeopleperBill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeopleperBill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B855E0D69F3131F18D5081DD /* Pods-ShareBill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareBill.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareBill/Pods-ShareBill.debug.xcconfig"; sourceTree = "<group>"; };
+		CCEEEC5742B717EFAEE63BED /* Pods_ShareBill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareBill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8E54797F21B8FB8690F201E /* Pods-PeopleperBill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleperBill.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleperBill/Pods-PeopleperBill.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15D47D61214EADA30020F074 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E68CAED9DFCD873818861D03 /* Pods_PeopleperBill.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1516A48A21554E3B000E1A59 /* AppMain */ = {
+			isa = PBXGroup;
+			children = (
+				1551F1C2214FC82800BA5CEF /* AppController.swift */,
+				15D47D67214EADA30020F074 /* AppDelegate.swift */,
+			);
+			path = AppMain;
+			sourceTree = "<group>";
+		};
+		1516A48B21554E44000E1A59 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				15D47D6E214EADAB0020F074 /* Assets.xcassets */,
+				15D47D70214EADAB0020F074 /* LaunchScreen.storyboard */,
+				15D47D73214EADAB0020F074 /* Info.plist */,
+				152DBAFA21AD6ACE00DE2DD9 /* GoogleService-Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		1516A49021555548000E1A59 /* AddBillVC */ = {
+			isa = PBXGroup;
+			children = (
+				1516A48C21554E5F000E1A59 /* AddBillVC.swift */,
+				1516A48D21554E5F000E1A59 /* AddBillVC.xib */,
+				15EADB772187330000DBCB06 /* AddBillVM.swift */,
+				15EADB792187332A00DBCB06 /* AddBillTextFieldExt.swift */,
+				1566EC6D2194708300E00DE4 /* AddBillCell */,
+				1566EC6E2194724B00E00DE4 /* AddBillTvExt.swift */,
+			);
+			path = AddBillVC;
+			sourceTree = "<group>";
+		};
+		1523F8CD21590E4000A6EC74 /* BillCell */ = {
+			isa = PBXGroup;
+			children = (
+				1523F8C921590E3D00A6EC74 /* BillCell.swift */,
+				1523F8CA21590E3D00A6EC74 /* BillCell.xib */,
+			);
+			path = BillCell;
+			sourceTree = "<group>";
+		};
+		15255F342175DE3D00E78425 /* MathInfoVC */ = {
+			isa = PBXGroup;
+			children = (
+				15255F312175DE3500E78425 /* MathInfoVC.xib */,
+				15255F302175DE3500E78425 /* MathInfoVC.swift */,
+			);
+			path = MathInfoVC;
+			sourceTree = "<group>";
+		};
+		15255F352175EE2400E78425 /* ReportVC */ = {
+			isa = PBXGroup;
+			children = (
+				15255F362175EE3400E78425 /* ReportVC.swift */,
+				15255F372175EE3400E78425 /* ReportVC.xib */,
+			);
+			path = ReportVC;
+			sourceTree = "<group>";
+		};
+		15371DAA21773F9800E52F32 /* FaqVC */ = {
+			isa = PBXGroup;
+			children = (
+				15371DA621773F8F00E52F32 /* FaqVC.swift */,
+				15371DA721773F8F00E52F32 /* FaqVC.xib */,
+				15840C422192D62600586D75 /* FaqCell */,
+				15840C432192DB1B00586D75 /* FaqTVExt.swift */,
+				15840C49219300C100586D75 /* AnswerVC */,
+			);
+			path = FaqVC;
+			sourceTree = "<group>";
+		};
+		1551F1C8214FCCAD00BA5CEF /* BillsVC */ = {
+			isa = PBXGroup;
+			children = (
+				1551F1C4214FC86100BA5CEF /* BillsVC.swift */,
+				1551F1C5214FC86100BA5CEF /* BillsVC.xib */,
+				1523F8C721590DB800A6EC74 /* BillsTVExt.swift */,
+				15D557122178FD8E000750D7 /* BillsVM.swift */,
+				1523F8CD21590E4000A6EC74 /* BillCell */,
+			);
+			path = BillsVC;
+			sourceTree = "<group>";
+		};
+		1551F1CD214FCD0000BA5CEF /* AddMateVC */ = {
+			isa = PBXGroup;
+			children = (
+				1551F1C9214FCCFD00BA5CEF /* AddMateVC.swift */,
+				1551F1CA214FCCFD00BA5CEF /* AddMateVC.xib */,
+				15C761B02188B839008DF6B5 /* AddMateTextFieldExt.swift */,
+				15A15D0B2195AA9B005FD85D /* AddMateCell */,
+				159C25CF21A297B20036DEDB /* AddMateVM.swift */,
+				159C25D121A2A44F0036DEDB /* AddMateTVExt.swift */,
+			);
+			path = AddMateVC;
+			sourceTree = "<group>";
+		};
+		1551F1D2214FD15800BA5CEF /* TenantsListVC */ = {
+			isa = PBXGroup;
+			children = (
+				1551F1CE214FD15300BA5CEF /* TenantsListVC.swift */,
+				1551F1CF214FD15300BA5CEF /* TenantsListVC.xib */,
+				1551F1D3214FF64A00BA5CEF /* TenantsListTableViewExt.swift */,
+				15EADB7521871F9000DBCB06 /* TenantsListVM.swift */,
+				1551F1D9214FF6ED00BA5CEF /* TenantCell */,
+			);
+			path = TenantsListVC;
+			sourceTree = "<group>";
+		};
+		1551F1D9214FF6ED00BA5CEF /* TenantCell */ = {
+			isa = PBXGroup;
+			children = (
+				1551F1D5214FF6EA00BA5CEF /* TenantCell.swift */,
+				1551F1D6214FF6EA00BA5CEF /* TenantCell.xib */,
+			);
+			path = TenantCell;
+			sourceTree = "<group>";
+		};
+		1566EC6D2194708300E00DE4 /* AddBillCell */ = {
+			isa = PBXGroup;
+			children = (
+				1566EC692194708000E00DE4 /* AddBillCell.swift */,
+				1566EC6A2194708000E00DE4 /* AddBillCell.xib */,
+			);
+			path = AddBillCell;
+			sourceTree = "<group>";
+		};
+		15840C422192D62600586D75 /* FaqCell */ = {
+			isa = PBXGroup;
+			children = (
+				15840C3E2192D61F00586D75 /* FaqCell.swift */,
+				15840C3F2192D61F00586D75 /* FaqCell.xib */,
+			);
+			path = FaqCell;
+			sourceTree = "<group>";
+		};
+		15840C49219300C100586D75 /* AnswerVC */ = {
+			isa = PBXGroup;
+			children = (
+				15840C45219300B500586D75 /* AnswerVC.swift */,
+				15840C46219300B500586D75 /* AnswerVC.xib */,
+				15840C4E2193015200586D75 /* AnswerTitleCell */,
+				15840C532193017400586D75 /* AnswerImageCell */,
+				15840C58219301A000586D75 /* AnswerContentCell */,
+				15840C59219302AA00586D75 /* AnswerTVExt.swift */,
+			);
+			path = AnswerVC;
+			sourceTree = "<group>";
+		};
+		15840C4E2193015200586D75 /* AnswerTitleCell */ = {
+			isa = PBXGroup;
+			children = (
+				15840C4A2193014A00586D75 /* AnswerTitleCell.swift */,
+				15840C4B2193014A00586D75 /* AnswerTitleCell.xib */,
+			);
+			path = AnswerTitleCell;
+			sourceTree = "<group>";
+		};
+		15840C532193017400586D75 /* AnswerImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				15840C4F2193017000586D75 /* AnswerImageCell.swift */,
+				15840C502193017000586D75 /* AnswerImageCell.xib */,
+			);
+			path = AnswerImageCell;
+			sourceTree = "<group>";
+		};
+		15840C58219301A000586D75 /* AnswerContentCell */ = {
+			isa = PBXGroup;
+			children = (
+				15840C542193019D00586D75 /* AnswerContentCell.swift */,
+				15840C552193019D00586D75 /* AnswerContentCell.xib */,
+			);
+			path = AnswerContentCell;
+			sourceTree = "<group>";
+		};
+		15A15D0B2195AA9B005FD85D /* AddMateCell */ = {
+			isa = PBXGroup;
+			children = (
+				15A15D072195AA98005FD85D /* AddMateCell.swift */,
+				15A15D082195AA98005FD85D /* AddMateCell.xib */,
+			);
+			path = AddMateCell;
+			sourceTree = "<group>";
+		};
+		15AE7F95214EC67900AEDDB1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				15AE7F93214EC5E500AEDDB1 /* Tenant.swift */,
+				15AE7F96214EC6CA00AEDDB1 /* Bill.swift */,
+				15840C5B2193047200586D75 /* Answer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		15D47D5B214EADA30020F074 = {
+			isa = PBXGroup;
+			children = (
+				1592946C21AD677D00E61069 /* Default-568h@2x.png */,
+				15D47D66214EADA30020F074 /* PeopleperBill */,
+				15D47D65214EADA30020F074 /* Products */,
+				712AA7C9C1FC686C58F55715 /* Pods */,
+				443B2485EE87595E7AC1068C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		15D47D65214EADA30020F074 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15D47D64214EADA30020F074 /* People per Bill.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15D47D66214EADA30020F074 /* PeopleperBill */ = {
+			isa = PBXGroup;
+			children = (
+				15255F352175EE2400E78425 /* ReportVC */,
+				1516A48A21554E3B000E1A59 /* AppMain */,
+				1516A48B21554E44000E1A59 /* SupportingFiles */,
+				15AE7F95214EC67900AEDDB1 /* Models */,
+				1551F1C8214FCCAD00BA5CEF /* BillsVC */,
+				1516A49021555548000E1A59 /* AddBillVC */,
+				1551F1CD214FCD0000BA5CEF /* AddMateVC */,
+				1551F1D2214FD15800BA5CEF /* TenantsListVC */,
+				15255F342175DE3D00E78425 /* MathInfoVC */,
+				15FDD2E1216E719700AE7D90 /* Interactors */,
+				158342AA2153C1DE00C95C2D /* Extensions.swift */,
+				156628D6215AA45300A04BD0 /* Alerts.swift */,
+				1598E906215BECC900F175C1 /* Constants.swift */,
+				15371DAA21773F9800E52F32 /* FaqVC */,
+				15C761AE218896EA008DF6B5 /* DatePicker.swift */,
+				152C24D02193570500E4E837 /* Placeholder.swift */,
+			);
+			path = PeopleperBill;
+			sourceTree = "<group>";
+		};
+		15FDD2E1216E719700AE7D90 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				158342A82153C10000C95C2D /* CalculateInteractor.swift */,
+				153537FC216B7D8D00152503 /* DataInteractor.swift */,
+				152DBAFC21AD6EA600DE2DD9 /* FirebaseHelper.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		443B2485EE87595E7AC1068C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCEEEC5742B717EFAEE63BED /* Pods_ShareBill.framework */,
+				A37019F28329997647A28BA4 /* Pods_PeopleperBill.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		712AA7C9C1FC686C58F55715 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B855E0D69F3131F18D5081DD /* Pods-ShareBill.debug.xcconfig */,
+				4DCD631C12C171F39418189E /* Pods-ShareBill.release.xcconfig */,
+				9E55DABFAE0491D9F443C44D /* Pods-PeopleperBill.debug.xcconfig */,
+				E8E54797F21B8FB8690F201E /* Pods-PeopleperBill.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15D47D63214EADA30020F074 /* People per Bill */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15D47D76214EADAB0020F074 /* Build configuration list for PBXNativeTarget "People per Bill" */;
+			buildPhases = (
+				AE4B60EFAD9B838FEE1ECE14 /* [CP] Check Pods Manifest.lock */,
+				15D47D60214EADA30020F074 /* Sources */,
+				15D47D61214EADA30020F074 /* Frameworks */,
+				15D47D62214EADA30020F074 /* Resources */,
+				63690C8FD4CF8917F12C35E2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "People per Bill";
+			productName = ShareBill;
+			productReference = 15D47D64214EADA30020F074 /* People per Bill.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15D47D5C214EADA30020F074 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = yakis;
+				TargetAttributes = {
+					15D47D63214EADA30020F074 = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
+					};
+				};
+			};
+			buildConfigurationList = 15D47D5F214EADA30020F074 /* Build configuration list for PBXProject "People per Bill" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 15D47D5B214EADA30020F074;
+			productRefGroup = 15D47D65214EADA30020F074 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15D47D63214EADA30020F074 /* People per Bill */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15D47D62214EADA30020F074 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15840C4D2193014A00586D75 /* AnswerTitleCell.xib in Resources */,
+				15840C572193019D00586D75 /* AnswerContentCell.xib in Resources */,
+				1566EC6C2194708000E00DE4 /* AddBillCell.xib in Resources */,
+				1523F8CC21590E3D00A6EC74 /* BillCell.xib in Resources */,
+				15371DA921773F8F00E52F32 /* FaqVC.xib in Resources */,
+				15840C522193017000586D75 /* AnswerImageCell.xib in Resources */,
+				15D47D72214EADAB0020F074 /* LaunchScreen.storyboard in Resources */,
+				1551F1D8214FF6EA00BA5CEF /* TenantCell.xib in Resources */,
+				1516A48F21554E5F000E1A59 /* AddBillVC.xib in Resources */,
+				15255F392175EE3400E78425 /* ReportVC.xib in Resources */,
+				15840C48219300B500586D75 /* AnswerVC.xib in Resources */,
+				15255F332175DE3500E78425 /* MathInfoVC.xib in Resources */,
+				1592946D21AD677D00E61069 /* Default-568h@2x.png in Resources */,
+				1551F1D1214FD15300BA5CEF /* TenantsListVC.xib in Resources */,
+				15840C412192D61F00586D75 /* FaqCell.xib in Resources */,
+				15D47D6F214EADAB0020F074 /* Assets.xcassets in Resources */,
+				1551F1C7214FC86100BA5CEF /* BillsVC.xib in Resources */,
+				152DBAFB21AD6ACE00DE2DD9 /* GoogleService-Info.plist in Resources */,
+				15A15D0A2195AA98005FD85D /* AddMateCell.xib in Resources */,
+				1551F1CC214FCCFD00BA5CEF /* AddMateVC.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		63690C8FD4CF8917F12C35E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PeopleperBill/Pods-PeopleperBill-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PeopleperBill/Pods-PeopleperBill-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE4B60EFAD9B838FEE1ECE14 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PeopleperBill-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15D47D60214EADA30020F074 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15840C402192D61F00586D75 /* FaqCell.swift in Sources */,
+				1551F1D0214FD15300BA5CEF /* TenantsListVC.swift in Sources */,
+				15840C4C2193014A00586D75 /* AnswerTitleCell.swift in Sources */,
+				158342A92153C10000C95C2D /* CalculateInteractor.swift in Sources */,
+				15AE7F97214EC6CA00AEDDB1 /* Bill.swift in Sources */,
+				152DBAFD21AD6EA600DE2DD9 /* FirebaseHelper.swift in Sources */,
+				15840C442192DB1B00586D75 /* FaqTVExt.swift in Sources */,
+				15D47D68214EADA30020F074 /* AppDelegate.swift in Sources */,
+				15840C5C2193047200586D75 /* Answer.swift in Sources */,
+				15C761AF218896EA008DF6B5 /* DatePicker.swift in Sources */,
+				15D557132178FD8E000750D7 /* BillsVM.swift in Sources */,
+				1516A48E21554E5F000E1A59 /* AddBillVC.swift in Sources */,
+				15255F322175DE3500E78425 /* MathInfoVC.swift in Sources */,
+				15255F382175EE3400E78425 /* ReportVC.swift in Sources */,
+				1551F1CB214FCCFD00BA5CEF /* AddMateVC.swift in Sources */,
+				15AE7F94214EC5E500AEDDB1 /* Tenant.swift in Sources */,
+				158342AB2153C1DE00C95C2D /* Extensions.swift in Sources */,
+				15840C5A219302AA00586D75 /* AnswerTVExt.swift in Sources */,
+				156628D7215AA45300A04BD0 /* Alerts.swift in Sources */,
+				153537FD216B7D8D00152503 /* DataInteractor.swift in Sources */,
+				15840C47219300B500586D75 /* AnswerVC.swift in Sources */,
+				1551F1D4214FF64A00BA5CEF /* TenantsListTableViewExt.swift in Sources */,
+				1551F1D7214FF6EA00BA5CEF /* TenantCell.swift in Sources */,
+				1523F8CB21590E3D00A6EC74 /* BillCell.swift in Sources */,
+				15371DA821773F8F00E52F32 /* FaqVC.swift in Sources */,
+				159C25D221A2A44F0036DEDB /* AddMateTVExt.swift in Sources */,
+				15EADB782187330000DBCB06 /* AddBillVM.swift in Sources */,
+				15EADB7A2187332A00DBCB06 /* AddBillTextFieldExt.swift in Sources */,
+				15C761B12188B839008DF6B5 /* AddMateTextFieldExt.swift in Sources */,
+				1551F1C6214FC86100BA5CEF /* BillsVC.swift in Sources */,
+				15840C512193017000586D75 /* AnswerImageCell.swift in Sources */,
+				15EADB7621871F9000DBCB06 /* TenantsListVM.swift in Sources */,
+				1566EC6F2194724B00E00DE4 /* AddBillTvExt.swift in Sources */,
+				1551F1C3214FC82800BA5CEF /* AppController.swift in Sources */,
+				15A15D092195AA98005FD85D /* AddMateCell.swift in Sources */,
+				15840C562193019D00586D75 /* AnswerContentCell.swift in Sources */,
+				1566EC6B2194708000E00DE4 /* AddBillCell.swift in Sources */,
+				1523F8C821590DB800A6EC74 /* BillsTVExt.swift in Sources */,
+				152C24D12193570500E4E837 /* Placeholder.swift in Sources */,
+				1598E907215BECC900F175C1 /* Constants.swift in Sources */,
+				159C25D021A297B20036DEDB /* AddMateVM.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		15D47D70214EADAB0020F074 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15D47D71214EADAB0020F074 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15D47D74214EADAB0020F074 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		15D47D75214EADAB0020F074 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15D47D77214EADAB0020F074 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E55DABFAE0491D9F443C44D /* Pods-PeopleperBill.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4WPNK427TB;
+				INFOPLIST_FILE = "$(SRCROOT)/PeopleperBill/SupportingFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yakis.peopleperbill;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15D47D78214EADAB0020F074 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8E54797F21B8FB8690F201E /* Pods-PeopleperBill.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4WPNK427TB;
+				INFOPLIST_FILE = "$(SRCROOT)/PeopleperBill/SupportingFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yakis.peopleperbill;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15D47D5F214EADA30020F074 /* Build configuration list for PBXProject "People per Bill" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15D47D74214EADAB0020F074 /* Debug */,
+				15D47D75214EADAB0020F074 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15D47D76214EADAB0020F074 /* Build configuration list for PBXNativeTarget "People per Bill" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15D47D77214EADAB0020F074 /* Debug */,
+				15D47D78214EADAB0020F074 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15D47D5C214EADA30020F074 /* Project object */;
+}
