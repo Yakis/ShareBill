@@ -9,6 +9,9 @@
 import UIKit
 import RealmSwift
 import Firebase
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         AppController.launchDashboardIn(window: window!)
         FirebaseApp.configure()
+        MSAppCenter.start("8fad1588-f5ce-4d77-9986-212027246ac8", withServices:[ MSAnalytics.self, MSCrashes.self ])
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         let config = Realm.Configuration(
             // Set the new schema version. This must be greater than the previously used
