@@ -1,6 +1,6 @@
 //
 //  FaqVC.swift
-//  ShareBill
+//  People per bill
 //
 //  Created by Mugurel Moscaliuc on 17/10/2018.
 //  Copyright © 2018 yakis. All rights reserved.

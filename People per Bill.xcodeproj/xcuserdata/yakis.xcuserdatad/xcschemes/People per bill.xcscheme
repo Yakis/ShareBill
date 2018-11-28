@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "15D47D63214EADA30020F074"
-               BuildableName = "PeopleperBill.app"
-               BlueprintName = "PeopleperBill"
-               ReferencedContainer = "container:PeopleperBill.xcodeproj">
+               BuildableName = "People per Bill.app"
+               BlueprintName = "People per Bill"
+               ReferencedContainer = "container:People per Bill.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -70,16 +70,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "15D47D63214EADA30020F074"
-            BuildableName = "PeopleperBill.app"
-            BlueprintName = "PeopleperBill"
-            ReferencedContainer = "container:PeopleperBill.xcodeproj">
+            BuildableName = "People per Bill.app"
+            BlueprintName = "People per Bill"
+            ReferencedContainer = "container:People per Bill.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
