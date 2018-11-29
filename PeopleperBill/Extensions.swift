@@ -70,3 +70,28 @@ extension Notification.Name {
     static let popToRootVC = Notification.Name("popToRootVC")
     static let keyboardActive = Notification.Name("keyboardActive")
 }
+
+
+extension UIViewController {
+    class func displaySpinner(onView: UIView) -> UIView {
+        let ai = UIActivityIndicatorView.init(style: .whiteLarge)
+        ai.frame = onView.bounds
+        ai.center = onView.center
+        ai.translatesAutoresizingMaskIntoConstraints = false
+        ai.startAnimating()
+        
+        DispatchQueue.main.async {
+            onView.addSubview(ai)
+            ai.centerXAnchor.constraint(equalTo: onView.centerXAnchor).isActive = true
+            ai.centerYAnchor.constraint(equalTo: onView.centerYAnchor).isActive = true
+        }
+        
+        return ai
+    }
+    
+    class func removeSpinner(spinner: UIView) {
+        DispatchQueue.main.async {
+            spinner.removeFromSuperview()
+        }
+    }
+}

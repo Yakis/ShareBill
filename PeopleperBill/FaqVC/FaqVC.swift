@@ -12,12 +12,13 @@ class FaqVC: UIViewController {
 
     
     @IBOutlet weak var tableView: UITableView!
-    
+    var activityIndicator: UIView!
     
     var answers = [Answer]() {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                UIViewController.removeSpinner(spinner: self.activityIndicator)
             }
         }
     }
@@ -28,6 +29,7 @@ class FaqVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        activityIndicator = UIViewController.displaySpinner(onView: self.tableView)
         FirebaseHelper.shared.getAnswers { [weak self] (answers) in
             self?.answers = answers
         }

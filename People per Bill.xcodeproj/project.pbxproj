@@ -769,7 +769,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4WPNK427TB;
 				INFOPLIST_FILE = "$(SRCROOT)/PeopleperBill/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -778,7 +778,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yakis.peopleperbill;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = PeoplePerBill;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -790,8 +790,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4WPNK427TB;
 				INFOPLIST_FILE = "$(SRCROOT)/PeopleperBill/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -800,7 +800,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yakis.peopleperbill;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = PeoplePerBill_Distribution;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
