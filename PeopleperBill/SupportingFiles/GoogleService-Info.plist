@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>624554063077-gneg3rpmvb6r5rni0je21mis51l589sk.apps.googleusercontent.com</string>
+	<string>946999340652-g1qjlo228qm82r8kat5855lg8gp9kra0.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.624554063077-gneg3rpmvb6r5rni0je21mis51l589sk</string>
+	<string>com.googleusercontent.apps.946999340652-g1qjlo228qm82r8kat5855lg8gp9kra0</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCKXGW9PZdhVneA2_OIfYoXTbi2zx4omn8</string>
+	<string>AIzaSyDfxzH5JDO2w12tg5zuj7WUVFT8ZWKFIIU</string>
 	<key>GCM_SENDER_ID</key>
-	<string>624554063077</string>
+	<string>946999340652</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.yakis.peopleperbill</string>
 	<key>PROJECT_ID</key>
-	<string>people-per-bill</string>
+	<string>people-per-bill-90522</string>
 	<key>STORAGE_BUCKET</key>
-	<string>people-per-bill.appspot.com</string>
+	<string>people-per-bill-90522.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:624554063077:ios:9a7c2e11a0c6248f</string>
+	<string>1:946999340652:ios:9a7c2e11a0c6248f</string>
 	<key>DATABASE_URL</key>
-	<string>https://people-per-bill.firebaseio.com</string>
+	<string>https://people-per-bill-90522.firebaseio.com</string>
 </dict>
 </plist>

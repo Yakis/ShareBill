@@ -12,5 +12,6 @@ target 'People per Bill' do
 	pod 'Firebase/Core'
 	pod 'Nuke'
 	pod 'Firebase/Firestore'
+	pod 'Firebase/Database'
 	pod 'AppCenter'
 end

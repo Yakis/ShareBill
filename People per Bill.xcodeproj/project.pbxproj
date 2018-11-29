@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1513DA2821B0159600025FE0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1513DA2721B0159600025FE0 /* GoogleService-Info.plist */; };
 		1516A48E21554E5F000E1A59 /* AddBillVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1516A48C21554E5F000E1A59 /* AddBillVC.swift */; };
 		1516A48F21554E5F000E1A59 /* AddBillVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1516A48D21554E5F000E1A59 /* AddBillVC.xib */; };
 		1523F8C821590DB800A6EC74 /* BillsTVExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1523F8C721590DB800A6EC74 /* BillsTVExt.swift */; };
@@ -17,7 +18,6 @@
 		15255F382175EE3400E78425 /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15255F362175EE3400E78425 /* ReportVC.swift */; };
 		15255F392175EE3400E78425 /* ReportVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15255F372175EE3400E78425 /* ReportVC.xib */; };
 		152C24D12193570500E4E837 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152C24D02193570500E4E837 /* Placeholder.swift */; };
-		152DBAFB21AD6ACE00DE2DD9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 152DBAFA21AD6ACE00DE2DD9 /* GoogleService-Info.plist */; };
 		152DBAFD21AD6EA600DE2DD9 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152DBAFC21AD6EA600DE2DD9 /* FirebaseHelper.swift */; };
 		153537FD216B7D8D00152503 /* DataInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153537FC216B7D8D00152503 /* DataInteractor.swift */; };
 		15371DA821773F8F00E52F32 /* FaqVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15371DA621773F8F00E52F32 /* FaqVC.swift */; };
@@ -73,6 +73,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1513DA2721B0159600025FE0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1516A48C21554E5F000E1A59 /* AddBillVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillVC.swift; sourceTree = "<group>"; };
 		1516A48D21554E5F000E1A59 /* AddBillVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddBillVC.xib; sourceTree = "<group>"; };
 		1523F8C721590DB800A6EC74 /* BillsTVExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsTVExt.swift; sourceTree = "<group>"; };
@@ -83,7 +84,6 @@
 		15255F362175EE3400E78425 /* ReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
 		15255F372175EE3400E78425 /* ReportVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportVC.xib; sourceTree = "<group>"; };
 		152C24D02193570500E4E837 /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
-		152DBAFA21AD6ACE00DE2DD9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		152DBAFC21AD6EA600DE2DD9 /* FirebaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		153537FC216B7D8D00152503 /* DataInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInteractor.swift; sourceTree = "<group>"; };
 		15371DA621773F8F00E52F32 /* FaqVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqVC.swift; sourceTree = "<group>"; };
@@ -175,7 +175,7 @@
 				15D47D6E214EADAB0020F074 /* Assets.xcassets */,
 				15D47D70214EADAB0020F074 /* LaunchScreen.storyboard */,
 				15D47D73214EADAB0020F074 /* Info.plist */,
-				152DBAFA21AD6ACE00DE2DD9 /* GoogleService-Info.plist */,
+				1513DA2721B0159600025FE0 /* GoogleService-Info.plist */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -508,7 +508,7 @@
 				15840C412192D61F00586D75 /* FaqCell.xib in Resources */,
 				15D47D6F214EADAB0020F074 /* Assets.xcassets in Resources */,
 				1551F1C7214FC86100BA5CEF /* BillsVC.xib in Resources */,
-				152DBAFB21AD6ACE00DE2DD9 /* GoogleService-Info.plist in Resources */,
+				1513DA2821B0159600025FE0 /* GoogleService-Info.plist in Resources */,
 				15A15D0A2195AA98005FD85D /* AddMateCell.xib in Resources */,
 				1551F1CC214FCCFD00BA5CEF /* AddMateVC.xib in Resources */,
 			);

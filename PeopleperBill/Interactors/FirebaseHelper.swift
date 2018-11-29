@@ -13,7 +13,7 @@ import Firebase
 class FirebaseHelper {
     
     static let shared = FirebaseHelper()
-    let db = Firestore.firestore()
+    var ref: DatabaseReference!
     
     
     
@@ -22,19 +22,16 @@ class FirebaseHelper {
     
     func getAnswers(completion: @escaping ([Answer]) ->()) {
         var answers = [Answer]()
-        db.collection("answers").getDocuments { (snap, error) in
-            if let error = error {
-                print("Error getting documents: \(error.localizedDescription)")
-            } else {
-                for answer in snap!.documents {
-                    let title = answer.data()["title"] as! String
-                    let image = answer.data()["image"] as! String
-                    let content = answer.data()["content"] as! String
-                    let newAnswer = Answer(title: title, image: image, content: content)
-                    answers.append(newAnswer)
-                }
-                completion(answers)
-            }
+        
+        ref = Database.database().reference()
+        ref.child("answers").observe(.childAdded) { (snap) in
+            let value = snap.value as? NSDictionary
+            let title = value!["title"] as! String
+            let image = value!["image"] as! String
+            let content = value!["content"] as! String
+            let newAnswer = Answer(title: title, image: image, content: content)
+            answers.append(newAnswer)
+            completion(answers)
         }
     }
     
