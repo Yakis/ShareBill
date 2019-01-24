@@ -51,8 +51,10 @@ class AddBillCell: UITableViewCell {
     
     
     func saveBill() {
-        guard let amount = amountTextField.text, !amount.isEmpty else {
+        guard let amount = amountTextField.text, amount.isNumber else {
             NotificationCenter.default.post(name: .alert, object: nil, userInfo: ["message": Messages.enterAmount])
+            amountTextField.shake()
+            amountTextField.makeRed()
             return
         }
         guard let startDateString = startDateTextField.text, !startDateString.isEmpty else {

@@ -37,11 +37,17 @@ extension String {
         return numberFormatter.number(from: self)?.doubleValue
     }
     
+    
     func toDate() -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
         return dateFormatter.date(from: self) ?? Date()
+    }
+    
+    
+    var isNumber: Bool {
+        return !isEmpty && Double(self) != nil
     }
     
 }
@@ -94,4 +100,32 @@ extension UIViewController {
             spinner.removeFromSuperview()
         }
     }
+}
+
+
+extension UIView {
+    
+    
+    func shake() {
+        let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+        animation.duration = 0.4
+        animation.values = [-10.0, 10.0, -10.0, 10.0, -7.0, 7.0, -3.0, 3.0, 0.0 ]
+        layer.add(animation, forKey: "shake")
+    }
+    
+    
+    func makeRed() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.backgroundColor = UIColor.red
+            self.alpha = 0.3
+        }) { (Bool) in
+            UIView.animate(withDuration: 0.4, animations: {
+                self.backgroundColor = Colors.maritimeDark
+                self.alpha = 1.0
+            }, completion: nil)
+        }
+    }
+    
+    
 }

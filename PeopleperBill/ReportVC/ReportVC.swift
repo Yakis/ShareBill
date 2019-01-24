@@ -18,7 +18,7 @@ class ReportVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // createReport()
+         createReport()
     }
 
     
@@ -26,7 +26,7 @@ class ReportVC: UIViewController {
     func createReport() {
         var stringReport = ""
         let realm = try! Realm()
-        guard let bill = realm.objects(Bill.self).last else {return}
+        guard let bill = realm.objects(Bill.self).filter("isCurrent == %@", true).first else {return}
         let tenants = realm.objects(Tenant.self)
         let startDate = bill.startDate.shortDateString()
         let endDate = bill.endDate.shortDateString()
