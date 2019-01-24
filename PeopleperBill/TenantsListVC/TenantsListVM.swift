@@ -39,7 +39,7 @@ struct TenantsListVM {
     
     func calculate() {
         let realm = try! Realm()
-        if let bill = realm.objects(Bill.self).last {
+        if let bill = realm.objects(Bill.self).filter("isCurrent == %@", true).first {
             self.calculateInteractor.calculate(bill: bill) {
                 self.fetchTenants()
             }

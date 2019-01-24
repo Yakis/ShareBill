@@ -51,10 +51,34 @@ class BillsVC: UIViewController {
 
     
     func calculate(bill: Bill) {
+        setupCurrentBill(newBill: bill)
         self.calculateInteractor.calculate(bill: bill) {
             DispatchQueue.main.async {
                 self.tabBarController?.selectedIndex = 1
             }
+        }
+    }
+    
+    
+    func setupCurrentBill(newBill: Bill) {
+        DispatchQueue.main.async {
+            autoreleasepool {
+                // Reset isCurrent property for all bills
+                let realm = try! Realm()
+                let bills = realm.objects(Bill.self)
+                realm.beginWrite()
+                for bill in bills {
+                    bill.isCurrent = false
+                }
+                // Set the current bill
+                try! realm.commitWrite()
+                realm.beginWrite()
+                let newBill = realm.objects(Bill.self).filter("id == %@", newBill.id).first
+                newBill?.isCurrent = true
+                try! realm.commitWrite()
+                self.billsVM.fetchBills()
+            }
+            
         }
     }
     

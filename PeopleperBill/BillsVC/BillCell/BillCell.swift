@@ -13,6 +13,8 @@ class BillCell: UITableViewCell {
     
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var lenghtLabel: UILabel!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var arrowLabel: UILabel!
     
     
     
@@ -24,12 +26,17 @@ class BillCell: UITableViewCell {
     }
 
     func setup(with bill: Bill) {
-        
         let startDate = bill.startDate.shortDateString()
         let endDate = bill.endDate.shortDateString()
         self.amountLabel.text = "Amount: \(bill.amount)"
         self.lenghtLabel.text = "\(startDate) - \(endDate)"
-        
+        if bill.isCurrent {
+            self.containerView.alpha = 0.9
+            arrowLabel.text = "⬅︎"
+        } else {
+            self.containerView.alpha = 1.0
+            arrowLabel.text = ""
+        }
     }
     
 }

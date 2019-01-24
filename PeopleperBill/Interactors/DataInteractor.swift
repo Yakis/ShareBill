@@ -43,6 +43,7 @@ class DataInteractor {
             bill.startDate = newBill.startDate
             bill.endDate = newBill.endDate
             bill.id = newBill.id
+            bill.isCurrent = newBill.isCurrent
             bills.append(bill)
         }
        completion(bills)
